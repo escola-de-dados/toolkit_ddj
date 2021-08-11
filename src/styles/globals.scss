@@ -1,14 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+@import './_variables.scss';
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {

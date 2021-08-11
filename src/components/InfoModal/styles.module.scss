@@ -1,0 +1,29 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.modal{
+
+}
+
+.modalHeader{
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  border: none;
+}
+
+.modalHeader button{
+  border: none;
+  
+  font-size: 2em;
+
+  background: none;
+}
+
+.modalBody{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
