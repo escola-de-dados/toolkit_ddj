@@ -1,41 +1,81 @@
-import React from 'react'
+import React from "react";
 
-import { Modal, Button } from "react-bootstrap"
+import { Modal, Button } from "react-bootstrap";
 
-import { Icon, InlineIcon } from '@iconify/react';
-import repoForked16 from '@iconify/icons-octicon/repo-forked-16';
+import { Icon, InlineIcon } from "@iconify/react";
+import repoForked16 from "@iconify/icons-octicon/repo-forked-16";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
-const InfoModal  = ({type, showModal, onHide}) => {
+const InfoModal = ({ type, showModal, onHide }) => {
   return (
-    <Modal show={showModal} onHide={onHide}>
+    <Modal
+      size="lg"
+      dialogClassName={styles.customModalDialog}
+      contentClassName={styles.customModalContent}
+      show={showModal}
+      onHide={onHide}
+    >
       <Modal.Header className={styles.modalHeader}>
         <button onClick={onHide}>&times;</button>
       </Modal.Header>
-      {type === "howTo" ?
-        <Modal.Body className={styles.modalBody}>
-          <h2>Como contribuir?</h2>
-          <p>Para adicionar uma ferramenta à base você pode Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam urna tellus, pellentesque et ante ut, molestie molestie turpis. Donec eu orci lorem. Vivamus non faucibus quam. Vivamus lobortis suscipit tellus a fringilla. Curabitur ullamcorper justo at erat aliquam consequat quis et ligula.</p>
-          <p>O processo está explicado em mais detalhes na página do projeto no Github:</p>
-          <Button>
-            <Icon icon={repoForked16} style={{color: '#ffffff', fontSize: '16px'}} />
-            Contribuir no GitHub
-          </Button>
-        </Modal.Body>
-      :
       <Modal.Body className={styles.modalBody}>
-          <h2>O que é a Caixa de Ferramentas</h2>
-          <p>Para adicionar uma ferramenta à base você pode Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam urna tellus, pellentesque et ante ut, molestie molestie turpis. Donec eu orci lorem. Vivamus non faucibus quam. Vivamus lobortis suscipit tellus a fringilla. Curabitur ullamcorper justo at erat aliquam consequat quis et ligula.</p>
-          <p>Para adicionar uma ferramenta à base você pode Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam urna tellus, pellentesque et ante ut, molestie molestie turpis. Donec eu orci lorem. Vivamus non faucibus quam. Vivamus lobortis suscipit tellus a fringilla. Curabitur ullamcorper justo at erat aliquam consequat quis et ligula.</p>
-          <Button>
-            <Icon icon={repoForked16} style={{color: '#ffffff', fontSize: '16px'}} />
-            Contribuir no GitHub
-          </Button>
-        </Modal.Body>
-      }
+        {type === "howTo" ? (
+          <div className="mb-3">
+            <h2 className={`${styles.modalTitle} mb-4`}>Como contribuir?</h2>
+            <p>
+              A base que reúne as ferramentas mostradas nesta página está
+              disponível no respositório da página no Github.
+            </p>
+            <p>
+              Para adicionar uma ferramenta à base você pode fazer um{" "}
+              <em>fork</em> do projeto e criar uma nova entrada no arquivo.
+              Avaliaremos o seu Pull Request e, caso esteja tudo certo, sua
+              contribuição será aceita e incorporada à base oficial.
+            </p>
+            <p>
+              O processo está explicado em detalhes no repositório da página no
+              Github:
+            </p>
+          </div>
+        ) : (
+          <div className="mb-3">
+            <h2 className={`${styles.modalTitle} mb-4`}>
+              O que é a Caixa de Ferramentas?
+            </h2>
+            <p>
+              A Caixa de Ferramentas do Jornalismo de Dados é um projeto
+              elaborado pela Escola de Dados, iniciativa da Open Knowledge
+              Brasil.
+            </p>
+            <p>
+              O objetivo desta página é divulgar de forma prática as ferramentas
+              no ecossistema de tecnologia que se adequam à atividade do
+              jornalismo de dados. As ferramentas são separadas por categorias e
+              plataformas, além de serem identificadas como ferramentas de
+              código aberto ou não.
+            </p>
+            <p>
+              A Caixa de Ferramentas é um trabalho colaborativo. Se você tem uma
+              sugestão de ferramenta que se encaixa na premissa da página, mas
+              não está presente na base, você pode contribuir com a lista
+              diretamente pelo Github:
+            </p>
+          </div>
+        )}
+        <Button
+          variant="primary"
+          href="https://github.com/escola-de-dados/toolkit_ddj"
+        >
+          <Icon
+            icon={repoForked16}
+            style={{ color: "#ffffff", fontSize: "16px", marginRight: "5px" }}
+          />
+          Contribuir no GitHub
+        </Button>
+      </Modal.Body>
     </Modal>
-  )
-}
+  );
+};
 
-export default InfoModal
+export default InfoModal;

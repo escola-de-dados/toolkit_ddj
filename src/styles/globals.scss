@@ -16,3 +16,28 @@ a {
 * {
   box-sizing: border-box;
 }
+
+//Overiding bootstrap rules
+.btn-primary,
+.btn-check:checked + .btn-primary,
+.btn-check:active + .btn-primary,
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle{
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+}
+
+.btn-primary:hover{
+  background-color: darken($red, 15%);
+  border-color: $red;
+}
+
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: $red;
+  border-color: $red;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba($red, .5);
+  box-shadow: 0 0 0 0.25rem rgba($red, .5);
+}
