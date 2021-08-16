@@ -1,0 +1,71 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+.pageFooter{
+  margin-top: 6em; //provisório
+  padding: 4em 5em 3em;
+
+  color: #fff;
+  background-color: $purple;
+}
+
+.pageFooter a:hover{
+  color: darken(#fff, 20%);
+}
+
+.mainRow{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8em;
+}
+
+.linksContainer{
+  width: 30%;
+  margin-right: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footerLink{
+  flex-basis: 50%;
+  font-weight: 300;
+}
+
+.madeByContainer{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  text-align: center;
+}
+
+.logoContainer{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.logoImgLink{
+  width: 30%;
+}
+
+.logoImg{
+  width: 100%;
+}
+
+.creditsRow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.creditsSpan{
+  font-weight: 300;
+}
+
+@media #{$big-tablets-and-down}{
+  .mainRow{
+    flex-direction: column;
+  }
+}
