@@ -39,7 +39,7 @@ const Footer = ({ handleModalOpen }) => {
           </a>
         </div>
         <div className={styles.madeByContainer}>
-          <span className="mb-4">Realização</span>
+          <span className={`${styles.madeBySpan} mb-4`}>Realização</span>
           <div className={styles.logoContainer}>
             <a className={styles.logoImgLink} href="https://escoladedados.org/">
               <img
@@ -59,7 +59,7 @@ const Footer = ({ handleModalOpen }) => {
         </div>
       </div>
       <div className={styles.creditsRow}>
-        <span className={`${styles.creditsSpan} mb-2`}>
+        <span className={`${styles.creditsSpan} mb-3 mb-lg-2`}>
           Desenvolvimento:{" "}
           <a href="https://liaporto.github.io/pt-br/">Lia Porto</a>
         </span>
