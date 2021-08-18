@@ -1,9 +1,11 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import { useState, useEffect } from "react";
 import yaml from "js-yaml";
 
 import Head from "next/head";
 
 import Header from "../components/Header";
+import Card from "../components/Card";
 import Footer from "../components/Footer";
 import InfoModal from "../components/InfoModal";
 
@@ -74,8 +76,9 @@ export default function Home() {
         type="aboutPage"
       />
 
-      {/* <main>
-        <div>
+      <main>
+        <Card />
+        {/* <div>
           {toolsData.length > 0 ?
           toolsData.map((tool, index) => {
             return(
@@ -105,8 +108,8 @@ export default function Home() {
           :
           <div>Loading...</div>
           } 
-        </div>
-      </main>*/}
+        </div> */}
+      </main>
 
       <Footer handleModalOpen={handleModalOpen} />
     </div>

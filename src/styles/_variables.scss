@@ -1,4 +1,4 @@
-// Colors
+//General colors
 $purple: #40133B;
 $red: #F34142;
 $yellow: #F4AD01;
@@ -7,6 +7,18 @@ $dark-red: #DE3C3C;
 $dark-yellow: #E09F00;
 
 $darkest-red: #CE3738;
+
+//Category colors
+$cat-visualizacao: #C2D6FF;
+$cat-obtencao: #BFEAFC;
+$cat-analise: #C2F5E9;
+$cat-cartografia: #D1F7C4;
+$cat-publicacao: #FFEAB6;
+$cat-limpeza: #FFDBCA;
+$cat-redes: #FFD6E1;
+$cat-multi: #FFDAF6;
+$cat-programacao: #EDE2FE;
+
 
 //Breakpoints
 $big-phones-and-down: "(max-width: 575.99px)";
