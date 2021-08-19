@@ -62,13 +62,13 @@ const Card = () => {
         </div>
       </section>
 
-      <footer>
-        <Button>
-          <Icon icon="octicon:repo-forked-16" color="#fff" />
+      <footer className={styles.cardFooter}>
+        <Button className={styles.cardButton}>
+          <Icon icon="mdi:link-variant" color="#fff" />
           Site
         </Button>
-        <Button>
-          <Icon icon="mdi:link-variant" color="#fff" />
+        <Button className={styles.cardButton}>
+          <Icon icon="octicon:repo-forked-16" color="#fff" />
           Repositório
         </Button>
       </footer>

@@ -24,14 +24,15 @@ a {
 .btn-primary:active,
 .btn-primary.active,
 .show > .btn-primary.dropdown-toggle{
+  white-space: nowrap;
   color: #fff;
   background-color: $red;
   border-color: $red;
 }
 
 .btn-primary:hover{
-  background-color: darken($red, 15%);
-  border-color: $red;
+  background-color: darken($red, 8%);
+  border-color: darken($red, 8%);
 }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {
@@ -40,4 +41,9 @@ a {
   border-color: $red;
   -webkit-box-shadow: 0 0 0 0.25rem rgba($red, .5);
   box-shadow: 0 0 0 0.25rem rgba($red, .5);
+}
+
+.btn svg{
+  font-size: 1em;
+  margin-right: .2em;
 }

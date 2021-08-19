@@ -77,38 +77,44 @@ export default function Home() {
       />
 
       <main>
-        <Card />
-        {/* <div>
-          {toolsData.length > 0 ?
-          toolsData.map((tool, index) => {
-            return(
-              <div key={index} style={{marginBottom: "50px"}}>
-                <h2>{tool.nome}</h2>
-                <p><a href={tool.link}>{tool.link}</a></p>
-                <p><a href={tool.github}>{tool.github}</a></p>
-                <p>Descrição: {tool["descrição"]}</p>
-                <p>Categoria: {tool.categoria}</p>
-                {Array.isArray(tool.plataforma) ?
-                  <div>
-                    <p>Plataformas:</p>
-                    <ul>
-                    {tool.plataforma.map((plataforma, index) => {
-                        return(
-                          <li key={index}>{plataforma}</li>
-                        )
-                      })}
-                    </ul>
-                  </div>
-                :
-                <p>Plataforma: {tool.plataforma}</p>
-                }
-              </div>
-            )
-          })
-          :
-          <div>Loading...</div>
-          } 
-        </div> */}
+        <div className={styles.contentContainer}>
+          {/* aqui entram os filtros */}
+          {/* aqui entra o número de resultados */}
+          <div className={styles.cardsContainer}>
+            <Card />
+            {/*
+            {toolsData.length > 0 ?
+            toolsData.map((tool, index) => {
+              return(
+                <div key={index} style={{marginBottom: "50px"}}>
+                  <h2>{tool.nome}</h2>
+                  <p><a href={tool.link}>{tool.link}</a></p>
+                  <p><a href={tool.github}>{tool.github}</a></p>
+                  <p>Descrição: {tool["descrição"]}</p>
+                  <p>Categoria: {tool.categoria}</p>
+                  {Array.isArray(tool.plataforma) ?
+                    <div>
+                      <p>Plataformas:</p>
+                      <ul>
+                      {tool.plataforma.map((plataforma, index) => {
+                          return(
+                            <li key={index}>{plataforma}</li>
+                          )
+                        })}
+                      </ul>
+                    </div>
+                  :
+                  <p>Plataforma: {tool.plataforma}</p>
+                  }
+                </div>
+              )
+            })
+            :
+            <div>Loading...</div>
+            } 
+          */}
+          </div>
+        </div>
       </main>
 
       <Footer handleModalOpen={handleModalOpen} />

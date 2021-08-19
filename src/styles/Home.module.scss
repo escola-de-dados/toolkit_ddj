@@ -1,77 +1,17 @@
 @use 'sass:math';
 @import './variables';
 
-$dotSize: 30px;
-
-.pageHeader{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  padding: 4em 0;
-
-  color: #fff;
-  font-family: 'Raleway', Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-  background-color: $purple;
-
-  background-image: radial-gradient(rgba($red, 2%) 15%, transparent 16%);
-  background-size: $dotSize $dotSize;
-  background-position: math.div($dotSize, 2) math.div($dotSize, 2);
+.contentContainer{
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-h1.title{
-  width: 12em;
-}
-
-.logoImage{
-  width: 100%;
-}
-
-.subtitle{
-  margin: 3rem 0;
+.cardsContainer{
   
-  font-size: 1.5em;
-  text-align: center;
 }
 
-.subtitleNumber{
-  font-weight: 500;
-}
-
-.colabModalLink{
-  font-weight: 300;
-}
-
-.colabModalLink:hover{
-  color:darken(#fff, 10%);
-}
-
-@media #{$big-tablets-and-down}{
-  h1.title{
-    width: 50%;
-  }
-
-  .subtitle{
-    margin-bottom: 50px;
-    font-size: 1.2em;
-  }
-}
-
-
-@media #{$big-phones-and-down}{
-  .pageHeader{
-    padding: 7em 3em;
-  }
-
-  h1.title{
-    width: 100%;
-    //TODO: Checar word-break
-  }
-
-  .subtitle{
-    // font-size: 1em;
+@media #{$desktop-1400-and-up}{
+  .contentContainer{
+    max-width: 1200px;
   }
 }

@@ -3,7 +3,6 @@ import React from "react";
 import { Modal, Button } from "react-bootstrap";
 
 import { Icon, InlineIcon } from "@iconify/react";
-import repoForked16 from "@iconify/icons-octicon/repo-forked-16";
 
 import styles from "./styles.module.scss";
 
@@ -67,10 +66,7 @@ const InfoModal = ({ type, showModal, onHide }) => {
           variant="primary"
           href="https://github.com/escola-de-dados/toolkit_ddj"
         >
-          <Icon
-            icon={repoForked16}
-            style={{ color: "#ffffff", fontSize: "16px", marginRight: "5px" }}
-          />
+          <Icon icon="octicon:repo-forked-16" color="#fff" />
           Contribuir no GitHub
         </Button>
       </Modal.Body>

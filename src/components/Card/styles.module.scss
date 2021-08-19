@@ -3,18 +3,16 @@
 
 :export { 
   purple: $purple;
-  // visualizacao: $cat-visualizacao;
 }
 
 .toolCard{
-  width: 30%;
-  margin: 0 2.5%;
+  width: 32%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 2.2em 1.8em 3em;
+  padding: 2.2em 1.8em 3.2em;
 
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
@@ -34,7 +32,8 @@
 
 .toolDetailsTitle{
   margin-bottom: .8em;
-  font-size: .9em
+  font-size: .9em;
+  font-weight: 600;
 }
 
 .toolCategory{
@@ -72,5 +71,24 @@
 }
 
 .platformIcon{
-  font-size: 1.5em;
+  margin-right: .5em;
+  font-size: 1.8em;
+}
+
+.cardFooter{
+  width: 100%;
+  margin-top: 1.5em;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.cardButton{
+  min-width: 40%;
+}
+
+@media #{$big-tablets-and-down}{
+  .toolCard{
+    width: 100%;
+  }
 }

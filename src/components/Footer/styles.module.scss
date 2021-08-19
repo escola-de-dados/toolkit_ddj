@@ -69,6 +69,7 @@
 .creditsSpan{
   text-align: center;
   font-weight: 300;
+  font-size: .9em;
 }
 
 @media #{$big-tablets-and-down}{
@@ -97,9 +98,5 @@
   .logoImgLink{
     width: 100%;
     margin-bottom: 3em;
-  }
-
-  .creditsSpan{
-    font-size: .9em;
   }
 }
