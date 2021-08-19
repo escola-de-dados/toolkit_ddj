@@ -81,7 +81,7 @@ export default function Home() {
           {/* aqui entram os filtros */}
           {/* aqui entra o número de resultados */}
           <div className={styles.cardsContainer}>
-            <Card />
+            {toolsData.length > 0 && <Card toolData={toolsData[0]} />}
             {/*
             {toolsData.length > 0 ?
             toolsData.map((tool, index) => {

@@ -7,10 +7,11 @@
 
 .toolCard{
   width: 32%;
+  min-height: 510px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: flex-start;
   padding: 2.2em 1.8em 3.2em;
 
@@ -40,6 +41,7 @@
   padding: .2em .8em;
   font-size: .9em;
   border-radius: 20px;
+  background-color: #adb5bd;
 
   &.visualizacao{
     background-color: $cat-visualizacao;
