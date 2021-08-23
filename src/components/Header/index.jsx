@@ -7,7 +7,7 @@ import logoImg from "../../../public/img/logo-caixadeferramentas.png";
 
 import styles from "./styles.module.scss";
 
-const Header = ({ handleModalOpen }) => {
+const Header = ({ toolsNumber, handleModalOpen }) => {
   return (
     <header className={styles.pageHeader}>
       <GithubCorner />
@@ -19,7 +19,10 @@ const Header = ({ handleModalOpen }) => {
         />
       </h1>
       <p className={styles.subtitle}>
-        Explore mais de <span className={styles.subtitleNumber}>140</span>{" "}
+        Explore mais de{" "}
+        <span className={styles.subtitleNumber}>
+          {toolsNumber - (toolsNumber % 5)}
+        </span>{" "}
         ferramentas para jornalistas de dados
       </p>
       <a
