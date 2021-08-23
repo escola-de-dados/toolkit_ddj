@@ -164,7 +164,7 @@
     link: http://wordwanderer.org/
     github: https://github.com/nrchtct/WordWanderer
     descrição: "Ferramenta que cria visualizações de textos."
-    categoria: Texto
+    categoria: Visualização
     plataforma: Web
     open-source: checked
     destaque: 
@@ -434,7 +434,7 @@
     link: https://chrome.google.com/webstore/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah
     github:
     descrição: "Extensão para o ChromeOS de ferramenta de extração de informações de páginas da web, que permite exportação de dados em Excel ou arquivo CSV."
-    categoria: Raspagem
+    categoria: Obtenção
     plataforma: Web,Chrome
     open-source: 
     destaque: 
@@ -454,7 +454,7 @@
     link: voyant-tools.org/
     github: https://github.com/sgsinclair/Voyant
     descrição: "Ferramenta de leitura e análise de textos digitais."
-    categoria: Texto
+    categoria: Análise
     plataforma: Web
     open-source: checked
     destaque: checked
@@ -584,7 +584,7 @@
     link: https://morph.io/
     github: https://github.com/openaustralia/morph
     descrição: "Interface para facilitar a raspagem de dados."
-    categoria: Raspagem
+    categoria: Obtenção
     plataforma: Web
     open-source: 
     destaque: 
@@ -814,7 +814,7 @@
     link: https://tools.digitalmethods.net/netvizz/youtube/
     github: https://github.com/bernorieder/YouTube-Data-Tools
     descrição: "Ferramenta de raspagem de dados do YouTube."
-    categoria: Raspagem
+    categoria: Obtenção
     plataforma: Web
     open-source: checked
     destaque: checked

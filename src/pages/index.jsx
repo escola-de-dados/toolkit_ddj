@@ -63,7 +63,10 @@ export default function Home() {
         />
       </Head>
 
-      <Header handleModalOpen={handleModalOpen} />
+      <Header
+        toolsNumber={toolsData.length > 0 ? toolsData.length : 144}
+        handleModalOpen={handleModalOpen}
+      />
 
       <InfoModal
         showModal={showHowToModal}
@@ -79,41 +82,21 @@ export default function Home() {
       <main>
         <div className={styles.contentContainer}>
           {/* aqui entram os filtros */}
-          {/* aqui entra o número de resultados */}
-          <div className={styles.cardsContainer}>
-            {toolsData.length > 0 && <Card toolData={toolsData[0]} />}
-            {/*
-            {toolsData.length > 0 ?
-            toolsData.map((tool, index) => {
-              return(
-                <div key={index} style={{marginBottom: "50px"}}>
-                  <h2>{tool.nome}</h2>
-                  <p><a href={tool.link}>{tool.link}</a></p>
-                  <p><a href={tool.github}>{tool.github}</a></p>
-                  <p>Descrição: {tool["descrição"]}</p>
-                  <p>Categoria: {tool.categoria}</p>
-                  {Array.isArray(tool.plataforma) ?
-                    <div>
-                      <p>Plataformas:</p>
-                      <ul>
-                      {tool.plataforma.map((plataforma, index) => {
-                          return(
-                            <li key={index}>{plataforma}</li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                  :
-                  <p>Plataforma: {tool.plataforma}</p>
-                  }
-                </div>
-              )
-            })
-            :
+          {toolsData.length > 0 ? (
+            <div className={styles.resultsContainer}>
+              <div className={styles.resultsInfo}>
+                <span className={styles.resultsNumber}>{toolsData.length}</span>{" "}
+                Resultados
+              </div>
+              <div className={styles.cardsContainer}>
+                {toolsData.map((tool, index) => {
+                  return <Card key={index} toolData={tool} />;
+                })}
+              </div>
+            </div>
+          ) : (
             <div>Loading...</div>
-            } 
-          */}
-          </div>
+          )}
         </div>
       </main>
 

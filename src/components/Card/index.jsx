@@ -91,36 +91,6 @@ const Card = ({ toolData }) => {
             color={styles.purple}
           />
         )}
-        {/* <Icon
-            className={styles.platformIcon}
-            icon="mdi:microsoft-windows"
-            color={styles.purple}
-          />
-          <Icon
-            className={styles.platformIcon}
-            icon="simple-icons:linux"
-            color={styles.purple}
-          />
-          <Icon
-            className={styles.platformIcon}
-            icon="simple-icons:macos"
-            color={styles.purple}
-          />
-          <Icon
-            className={styles.platformIcon}
-            icon="simple-icons:android"
-            color={styles.purple}
-          />
-          <Icon
-            className={styles.platformIcon}
-            icon="simple-icons:ios"
-            color={styles.purple}
-          />
-          <Icon
-            className={styles.platformIcon}
-            icon="mdi:web"
-            color={styles.purple}
-          /> */}
       </section>
 
       <footer className={styles.cardFooter}>

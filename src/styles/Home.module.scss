@@ -6,8 +6,26 @@
   margin: 0 auto;
 }
 
+.resultsContainer{
+  margin-top: 3.2em;
+}
+
+.resultsInfo{
+  margin-bottom: 1.3em;
+
+  text-align: right;
+  font-size: 1.3em;
+  color: rgba($color: $purple, $alpha: .4);
+}
+
+.resultsNumber{
+  font-weight: 600;
+}
+
 .cardsContainer{
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 @media #{$desktop-1400-and-up}{
