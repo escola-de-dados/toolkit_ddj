@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react";
 import styles from "./styles.module.scss";
 
 const Card = ({ toolData }) => {
-  const getStyleTag = (category) => {
+  const getCategoryStyle = (category) => {
     switch (category) {
       case "Visualização":
         return styles.visualizacao;
@@ -35,7 +35,7 @@ const Card = ({ toolData }) => {
     switch (platform) {
       case "Windows":
         return "mdi:microsoft-windows";
-      case "MacOS":
+      case "Mac OS":
         return "simple-icons:macos";
       case "Linux":
         return "simple-icons:linux";
@@ -45,6 +45,27 @@ const Card = ({ toolData }) => {
         return "simple-icons:android";
       case "Web":
         return "mdi:web";
+      case "Python":
+        return "mdi:language-python";
+      case "NodeJS":
+        return "mdi:nodejs";
+      case "R":
+        return "mdi:language-r";
+      case "Chrome OS":
+      case "Chrome":
+        return "mdi:google-chrome";
+      case "Firefox":
+        return "mdi:firefox";
+      case "Microsoft Power BI":
+        return "bi:bar-chart-fill";
+      case "Excel":
+        return "mdi:microsoft-excel";
+      case "Localhost":
+        return "mdi:home-floor-l";
+      case "JavaScript":
+        return "mdi:language-javascript";
+      case "Docker Compose":
+        return "mdi:docker";
       default:
         return "mdi:help";
     }
@@ -52,7 +73,7 @@ const Card = ({ toolData }) => {
 
   return (
     <article className={styles.toolCard}>
-      <header>
+      <header className={styles.cardHeader}>
         <h2 className={styles.toolName}>{toolData.nome}</h2>
         <p className={styles.toolDescription}>{toolData["descrição"]}</p>
       </header>
@@ -60,7 +81,7 @@ const Card = ({ toolData }) => {
         <h3 className={styles.toolDetailsTitle}>Categorias</h3>
         <div>
           <span
-            className={`${styles.toolCategory} ${getStyleTag(
+            className={`${styles.toolCategory} ${getCategoryStyle(
               toolData.categoria
             )}`}
           >
@@ -72,36 +93,45 @@ const Card = ({ toolData }) => {
       <section className={styles.toolDetailsContainer}>
         <h3 className={styles.toolDetailsTitle}>Plataformas</h3>
         {Array.isArray(toolData.plataforma) ? (
-          <ul>
+          <ul className={styles.platformList}>
             {toolData.plataforma.map((plataforma, index) => {
               return (
-                <Icon
-                  key={index}
+                <span
+                  title={plataforma}
                   className={styles.platformIcon}
-                  icon={`${getPlatformIcon(plataforma)}`}
-                  color={styles.purple}
-                />
+                  key={index}
+                >
+                  <Icon
+                    icon={`${getPlatformIcon(plataforma)}`}
+                    color={styles.purple}
+                  />
+                </span>
               );
             })}
           </ul>
         ) : (
-          <Icon
-            className={styles.platformIcon}
-            icon={getPlatformIcon(toolData.plataforma)}
-            color={styles.purple}
-          />
+          <span title={toolData.plataforma} className={styles.platformIcon}>
+            <Icon
+              icon={getPlatformIcon(toolData.plataforma)}
+              color={styles.purple}
+            />
+          </span>
         )}
       </section>
 
       <footer className={styles.cardFooter}>
-        <Button className={styles.cardButton}>
-          <Icon icon="mdi:link-variant" color="#fff" />
-          Site
-        </Button>
-        <Button className={styles.cardButton}>
-          <Icon icon="octicon:repo-forked-16" color="#fff" />
-          Repositório
-        </Button>
+        {toolData.link && (
+          <Button className={styles.cardButton} href={toolData.link}>
+            <Icon icon="mdi:link-variant" color="#fff" />
+            Site
+          </Button>
+        )}
+        {toolData.github && (
+          <Button className={styles.cardButton} href={toolData.github}>
+            <Icon icon="octicon:repo-forked-16" color="#fff" />
+            Repositório
+          </Button>
+        )}
       </footer>
     </article>
   );

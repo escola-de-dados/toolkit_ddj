@@ -25,7 +25,9 @@
     github: https://github.com/noduslabs/infranodus
     descrição: "Visualiza textos como redes, sendo possível criar um resumo visual rápido do texto."
     categoria: Redes
-    plataforma: Web, NodeJS
+    plataforma:
+        - Web
+        - NodeJS
     open-source: checked
     destaque: 
     Desativado: 
@@ -45,7 +47,9 @@
     github: https://github.com/oduwsdl/CarbonDate
     descrição: "Serviço online que permite identificar a data de criação de recursos online. Para consultar várias URLs, é recomendada rodar a versão local do software."
     categoria: Obtenção
-    plataforma: Web, Python
+    plataforma:
+        - Web
+        - Python
     open-source: checked
     destaque: 
     Desativado: 
@@ -55,7 +59,10 @@
     github: https://github.com/e2d3/
     descrição: "Permite criar gráficos dinâmicos e interativos no Excel sem programação. Faz a ponte entre uma ferramenta de análise estatística (Excel) e uma ferramenta gráfica (D3.js)."
     categoria: Visualização
-    plataforma: Windows, Linux, Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: 
     destaque: 
     Desativado: 
@@ -95,7 +102,10 @@
     github: https://github.com/tabulapdf/tabula
     descrição: "Liberta tabelas de PDFs. Tem Interface amigável. Não realiza OCR."
     categoria: Limpeza
-    plataforma: Windows, Linux, Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: checked
     Desativado: 
@@ -145,7 +155,10 @@
     github: https://github.com/alephdata
     descrição: "Kit de ferramentas para pesquisa, gerenciamento e análise de dados em contextos investigativos. Para a instalação, é preciso obter o sistema por meio do contêiner Docker."
     categoria: Análise
-    plataforma: Windows, Linux, Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -185,7 +198,10 @@
     github:
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
-    plataforma: Android, iOS, Mac OS
+    plataforma:
+        - Android
+        - iOS
+        - Mac OS
     open-source: 
     destaque: checked
     Desativado: 
@@ -195,7 +211,11 @@
     github: https://github.com/neo4j
     descrição: "Plataforma para criação e manipulação de grafos. Utilizado para o Panama Papers e Paradise Papers."
     categoria: Redes
-    plataforma: Web, Mac OS, Windows, Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -215,7 +235,9 @@
     github: https://github.com/associatedpress/geomancer/
     descrição: "Adiciona dados geográficos para tabelas com localização como texto, por exemplo, endereços."
     categoria: Cartografia
-    plataforma: Web, Python
+    plataforma:
+        - Web
+        - Python
     open-source: checked
     destaque: checked
     Desativado: 
@@ -245,7 +267,10 @@
     github: https://github.com/dataproofer/Dataproofer
     descrição: "Ferramenta para automatizar a validação de conjuntos de dados."
     categoria: Limpeza
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -255,7 +280,11 @@
     github: https://github.com/scrapinghub/portia
     descrição: "Ferramenta para raspagem de dados de forma visual."
     categoria: Obtenção
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -415,7 +444,10 @@
     github: https://github.com/Linkurious
     descrição: "Ferramenta web para construção de grafos. Permite integração com datasets de bilhões de linhas. Possibilita análise de bases orientadas a grafos."
     categoria: Redes
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -435,8 +467,10 @@
     github:
     descrição: "Extensão para o ChromeOS de ferramenta de extração de informações de páginas da web, que permite exportação de dados em Excel ou arquivo CSV."
     categoria: Obtenção
-    plataforma: Web,Chrome
-    open-source: 
+    plataforma:
+        - Web
+        - Chrome
+    open-source:
     destaque: 
     Desativado: 
 -
@@ -495,7 +529,10 @@
     github: https://github.com/biolab/orange3
     descrição: "Ferramenta que permite construir fluxos de trabalho para análise e visualização de dados, inclusive com módulos de aprendizado de máquina."
     categoria: Análise
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -505,7 +542,10 @@
     github: https://github.com/Microsoft/timelinestoryteller
     descrição: "Ferramenta de representação de aspectos de dados em linha do tempo no navegador ou no Microsoft Power BI."
     categoria: Visualização
-    plataforma: Web,Localhost,Microsoft Power BI
+    plataforma:
+        - Web
+        - Localhost
+        - Microsoft Power BI
     open-source: checked
     destaque: 
     Desativado: 
@@ -525,7 +565,11 @@
     github: https://github.com/postmanlabs
     descrição: "Ferramenta para exploração de APIs."
     categoria: Análise
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -575,7 +619,10 @@
     github: https://github.com/apache/hadoop
     descrição: "Software de código aberto para processar grandes bases de dados."
     categoria: Análise
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -605,7 +652,10 @@
     github: https://github.com/OpenRefine/OpenRefine
     descrição: "Plataforma para limpeza de dados. Com os diferenciais: cluster and edit."
     categoria: Limpeza
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: checked
     Desativado: 
@@ -625,7 +675,10 @@
     github: https://github.com/graphcommons
     descrição: "Ferramenta que permite visualização de redes. É gratuita para projetos com dados públicos e abertos. Pode ser incorporada via HTML."
     categoria: Redes
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -645,7 +698,10 @@
     github: https://github.com/Waikato/weka-wiki
     descrição: "Coleção de algoritmos de aprendizado de máquina e pré-processamento de dados."
     categoria: Multi
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -685,7 +741,11 @@
     github: https://github.com/metabase/metabase
     descrição: "Navegador de dados, com linguagem SQL."
     categoria: Análise
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -715,7 +775,10 @@
     github: https://github.com/Kong/insomnia
     descrição: "Plataforma para interação com APIs baseadas em HTTP."
     categoria: Obtenção
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -735,7 +798,10 @@
     github:
     descrição: "Ferramenta paga para criação de tree maps."
     categoria: Visualização
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: 
     destaque: 
     Desativado: 
@@ -855,7 +921,9 @@
     github: https://github.com/invideu/invid-verification-plugin
     descrição: "Verifica a confiabilidade e precisão de arquivos de vídeo. "
     categoria: Análise
-    plataforma: Chrome,Mozilla Firefox
+    plataforma:
+        - Chrome
+        - Mozilla Firefox
     open-source: checked
     destaque: 
     Desativado: 
@@ -865,7 +933,11 @@
     github: https://github.com/OpenDroneMap/
     descrição: "Kit de ferramentas de exploração de dados espaciais aéreos."
     categoria: Cartografia
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -875,7 +947,10 @@
     github: https://github.com/sqlitebrowser/sqlitebrowser
     descrição: "Programa que permite visualizar, editar e executar consultas com SQL. Permite navegar ou alterar dados, executar scripts, exportar e imprimir dados."
     categoria: Análise
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: checked
     Desativado: 
@@ -885,7 +960,10 @@
     github: https://github.com/atutor/cmap
     descrição: "Contrutor de mapas conceituais colaborativos para representar modelos de conhecimento."
     categoria: Redes
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -895,7 +973,11 @@
     github: https://github.com/sentinel-hub
     descrição: "Ferramenta para processamento de petabytes de dados de satélite."
     categoria: Cartografia
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: checked
     Desativado: 
@@ -925,7 +1007,11 @@
     github: https://github.com/simonw/datasette
     descrição: "Ferramenta para explorar e publicar dados de maneira interativa."
     categoria: Publicação
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -975,7 +1061,11 @@
     github: https://github.com/google/earthenterprise
     descrição: "Programa que apresenta modelos tridimensionais do globo terrestre. Também permite o carregamento e edição de dados geográficos."
     categoria: Cartografia
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: 
     destaque: 
     Desativado: 
@@ -1015,7 +1105,9 @@
     github: https://github.com/qgis/QGIS-Django
     descrição: "Pugins para visualização de DEM e dados vetoriais em 3D em navegadores da web."
     categoria: Cartografia
-    plataforma: Web,JavaScript
+    plataforma:
+        - Web
+        - JavaScript
     open-source: checked
     destaque: 
     Desativado: 
@@ -1025,7 +1117,10 @@
     github: https://github.com/saulpw/visidata
     descrição: "Editor de planilhas na linha de comando."
     categoria: Análise
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1065,7 +1160,10 @@
     github: https://github.com/tesseract-ocr/tesseract
     descrição: "Software de reconhecimento ótico de caracteres, com código aberto. Para os PDFs que são imagem!"
     categoria: Limpeza
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1075,7 +1173,10 @@
     github: https://github.com/rstudio
     descrição: "Programa que traz uma interface gráfica mais amigável para utilizar o R. R = linguagem de programação para gráficos e cálculos estatísticos."
     categoria: Multi
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1095,7 +1196,10 @@
     github: https://github.com/BurntSushi/xsv
     descrição: "Kit de ferramentas de linha de comando para analisar e combinar arquivios CSV."
     categoria: Multi
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1135,7 +1239,10 @@
     github: https://github.com/sherlock-project/sherlock
     descrição: "Ferramenta usada para localizar nomes de usuários em redes sociais."
     categoria: Obtenção
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1155,7 +1262,11 @@
     github: https://github.com/tableau
     descrição: "Como andar de bicicleta: aprender pode ser um pouco doloroso, mas depois fica mole-mole e é só alegria. É uma ferramenta poderosa para análise e visualização de dados. A versão gratuita atende muito bem ao jornalismo. Conferências inteiras são realizadas em torno dela."
     categoria: Visualização
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: 
     destaque: 
     Desativado: 
@@ -1195,7 +1306,10 @@
     github: https://github.com/paterva/maltego-trx
     descrição: "Interface visual para coleta, vinculação e combinação de informações."
     categoria: Obtenção
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1225,7 +1339,11 @@
     github: https://github.com/qgis/
     descrição: "Ferramenta de criação e manipulação de mapas."
     categoria: Cartografia
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -1255,7 +1373,9 @@
     github: https://github.com/NUKnightLab/StoryMapJS
     descrição: "Ferramenta que possibilita plotar narrativas em mapas. Se conecta com fotos e vídeos."
     categoria: Cartografia
-    plataforma: Web,Localhost
+    plataforma:
+        - Web
+        - Localhost
     open-source: checked
     destaque: checked
     Desativado: 
@@ -1265,7 +1385,10 @@
     github: https://github.com/medialab/manylines
     descrição: "Ferramenta de visualização de grafos."
     categoria: Redes
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: checked
     Desativado: 
@@ -1275,7 +1398,10 @@
     github: https://github.com/gephi/gephi
     descrição: "Principal solução de código aberto para visualização de grafos. Permite realizar análise e visualização de redes, por meio da interface gráfica."
     categoria: Redes
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: checked
     destaque: 
     Desativado: 
@@ -1305,7 +1431,9 @@
     github: https://github.com/webscraperio
     descrição: "Extensão do Chrome. Funciona dentro do webinspector. Raspa dados sem necessidade de programação."
     categoria: Obtenção
-    plataforma: Chrome,Mozilla Firefox
+    plataforma:
+        - Chrome
+        - Mozilla Firefox
     open-source: checked
     destaque: checked
     Desativado: 
@@ -1325,7 +1453,10 @@
     github: https://github.com/dataiku
     descrição: "Ferramenta para facilitar o trabalho com aplicações de inteligência artificial."
     categoria: Multi
-    plataforma: Windows,Linux,Mac OS
+    plataforma:
+        - Windows
+        - Linux
+        - Mac OS
     open-source: 
     destaque: 
     Desativado: 
@@ -1365,7 +1496,11 @@
     github: https://github.com/overview
     descrição: "Ferramenta de visualização e análise projetada para conjuntos de documentos massivos. Suporta diversos formatos e permite a pesonalização de plugins através de uma API."
     categoria: Análise
-    plataforma: Web,Mac OS,Windows,Linux
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: checked
     destaque: 
     Desativado: 
@@ -1375,7 +1510,10 @@
     github: https://github.com/geonetwork/core-geonetwork
     descrição: "Ferramenta de catálogo para gerenciar recursos georreferenciados. Disponibiliza funções de edição, pesquisa de metadados e visualização de mapa interativo."
     categoria: Cartografia
-    plataforma: Windows,Linux,Localhost
+    plataforma:
+        - Windows
+        - Linux
+        - Localhost
     open-source: checked
     destaque: 
     Desativado: 
@@ -1385,7 +1523,9 @@
     github: https://github.com/airbytehq/airbyte
     descrição: "Plataforma para integração e processamento ETL de armazenamento de dados."
     categoria: Multi
-    plataforma: Localhost,Docker Compose
+    plataforma:
+        - Localhost
+        - Docker Compose
     open-source: checked
     destaque: 
     Desativado: 

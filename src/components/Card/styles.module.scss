@@ -12,14 +12,18 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: flex-start;
-  padding: 2.2em 1.8em 3.2em;
+  padding: 2.2em 1.8em 3em;
 
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+}
+
+.cardHeader{
+  min-height: 35%;
 }
 
 .toolName{
@@ -30,6 +34,10 @@
 
 .toolDetailsContainer{
   margin: 1em 0;
+}
+
+.toolDetailsContainer:last-child{
+  margin-bottom: 2em;
 }
 
 .toolDetailsTitle{
@@ -73,6 +81,11 @@
   }
 }
 
+.platformList{
+  margin: 0;
+  padding: 0;
+}
+
 .platformIcon{
   margin-right: .5em;
   font-size: 1.8em;
@@ -80,7 +93,7 @@
 
 .cardFooter{
   width: 100%;
-  margin-top: 1.5em;
+  margin-top: auto;
 
   display: flex;
   justify-content: space-around;

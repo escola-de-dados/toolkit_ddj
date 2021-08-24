@@ -89,9 +89,10 @@ export default function Home() {
                 Resultados
               </div>
               <div className={styles.cardsContainer}>
-                {toolsData.map((tool, index) => {
-                  return <Card key={index} toolData={tool} />;
-                })}
+                {toolsData.map(
+                  (tool, index) =>
+                    !tool.desativado && <Card key={index} toolData={tool} />
+                )}
               </div>
             </div>
           ) : (
