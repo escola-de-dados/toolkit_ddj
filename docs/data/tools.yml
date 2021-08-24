@@ -1,7 +1,7 @@
 ---
 -
     nome: "GloVis"
-    link: glovis.usgs.gov/
+    link: https://glovis.usgs.gov/
     github:
     descrição: "Biblioteca de dados de sensoriamento remoto, com diversas imagens de satélite."
     categoria: Cartografia
@@ -11,7 +11,7 @@
     Desativado: 
 -
     nome: "PDF Tables"
-    link: pdftables.com/
+    link: https://pdftables.com/
     github: https://github.com/pdftables
     descrição: "Conversor de tabelas em PDFs para formatos abertos (CSV, por exemplo)."
     categoria: Limpeza
@@ -28,34 +28,34 @@
     plataforma:
         - Web
         - NodeJS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Data Plotly"
-    link: github.com/ghtmtt/DataPlotly
+    link: https://github.com/ghtmtt/DataPlotly
     github: https://github.com/ghtmtt/DataPlotly
-    descrição: "Permite trabalhar com gráficos no estilo daqueles feitos com D3.JS, dentro do QGIS."
+    descrição: "Permite trabalhar com gráficos no estilo daqueles feitos com https://D3.JS, dentro do QGIS."
     categoria: Cartografia
     plataforma: Python
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Carbondate"
-    link: carbondate.cs.odu.edu/
+    link: https://carbondate.cs.odu.edu/
     github: https://github.com/oduwsdl/CarbonDate
     descrição: "Serviço online que permite identificar a data de criação de recursos online. Para consultar várias URLs, é recomendada rodar a versão local do software."
     categoria: Obtenção
     plataforma:
         - Web
         - Python
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "E2D3"
-    link: e2d3.org/en/
+    link: https://e2d3.org/en/
     github: https://github.com/e2d3/
     descrição: "Permite criar gráficos dinâmicos e interativos no Excel sem programação. Faz a ponte entre uma ferramenta de análise estatística (Excel) e uma ferramenta gráfica (D3.js)."
     categoria: Visualização
@@ -68,7 +68,7 @@
     Desativado: 
 -
     nome: "Dedupelist"
-    link: www.dedupelist.com/
+    link: https://www.dedupelist.com/
     github:
     descrição: "Solução online para remover duplicatas de listas."
     categoria: Limpeza
@@ -78,7 +78,7 @@
     Desativado: 
 -
     nome: "Wordcounter"
-    link: wordcounter.net/
+    link: https://wordcounter.net/
     github:
     descrição: "Ferramenta de contagem de palavras e caracteres, que identifica e sugere palavras-chave."
     categoria: Análise
@@ -88,7 +88,7 @@
     Desativado: 
 -
     nome: "Data-CLI (Datahub)"
-    link: datahub.io/
+    link: https://datahub.io/
     github: https://github.com/datopian/data-cli
     descrição: "Plataforma que fornece um repositório de dados online e uma ferramenta via linha de comando que facilita a publicação de dados online."
     categoria: Publicação
@@ -98,7 +98,7 @@
     Desativado: 
 -
     nome: "Tabula"
-    link: tabula.technology
+    link: https://tabula.technology
     github: https://github.com/tabulapdf/tabula
     descrição: "Liberta tabelas de PDFs. Tem Interface amigável. Não realiza OCR."
     categoria: Limpeza
@@ -106,17 +106,17 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "DataVoyager"
     link: https://vega.github.io/voyager/
-    github: github.com/vega/voyager
+    github: https://github.com/vega/voyager
     descrição: "Ferramenta de exploração de dados que produz sumários estatísticos automatizados direto do navegador."
     categoria: Análise
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -126,27 +126,27 @@
     descrição: "Raspador automatizado de dados estruturados de páginas da web, que não requer programações específicas para cada site. "
     categoria: Obtenção
     plataforma: Python
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "ElasticSearch"
-    link: www.elastic.co/
+    link: https://www.elastic.co/
     github: https://github.com/elastic/elasticsearch
     descrição: "Servidor de buscas baseado em Java, especializado em indexação e buscas ultra rápidas. É um motor de pesquisa textual altamente escalável, que permite armazenar e analisar grandes volumes de informações praticamente em tempo real."
     categoria: Análise
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Visdown"
-    link: visdown.com/
+    link: https://visdown.com/
     github: https://github.com/amitkaps/visdown
     descrição: "Cria visualizações usando markdown."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -159,17 +159,17 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "MapShaper"
-    link: mapshaper.org/
+    link: https://mapshaper.org/
     github: https://github.com/mbloch/mapshaper
     descrição: "Software para edição de Shapefile, GeoJSON, TopoJSON , CSV e arquivos escritos em JavaScript."
     categoria: Cartografia
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -177,14 +177,14 @@
     link: http://wordwanderer.org/
     github: https://github.com/nrchtct/WordWanderer
     descrição: "Ferramenta que cria visualizações de textos."
-    categoria: Texto
+    categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Infogram"
-    link: infogram.com/
+    link: https://infogram.com/
     github: https://github.com/infogram
     descrição: "Ferramenta de visualização de dados. Cria diferentes tipos de gráficos, com interface de edição amigável."
     categoria: Visualização
@@ -194,7 +194,7 @@
     Desativado: 
 -
     nome: "SnapPlanet"
-    link: snapplanet.io/
+    link: https://snapplanet.io/
     github:
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
@@ -203,11 +203,11 @@
         - iOS
         - Mac OS
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "Neo4J"
-    link: neo4j.com/
+    link: https://neo4j.com/
     github: https://github.com/neo4j
     descrição: "Plataforma para criação e manipulação de grafos. Utilizado para o Panama Papers e Paradise Papers."
     categoria: Redes
@@ -216,12 +216,12 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "VIS: Visual Investigative Scenarios"
-    link: vis.occrp.org/
+    link: https://vis.occrp.org/
     github:
     descrição: "Ferramenta para visualização de redes relacionais. Não requer programação. Pode ser incorporada no código do seu site."
     categoria: Visualização
@@ -231,15 +231,15 @@
     Desativado: 
 -
     nome: "Geomancer"
-    link: geomancer.io/
+    link: https://geomancer.io/
     github: https://github.com/associatedpress/geomancer/
     descrição: "Adiciona dados geográficos para tabelas com localização como texto, por exemplo, endereços."
     categoria: Cartografia
     plataforma:
         - Web
         - Python
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Parserator"
@@ -248,17 +248,17 @@
     descrição: "Analisa e divide textos não estruturados e transforma em dados estruturados. Funciona para endereços e nomes."
     categoria: Limpeza
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "HTMLWidgets"
-    link: www.htmlwidgets.org/
+    link: https://www.htmlwidgets.org/
     github: https://github.com/ramnathv/htmlwidgets
     descrição: "Permite utilizar bibliotecas de visualização de dados de JavaScript (como D3) diretamente no R."
     categoria: Visualização
     plataforma: R
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -271,7 +271,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -285,28 +285,28 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "CKAN"
-    link: ckan.org/
+    link: https://ckan.org/
     github: https://github.com/ckan/ckan
     descrição: "Plataforma da Open Knowledge para portais de dados abertos, que permite organizar repositórios de conjuntos de dados (datasets)."
     categoria: Publicação
     plataforma: Python
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Datawrapper"
-    link: www.datawrapper.de/
+    link: https://www.datawrapper.de/
     github: https://github.com/datawrapper/datawrapper
     descrição: "Plataforma online para criar gráficos e mapas. Gratuita até 10.000 visualizações."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Google Earth Studio"
@@ -316,11 +316,11 @@
     categoria: Cartografia
     plataforma: Web
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "Trifacta"
-    link: vis.stanford.edu/wrangler/
+    link: https://vis.stanford.edu/wrangler/
     github:
     descrição: "Ferramenta para limpeza e transformação de dados. O projeto foi descontinuado."
     categoria: Limpeza
@@ -330,12 +330,12 @@
     Desativado: 
 -
     nome: "TimeMapper"
-    link: timemapper.okfnlabs.org/
+    link: https://timemapper.okfnlabs.org/
     github: https://github.com/okfn/timemapper
     descrição: "Cria cronologias em cima de mapas. Permite navegar sobre imagens."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -350,7 +350,7 @@
     Desativado: 
 -
     nome: "Crowdtangle"
-    link: www.crowdtangle.com/
+    link: https://www.crowdtangle.com/
     github: https://github.com/CrowdTangle
     descrição: "Ferramenta para rastrear a difusão de conteúdo no Facebook e identificar tendências e influenciadores. Jornalistas podem conseguir acesso gratuito."
     categoria: Redes
@@ -360,27 +360,27 @@
     Desativado: 
 -
     nome: "Mr data converter"
-    link: shancarter.github.io/mr-data-converter/
+    link: https://shancarter.github.io/mr-data-converter/
     github: https://github.com/shancarter/Mr-Data-Converter
     descrição: "Converte dados do Excel em formatos amigáveis ​​para a web."
     categoria: Limpeza
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "DocumentCloud"
-    link: www.documentcloud.org/
+    link: https://www.documentcloud.org/
     github: https://github.com/documentcloud
     descrição: "Catálogo online de documentos para jornalistas. Facilita a compreensão dos documentos, por meio da classificação de entidades (datas, pessoas, etc) e outros recursos."
     categoria: Análise
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Google Dataprep"
-    link: cloud.google.com/dataprep/
+    link: https://cloud.google.com/dataprep/
     github: https://github.com/victorcouste/google-cloudfunctions-dataprep
     descrição: "Ferramenta Google para data limpeza de dados, com interface amigável. Tem possibilidade de edição compartilhada."
     categoria: Limpeza
@@ -389,18 +389,8 @@
     destaque: 
     Desativado: 
 -
-    nome: "Timeline Storyteller"
-    link: timelinestoryteller.com/
-    github: https://github.com/Microsoft/timelinestoryteller
-    descrição: "Ferramenta para criar linhas do tempo e séries temporais em diferentes tipos de representação."
-    categoria: Visualização
-    plataforma: Web
-    open-source: checked
-    destaque: 
-    Desativado: 
--
     nome: "Cometdots"
-    link: www.cometdocs.com/
+    link: https://www.cometdocs.com/
     github: https://github.com/Pragmateek/CometDocs
     descrição: "Serviço de conversão de arquivos PDF em diferentes formatos. Possui uma API para conversão automática de arquivos em lote."
     categoria: Limpeza
@@ -410,37 +400,40 @@
     Desativado: 
 -
     nome: "Collaborate"
-    link: github.com/propublica/django-collaborative
+    link: https://github.com/propublica/django-collaborative
     github: https://github.com/propublica/django-collaborative
     descrição: "Aplicativo web para coleta e gerenciamento de informações a partir de consultas públicas. Voltado especialmente para jornalistas que buscam ajuda do público para produzir pautas."
     categoria: Análise
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Cytoscape"
-    link: cytoscape.org/
+    link: https://cytoscape.org/
     github: https://github.com/cytoscape
     descrição: "Ferramenta para visualizar redes complexas."
     categoria: Redes
-    plataforma: Mac OS,Windows,Linux
-    open-source: checked
+    plataforma:
+        - Mac OS
+        - Windows
+        - Linux
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Airtable"
-    link: airtable.com
+    link: https://airtable.com
     github: https://github.com/Airtable
     descrição: "Banco de dados com interface de planilha. Útil para edições colaborativas e visualizações dos registros das tabelas em outros formatos (galeria, formulário, kanban, gantt, etc)."
     categoria: Multi
     plataforma: Web
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "Linkurious"
-    link: linkurio.us/
+    link: https://linkurio.us/
     github: https://github.com/Linkurious
     descrição: "Ferramenta web para construção de grafos. Permite integração com datasets de bilhões de linhas. Possibilita análise de bases orientadas a grafos."
     categoria: Redes
@@ -448,17 +441,17 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Timelinecurator"
-    link: timelinecurator.org/
+    link: https://timelinecurator.org/
     github: https://github.com/jo-fu/TimeLineCurator
     descrição: "Ferramenta que extrai referências temporais de textos para gerar uma linha do tempo visual."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -469,7 +462,7 @@
     categoria: Obtenção
     plataforma:
         - Web
-        - Chrome
+        - Chrome OS
     open-source:
     destaque: 
     Desativado: 
@@ -480,22 +473,22 @@
     descrição: "Combina raspagem, análise e visualização de forma simples. Funciona a partir de módulos que podem ser facilmente montados em um “fluxo de trabalho”. É compartilhável e produz gráficos publicáveis ou uma API."
     categoria: Multi
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Voyant Tools"
     link: voyant-tools.org/
     github: https://github.com/sgsinclair/Voyant
     descrição: "Ferramenta de leitura e análise de textos digitais."
-    categoria: Texto
+    categoria: Análise
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "R Notebook"
-    link: rnotebook.io/
+    link: https://rnotebook.io/
     github:
     descrição: "Bloco de notas e editor de códigos disponível para uso na web."
     categoria: Programação
@@ -505,17 +498,17 @@
     Desativado: 
 -
     nome: "TAGS"
-    link: tags.hawksey.info/
+    link: https://tags.hawksey.info/
     github: https://github.com/mhawksey/TwtrService
     descrição: "Template do sheets que coleta tweets a partir de resultados de uma busca. É facilmente configurável."
     categoria: Redes
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Google Form"
-    link: www.google.com/forms/about/
+    link: https://www.google.com/forms/about/
     github:
     descrição: "Ferramenta do Google para produzir questionários online. Permite personalizar os formulários para coleta de dados por meio de perguntas múltipla escolha, escalas, listas suspensas e outras opções."
     categoria: Obtenção
@@ -533,30 +526,29 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
-    nome: "Timelinestoryteller"
-    link: timelinestoryteller.com/
+    nome: "Timeline Storyteller"
+    link: https://timelinestoryteller.com/
     github: https://github.com/Microsoft/timelinestoryteller
     descrição: "Ferramenta de representação de aspectos de dados em linha do tempo no navegador ou no Microsoft Power BI."
     categoria: Visualização
     plataforma:
         - Web
-        - Localhost
         - Microsoft Power BI
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Tiled Maps - Brasil"
-    link: pitchinteractiveinc.github.io/tilegrams/
+    link: https://pitchinteractiveinc.github.io/tilegrams/
     github: https://github.com/PitchInteractiveInc/tilegrams
     descrição: "Ferramenta que gera mapas lado a lado onde as regiões são dimensionadas proporcionalmente a um conjunto de dados."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -570,7 +562,7 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -580,12 +572,12 @@
     descrição: "Ferramenta de código-aberto para transformar PDFs em tabelas."
     categoria: Limpeza
     plataforma: Python
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Fastcharts"
-    link: fastcharts.io/
+    link: https://fastcharts.io/
     github:
     descrição: "Ferramenta online do Financial Times parar criar visualizações de dados rapidamente direto do navegador."
     categoria: Visualização
@@ -595,17 +587,17 @@
     Desativado: 
 -
     nome: "Goodtables"
-    link: try.goodtables.io/
+    link: https://try.goodtables.io/
     github: https://github.com/frictionlessdata/goodtables.io
     descrição: "Verifica dados tabulares em busca de problemas estruturais, útil para a validação de dados."
     categoria: Limpeza
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Typing"
-    link: typing.io/
+    link: https://typing.io/
     github:
     descrição: "Serviço web para treinar escrita de código. Serve para diferentes linguagens (JavaScript, Ruby, C, C ++, Java, PHP, Perl, Haskell, Scala e outras)."
     categoria: Programação
@@ -615,7 +607,7 @@
     Desativado: 
 -
     nome: "Hadoop"
-    link: hadoop.apache.org/
+    link: https://hadoop.apache.org/
     github: https://github.com/apache/hadoop
     descrição: "Software de código aberto para processar grandes bases de dados."
     categoria: Análise
@@ -623,7 +615,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -643,12 +635,12 @@
     descrição: "Plataforma de dados geográfica, com destaque para as possibilidades de customização visual."
     categoria: Cartografia
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Open Refine"
-    link: openrefine.org/
+    link: https://openrefine.org/
     github: https://github.com/OpenRefine/OpenRefine
     descrição: "Plataforma para limpeza de dados. Com os diferenciais: cluster and edit."
     categoria: Limpeza
@@ -656,12 +648,12 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Google Sheets"
-    link: www.google.com/sheets/about/
+    link: https://www.google.com/sheets/about/
     github:
     descrição: "O editor de planilhas do Google. Funciona online e permite criar documentos compartilháveis e facilita a edição colaborativa."
     categoria: Multi
@@ -671,7 +663,7 @@
     Desativado: 
 -
     nome: "Graph Commons"
-    link: graphcommons.com/
+    link: https://graphcommons.com/
     github: https://github.com/graphcommons
     descrição: "Ferramenta que permite visualização de redes. É gratuita para projetos com dados públicos e abertos. Pode ser incorporada via HTML."
     categoria: Redes
@@ -679,7 +671,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -689,7 +681,7 @@
     descrição: "Bloco de notas editor de códigos."
     categoria: Programação
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -702,7 +694,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -712,32 +704,32 @@
     descrição: "Ferramenta online para facilitar a visualização da disseminação de informação no Twitter. Muito útil para investigar desinformação e em checagem de fatos."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Ushahidi"
-    link: www.ushahidi.com/
+    link: https://www.ushahidi.com/
     github: https://github.com/ushahidi
     descrição: "Ferramenta para a coleta de informações, visualização e mapeamento interativo. Coleta crowdsourcing de dados: do twitter, de celulares, etc."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Jupyter"
-    link: jupyter.org/
+    link: https://jupyter.org/
     github: https://github.com/jupyter
     descrição: "Aplicativo que produz documentos com códigos de programação (por exemplo, em Python) e elementos de texto (parágrafo, equações, figuras, links, etc). São documentos legíveis por humanos e executáveis por computador (para realizar a análise de dados, por exemplo)."
     categoria: Multi
     plataforma: Python
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Metabase"
-    link: metabase.com/
+    link: https://metabase.com/
     github: https://github.com/metabase/metabase
     descrição: "Navegador de dados, com linguagem SQL."
     categoria: Análise
@@ -746,22 +738,22 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "ColorBrewer2"
-    link: colorbrewer2.org/
+    link: https://colorbrewer2.org/
     github: https://github.com/axismaps/colorbrewer/
     descrição: "Ferramenta que sugere paleta de cores para utilização em mapas. "
     categoria: Visualização
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Public Data Explorer"
-    link: www.google.com/publicdata
+    link: https://www.google.com/publicdata
     github:
     descrição: "Facilita a exploração e visualização de grandes conjuntos de dados públicos relevantes. Funciona melhor em ENG. Permite o upload e compartilhamento de bases próprias."
     categoria: Visualização
@@ -771,7 +763,7 @@
     Desativado: 
 -
     nome: "Insomnia"
-    link: insomnia.rest
+    link: https://insomnia.rest
     github: https://github.com/Kong/insomnia
     descrição: "Plataforma para interação com APIs baseadas em HTTP."
     categoria: Obtenção
@@ -779,7 +771,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -789,12 +781,12 @@
     descrição: "Ferramenta de organização para projetos baseados em dados, criada pela agência jornalística The Associated Press."
     categoria: Publicação
     plataforma: Python
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "TreeMap"
-    link: www.treemap.com/
+    link: https://www.treemap.com/
     github:
     descrição: "Ferramenta paga para criação de tree maps."
     categoria: Visualização
@@ -807,27 +799,27 @@
     Desativado: 
 -
     nome: "Geodata Merger"
-    link: funkeinteraktiv.github.io/geo-data-merger/
+    link: https://funkeinteraktiv.github.io/geo-data-merger/
     github: https://github.com/funkeinteraktiv/geo-data-merger
     descrição: "Mescla dados geográficos de arquivos csv, json, geo e topojson."
     categoria: Cartografia
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Tulip"
-    link: code.minnpost.com/tulip/
+    link: https://code.minnpost.com/tulip/
     github: https://github.com/MinnPost/tulip
     descrição: "Ferramenta útil para estilizar mapas coropléticos. Parte de arquivos GeoJSON (formato para dados geográficos baseado em JSON)."
     categoria: Cartografia
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Import.IO"
-    link: www.import.io/
+    link: https://www.import.io/
     github: https://github.com/import-io
     descrição: "Ferramenta que permite realizar raspagem de dados sem programação. Tem interface amigável. É uma ferramenta paga."
     categoria: Obtenção
@@ -842,22 +834,22 @@
     descrição: "Cria visualizações, distribuições e escalas para dados."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Carto"
-    link: carto.com/builder/
+    link: https://carto.com/builder/
     github: https://github.com/CartoDB
     descrição: "Ferramenta de visualização de dados geográficos. Destaca-se pelas possibilidades de armazenamento, análise, processamento dos dados geográficos e recursos para geocodificação dos endereços."
     categoria: Cartografia
     plataforma: Web
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "NodeXL"
-    link: nodexl.codeplex.com/
+    link: https://nodexl.codeplex.com/
     github: https://github.com/yharshil/NodeXL
     descrição: "Extensão do Microsoft Excel. Permite a análise de redes e tem a opção de captura de dados do Twitter, Facebook, Youtube e Flickr."
     categoria: Redes
@@ -872,7 +864,7 @@
     descrição: "Ferramenta de criação de designs, animações ou visualizações interativas a partir de dados."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -882,37 +874,37 @@
     descrição: "Ferramenta de raspagem de dados do YouTube."
     categoria: Obtenção
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Web Archive"
-    link: web.archive.org/
+    link: https://web.archive.org/
     github: https://github.com/internetarchive
     descrição: "Biblioteca digital de sites da Internet."
     categoria: Obtenção
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "TensorFlow"
-    link: www.tensorflow.org/
+    link: https://www.tensorflow.org/
     github: https://github.com/tensorflow/
     descrição: "Biblioteca para aprendizado de máquina, lançada pelo Google. Permite treinamento de redes neurais para detectar e decifrar padrões e correlações."
     categoria: Análise
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Vega"
-    link: vega.github.io/vega/about/
+    link: https://vega.github.io/vega/about/
     github: https://github.com/vega/vega
     descrição: "Ferramenta para descrever visualizações de dados em formato JSON e gerar visualizações interativas usando HTML5 Canvas ou SVG."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -923,8 +915,8 @@
     categoria: Análise
     plataforma:
         - Chrome
-        - Mozilla Firefox
-    open-source: checked
+        - Firefox
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -938,12 +930,12 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "DB Browser"
-    link: sqlitebrowser.org/
+    link: https://sqlitebrowser.org/
     github: https://github.com/sqlitebrowser/sqlitebrowser
     descrição: "Programa que permite visualizar, editar e executar consultas com SQL. Permite navegar ou alterar dados, executar scripts, exportar e imprimir dados."
     categoria: Análise
@@ -951,8 +943,8 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Cmap Tools"
@@ -964,12 +956,12 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "SentinelHub"
-    link: apps.sentinel-hub.com/eo-browser/
+    link: https://apps.sentinel-hub.com/eo-browser/
     github: https://github.com/sentinel-hub
     descrição: "Ferramenta para processamento de petabytes de dados de satélite."
     categoria: Cartografia
@@ -978,8 +970,8 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "DataStudio"
@@ -993,7 +985,7 @@
     Desativado: 
 -
     nome: "SameDiff"
-    link: databasic.io/pt/samediff/
+    link: https://databasic.io/pt/samediff/
     github:
     descrição: "Compara arquivos de texto, para mostrar semelhaças e diferenças."
     categoria: Análise
@@ -1012,17 +1004,17 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Graph tips"
-    link: graph.tips/beta/
+    link: https://graph.tips/beta/
     github: https://github.com/sowdust/sowdust.github.io
     descrição: "Interface que facilita a busca avançada no Facebook."
     categoria: Obtenção
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1031,13 +1023,15 @@
     github: https://github.com/apache/zeppelin
     descrição: "Bloco de notas multifuncional para análise e visualização de dados, com suporte a SQL, Scala, Python e outras linguagens."
     categoria: Análise
-    plataforma: Mac OS,Linux
-    open-source: checked
+    plataforma:
+        - Mac OS
+        - Linux
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Piktochart"
-    link: piktochart.com/
+    link: https://piktochart.com/
     github: https://github.com/piktochart
     descrição: "Ferramenta para a construção de infográficos. Tem interface amigável, que parte de templates básicos formatáveis."
     categoria: Visualização
@@ -1047,17 +1041,17 @@
     Desativado: 
 -
     nome: "Databin"
-    link: databin.pudo.org/
+    link: https://databin.pudo.org/
     github: https://github.com/pudo/databin
     descrição: "Ferramenta para facilitar o compartilhamento de tabelas na web."
     categoria: Publicação
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Google Earth"
-    link: www.google.com/earth/
+    link: https://www.google.com/earth/
     github: https://github.com/google/earthenterprise
     descrição: "Programa que apresenta modelos tridimensionais do globo terrestre. Também permite o carregamento e edição de dados geográficos."
     categoria: Cartografia
@@ -1071,12 +1065,12 @@
     Desativado: 
 -
     nome: "CSV fingerprint"
-    link: setosa.io/csv-fingerprint/
+    link: https://setosa.io/csv-fingerprint/
     github: https://github.com/setosa/csv-fingerprint
     descrição: "Gerador de visualizações rápidas do conteúdo de arquivos CSV, para ajudar a identificar problemas na limpeza dos dados."
     categoria: Análise
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1091,24 +1085,24 @@
     Desativado: 
 -
     nome: "Timeline Knightlab"
-    link: timeline.knightlab.com/
+    link: https://timeline.knightlab.com/
     github: https://github.com/NUKnightLab/TimelineJS3
     descrição: "Ferramenta web que possibilita a criação de cronologias. Tem interface de edição baseada no Google Sheets."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Qgis2threejs"
-    link: plugins.qgis.org/plugins/Qgis2threejs/
+    link: https://plugins.qgis.org/plugins/Qgis2threejs/
     github: https://github.com/qgis/QGIS-Django
     descrição: "Pugins para visualização de DEM e dados vetoriais em 3D em navegadores da web."
     categoria: Cartografia
     plataforma:
         - Web
         - JavaScript
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1121,7 +1115,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1131,12 +1125,12 @@
     descrição: "Navegador de bancos de dados com linguagem SQL."
     categoria: Análise
     plataforma: Localhost
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Netlytic"
-    link: netlytic.org/
+    link: https://netlytic.org/
     github:
     descrição: "Ferramenta de monitoramento de mídias sociais. É paga, mas possui planos mais baratos que os apps comerciais. Tem interface com Twitter, Facebook, YouTube, Instagram, Feeds e Google Drive."
     categoria: Redes
@@ -1146,7 +1140,7 @@
     Desativado: 
 -
     nome: "Kumu"
-    link: kumu.io
+    link: https://kumu.io
     github: https://github.com/kumu
     descrição: "Ferramenta que permite organizar os dados em mapas de relações entre entidades."
     categoria: Redes
@@ -1156,7 +1150,7 @@
     Desativado: 
 -
     nome: "Tesseract"
-    link: github.com/tesseract-ocr/
+    link: https://github.com/tesseract-ocr/
     github: https://github.com/tesseract-ocr/tesseract
     descrição: "Software de reconhecimento ótico de caracteres, com código aberto. Para os PDFs que são imagem!"
     categoria: Limpeza
@@ -1164,12 +1158,12 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "RStudio"
-    link: www.rstudio.com/
+    link: https://www.rstudio.com/
     github: https://github.com/rstudio
     descrição: "Programa que traz uma interface gráfica mais amigável para utilizar o R. R = linguagem de programação para gráficos e cálculos estatísticos."
     categoria: Multi
@@ -1177,18 +1171,18 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Flourish"
-    link: flourish.studio/
+    link: https://flourish.studio/
     github: https://github.com/kiln
     descrição: "Ferramenta de visualização de dados com interface amigável. Possui diferentes tipos de gráficos e layouts e permite criar animações com gráficos."
     categoria: Visualização
     plataforma: Web
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "XSV"
@@ -1200,7 +1194,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1215,7 +1209,7 @@
     Desativado: 
 -
     nome: "Wolfram Alpha"
-    link: www.wolframalpha.com/
+    link: https://www.wolframalpha.com/
     github:
     descrição: "Calculadora que dá respostas sobre diversas áreas do conhecimento usando inteligência artificial."
     categoria: Obtenção
@@ -1230,7 +1224,7 @@
     descrição: "Plataforma web de business intelligence (BI) para exploração de dados, com suporte a grandes volumes de dados. Para experimentar o software no Windows, é preciso utilizar uma máquina virtual, pois não há suporte nativo."
     categoria: Multi
     plataforma: Mac OS,Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1243,22 +1237,22 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "IFTTT"
-    link: ifttt.com/
+    link: https://ifttt.com/
     github: https://github.com/IFTTT
     descrição: "Aplicativo que conecta serviços, aplicativos e aparelhos e automatiza tarefas. Pode servir para coletar dados sobre um tema em redes sociais."
     categoria: Obtenção
     plataforma: Web
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "Tableau Public"
-    link: public.tableau.com/
+    link: https://public.tableau.com/
     github: https://github.com/tableau
     descrição: "Como andar de bicicleta: aprender pode ser um pouco doloroso, mas depois fica mole-mole e é só alegria. É uma ferramenta poderosa para análise e visualização de dados. A versão gratuita atende muito bem ao jornalismo. Conferências inteiras são realizadas em torno dela."
     categoria: Visualização
@@ -1272,7 +1266,7 @@
     Desativado: 
 -
     nome: "Scatterplot online"
-    link: scatterplot.online/
+    link: https://scatterplot.online/
     github:
     descrição: "Ferramenta de vizualização de dados  que cria gráficos de dispersão."
     categoria: Visualização
@@ -1292,7 +1286,7 @@
     Desativado: 
 -
     nome: "Visualize Free"
-    link: visualizefree.com/
+    link: https://visualizefree.com/
     github:
     descrição: "Ferramenta para criar dashboards interativos, semelhante ao Tableau. Se conecta com diferentes tipos de dados. É boa para gerar relatórios."
     categoria: Visualização
@@ -1302,7 +1296,7 @@
     Desativado: 
 -
     nome: "Maltego"
-    link: www.paterva.com/web7/buy/maltego-clients/maltego-ce.php
+    link: https://www.paterva.com/web7/buy/maltego-clients/maltego-ce.php
     github: https://github.com/paterva/maltego-trx
     descrição: "Interface visual para coleta, vinculação e combinação de informações."
     categoria: Obtenção
@@ -1310,7 +1304,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1320,7 +1314,7 @@
     descrição: "Ferramenta online para ajudar na hora para definir sua paleta de cores."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1330,12 +1324,12 @@
     descrição: "Compartilha visualizações de imagens de satélites em volta da terra."
     categoria: Cartografia
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "QGis"
-    link: www.qgis.org/
+    link: https://www.qgis.org/
     github: https://github.com/qgis/
     descrição: "Ferramenta de criação e manipulação de mapas."
     categoria: Cartografia
@@ -1344,12 +1338,12 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Pixelmap"
-    link: pixelmap.amcharts.com/
+    link: https://pixelmap.amcharts.com/
     github:
     descrição: "Ferramenta de criação de mapas."
     categoria: Cartografia
@@ -1364,24 +1358,24 @@
     descrição: "Kit de ferramentas para análise e visualização de dados."
     categoria: Multi
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Storymap"
-    link: storymap.knightlab.com/
+    link: https://storymap.knightlab.com/
     github: https://github.com/NUKnightLab/StoryMapJS
     descrição: "Ferramenta que possibilita plotar narrativas em mapas. Se conecta com fotos e vídeos."
     categoria: Cartografia
     plataforma:
         - Web
         - Localhost
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Manylines"
-    link: tools.medialab.sciences-po.fr/manylines/
+    link: https://tools.medialab.sciences-po.fr/manylines/
     github: https://github.com/medialab/manylines
     descrição: "Ferramenta de visualização de grafos."
     categoria: Redes
@@ -1389,12 +1383,12 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Gephi"
-    link: gephi.org/
+    link: https://gephi.org/
     github: https://github.com/gephi/gephi
     descrição: "Principal solução de código aberto para visualização de grafos. Permite realizar análise e visualização de redes, por meio da interface gráfica."
     categoria: Redes
@@ -1402,7 +1396,7 @@
         - Windows
         - Linux
         - Mac OS
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1412,7 +1406,7 @@
     descrição: "Ferramenta web que converte arquivos espaciais em GeoJSON para diversos formatos."
     categoria: Limpeza
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1423,28 +1417,28 @@
     categoria: Análise
     plataforma: Web
     open-source: 
-    destaque: checked
+    destaque: True
     Desativado: 
 -
     nome: "Webscraper"
-    link: chrome.google.com/webstore/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn
+    link: https://chrome.google.com/webstore/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn
     github: https://github.com/webscraperio
     descrição: "Extensão do Chrome. Funciona dentro do webinspector. Raspa dados sem necessidade de programação."
     categoria: Obtenção
     plataforma:
-        - Chrome
-        - Mozilla Firefox
-    open-source: checked
-    destaque: checked
+        - Chrome OS
+        - Firefox
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Ai2HTML"
-    link: ai2html.org/
+    link: https://ai2html.org/
     github: https://github.com/newsdev/ai2html
     descrição: "Converte documentos feitos no Adobe Illustrator em arquivos HTML e CSS. Assim, é possível aumentar a escala do gráfico, mantendo o texto legível."
     categoria: Visualização
     plataforma: JavaScript
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1462,13 +1456,13 @@
     Desativado: 
 -
     nome: "RawGraphs"
-    link: rawgraphs.io/
+    link: https://rawgraphs.io/
     github: https://github.com/densitydesign/raw
     descrição: "Ferramenta de visualização Open Source, que possibilita diferentes tipos de gráficos e layouts. Modelo “drag and drop”."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
-    destaque: checked
+    open-source: True
+    destaque: True
     Desativado: 
 -
     nome: "Cartogrid"
@@ -1477,7 +1471,7 @@
     descrição: "Ferramenta que gera visualizações de conjuntos de dados baseados em grade de geometrias de limite de nível administrativo, exportáveis em GeoJSON."
     categoria: Cartografia
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1487,12 +1481,12 @@
     descrição: "Ferramenta que gera sons a partir de dados."
     categoria: Visualização
     plataforma: Web
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Overview"
-    link: overviewdocs.com
+    link: https://overviewdocs.com
     github: https://github.com/overview
     descrição: "Ferramenta de visualização e análise projetada para conjuntos de documentos massivos. Suporta diversos formatos e permite a pesonalização de plugins através de uma API."
     categoria: Análise
@@ -1501,7 +1495,7 @@
         - Mac OS
         - Windows
         - Linux
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1514,7 +1508,7 @@
         - Windows
         - Linux
         - Localhost
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
@@ -1526,56 +1520,56 @@
     plataforma:
         - Localhost
         - Docker Compose
-    open-source: checked
+    open-source: True
     destaque: 
     Desativado: 
 -
     nome: "Convextra"
-    link: convextra.com/
+    link: https://convextra.com/
     github:
     descrição: "Plugin para o browser que permite realizar mineração de dados sem código."
     categoria: Obtenção
     plataforma: Web
     open-source: 
     destaque: 
-    Desativado: checked
+    desativado: True
 -
     nome: "Flocker"
-    link: flocker.outliers.es/
+    link: https://flocker.outliers.es/
     github:
     descrição: "Aplicativo que estrutura redes de retweets e menções em tempo real. Permite exportar nos formatos Gexf, SGV e PNG. "
     categoria: Redes
     plataforma: Web
     open-source: 
     destaque: 
-    Desativado: checked
+    desativado: True
 -
     nome: "Netvizz"
-    link: apps.facebook.com/netvizz/
+    link: https://apps.facebook.com/netvizz/
     github:
     descrição: "Aplicativo do Facebook que captura e planifica dados de posts, usuários e interações em páginas ou grupos. Funciona apenas com páginas e grupos abertos. Anonimiza os usuários."
     categoria: Redes
     plataforma: Web
     open-source: 
     destaque: 
-    Desativado: checked
+    desativado: True
 -
     nome: "Charted"
-    link: charted.co/
+    link: https://charted.co/
     github: https://github.com/charted-co/charted
     descrição: "Ferramenta de criação de visualizações de dados interativas."
     categoria: Visualização
-    plataforma: 
-    open-source: checked
+    plataforma:
+    open-source: True
     destaque: 
-    Desativado: checked
+    desativado: True
 -
     nome: "QuickCode"
-    link: quickcode.io/
+    link: https://quickcode.io/
     github:
     descrição: "Ferramenta que permite programar em R e Python sem precisar instalar programas. Possui suporte de uma comunidade de desenvolvedores. Tem biblioteca de códigos bem indexada."
     categoria: Programação
     plataforma:
     open-source: 
     destaque: 
-    Desativado: checked
+    desativado: True
