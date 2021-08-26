@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import yaml from "js-yaml";
 
 import Head from "next/head";
+import Script from "next/script";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
@@ -12,21 +13,36 @@ import InfoModal from "../components/InfoModal";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
+  const [categoryFilters, setCategoryFilters] = useState([
+    { label: "Visualização", isChecked: false },
+    { label: "Obtenção", isChecked: false },
+    { label: "Análise", isChecked: false },
+    { label: "Cartografia", isChecked: false },
+    { label: "Publicação", isChecked: false },
+    { label: "Limpeza", isChecked: false },
+    { label: "Redes", isChecked: false },
+    { label: "Multi", isChecked: false },
+    { label: "Programação", isChecked: false },
+  ]);
+
+  const [isFiltered, setIsFiltered] = useState(false);
+
   const [toolsData, setToolsData] = useState([]);
 
   const [showHowToModal, setShowHowToModal] = useState(false);
   const [showAboutPageModal, setShowAboutPageModal] = useState(false);
 
-  const getUpdatedData = async () => {
+  const fetchUpdatedData = async () => {
     const updatedData = await fetch("/toolkit_ddj/data/tools.yml")
       .then((res) => res.text())
       .then((data) => yaml.load(data));
     console.log(updatedData);
+
     setToolsData([...updatedData]);
   };
 
   useEffect(() => {
-    getUpdatedData();
+    fetchUpdatedData();
   }, []);
 
   const handleModalClose = () => {
@@ -43,6 +59,55 @@ export default function Home() {
     } else {
       setShowAboutPageModal(true);
     }
+  };
+
+  const getCheckedCategoryFilters = () => {
+    return categoryFilters
+      .filter((filterItem) => filterItem.isChecked)
+      .map((filterItem) => filterItem.label);
+  };
+
+  // Filter change handler
+  const onFilter = (event) => {
+    const {
+      target: { value, checked },
+    } = event;
+
+    setCategoryFilters((currentFilters) =>
+      currentFilters.map((f) => {
+        if (f.label === value) {
+          return {
+            ...f,
+            isChecked: checked,
+          };
+        }
+        return f;
+      })
+    );
+  };
+
+  //Category filtering function
+  const filterRule = (item) => {
+    const checkedFilters = getCheckedCategoryFilters();
+
+    if (checkedFilters.length === 0) {
+      // if (isFiltered) {
+      //   setIsFiltered(false);
+      // }
+
+      return true;
+    } else {
+      // if (!isFiltered) {
+      //   setIsFiltered(true);
+      // }
+
+      return checkedFilters.indexOf(item.categoria) !== -1;
+    }
+  };
+
+  const sortRule = (a, b) => {
+    //Primeiro ordena pelos destaques, depois pelas categorias
+    return b.destaque - a.destaque || a.categoria < b.categoria;
   };
 
   return (
@@ -82,17 +147,36 @@ export default function Home() {
       <main>
         <div className={styles.contentContainer}>
           {/* aqui entram os filtros */}
+          <div className="filter-container">
+            {categoryFilters.map((f) => (
+              <div className="filter" key={`${f.label}_key`}>
+                <input
+                  id={f.label}
+                  type="checkbox"
+                  value={f.label}
+                  onChange={onFilter}
+                  checked={f.isChecked}
+                />
+                <label htmlFor={f.label}>{f.label}</label>
+              </div>
+            ))}
+          </div>
+
           {toolsData.length > 0 ? (
             <div className={styles.resultsContainer}>
               <div className={styles.resultsInfo}>
                 <span className={styles.resultsNumber}>{toolsData.length}</span>{" "}
                 Resultados
               </div>
+
               <div className={styles.cardsContainer}>
-                {toolsData.map(
-                  (tool, index) =>
-                    !tool.desativado && <Card key={index} toolData={tool} />
-                )}
+                {toolsData
+                  .filter(filterRule)
+                  .sort(sortRule)
+                  .map(
+                    (tool, index) =>
+                      !tool.desativado && <Card key={index} toolData={tool} />
+                  )}
               </div>
             </div>
           ) : (
