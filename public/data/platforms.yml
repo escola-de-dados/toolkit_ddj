@@ -1,0 +1,48 @@
+-
+  nome: Windows
+  icone: mdi:microsoft-windows
+-
+  nome: Mac OS
+  icone: simple-icons:macos
+-
+  nome: Linux
+  icone: simple-icons:linux
+-
+  nome: iOS
+  icone: simple-icons:ios
+-
+  nome: Android
+  icone: simple-icons:android
+-
+  nome: Web
+  icone: mdi:web
+-
+  nome: Python
+  icone: mdi:language-python
+-
+  nome: NodeJS
+  icone: mdi:nodejs
+-
+  nome: R
+  icone: mdi:language-r
+-
+  nome: ChromeOS
+  icone: mdi:google-chrome
+-
+  nome: Chrome
+  icone: mdi:google-chrome
+-
+  nome: Firefox
+  icone: mdi:firefox
+-
+  nome: Micosoft Power BI
+  icone: bi:bar-chart-fill
+-
+  nome: Localhost
+  icone: mdi:home-floor-l
+-
+  nome: JavaScript
+  icone: mdi:language-javascript
+-
+  nome: Docker Compose
+  icone: mdi:docker
