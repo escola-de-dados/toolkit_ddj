@@ -12,7 +12,56 @@ import InfoModal from "../components/InfoModal";
 
 import styles from "../styles/Home.module.scss";
 
-export default function Home() {
+export async function getStaticProps(context) {
+  const initialToolsData = await fetch(
+    "https://escola-de-dados.github.io/toolkit_ddj/data/tools.yml"
+  )
+    .then((res) => res.text())
+    .then((data) => yaml.load(data))
+    .catch((err) => {
+      throw new Error(err);
+    });
+
+  const initialPlatformsData = await fetch(
+    "https://escola-de-dados.github.io/toolkit_ddj/data/platforms.yml"
+  )
+    .then((res) => res.text())
+    .then((data) => yaml.load(data))
+    .catch((err) => {
+      throw new Error(err);
+    });
+
+  const initialPlatformFilters = initialPlatformsData.map((platform) => {
+    return {
+      label: platform.nome,
+      isChecked: false,
+    };
+  });
+
+  if (!initialPlatformsData || !initialToolsData) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      initialToolsData,
+      initialPlatformsData,
+      initialPlatformFilters,
+    }, // will be passed to the page component as props
+  };
+}
+
+export default function Home({
+  initialToolsData,
+  initialPlatformsData,
+  initialPlatformFilters,
+}) {
+  const [toolsData, setToolsData] = useState([]);
+
+  const [platforms, setPlatforms] = useState([...initialPlatformsData]);
+
   const [categoryFilters, setCategoryFilters] = useState([
     { label: "Visualização", isChecked: false },
     { label: "Obtenção", isChecked: false },
@@ -25,20 +74,38 @@ export default function Home() {
     { label: "Programação", isChecked: false },
   ]);
 
-  const [isFiltered, setIsFiltered] = useState(false);
+  const [platformFilters, setPlatformFilters] = useState([
+    ...initialPlatformFilters,
+  ]);
 
-  const [toolsData, setToolsData] = useState([]);
+  const [isFiltered, setIsFiltered] = useState(false);
 
   const [showHowToModal, setShowHowToModal] = useState(false);
   const [showAboutPageModal, setShowAboutPageModal] = useState(false);
 
   const fetchUpdatedData = async () => {
-    const updatedData = await fetch("/toolkit_ddj/data/tools.yml")
+    const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
       .then((res) => res.text())
       .then((data) => yaml.load(data));
-    console.log(updatedData);
 
-    setToolsData([...updatedData]);
+    // console.log("line 93 ", updatedToolsData);
+
+    setToolsData([...updatedToolsData]);
+
+    const updatedPlatformsData = await fetch("/toolkit_ddj/data/platforms.yml")
+      .then((res) => res.text())
+      .then((data) => yaml.load(data));
+
+    setPlatforms(updatedPlatformsData);
+
+    setPlatformFilters(() => {
+      return platforms.map((platform) => {
+        return {
+          label: platform.nome,
+          isChecked: false,
+        };
+      });
+    });
   };
 
   useEffect(() => {
@@ -67,8 +134,14 @@ export default function Home() {
       .map((filterItem) => filterItem.label);
   };
 
+  const getCheckedPlatformFilters = () => {
+    return platformFilters
+      .filter((filterItem) => filterItem.isChecked)
+      .map((filterItem) => filterItem.label);
+  };
+
   // Filter change handler
-  const onFilter = (event) => {
+  const onCategoryFilter = (event) => {
     const {
       target: { value, checked },
     } = event;
@@ -86,22 +159,52 @@ export default function Home() {
     );
   };
 
+  // Filter change handler
+  const onPlatformFilter = (event) => {
+    const {
+      target: { value, checked },
+    } = event;
+
+    setPlatformFilters((currentFilters) =>
+      currentFilters.map((f) => {
+        if (f.label === value) {
+          return {
+            ...f,
+            isChecked: checked,
+          };
+        }
+        return f;
+      })
+    );
+  };
+
+  const removeUnactive = (item) => {
+    return !item.desativado;
+  };
+
   //Category filtering function
-  const filterRule = (item) => {
-    const checkedFilters = getCheckedCategoryFilters();
-
-    if (checkedFilters.length === 0) {
-      // if (isFiltered) {
-      //   setIsFiltered(false);
-      // }
-
+  const categoryFilterRule = (item) => {
+    const categoryCheckedFilters = getCheckedCategoryFilters();
+    if (categoryCheckedFilters.length === 0) {
       return true;
     } else {
-      // if (!isFiltered) {
-      //   setIsFiltered(true);
-      // }
+      return categoryCheckedFilters.indexOf(item.categoria) !== -1;
+    }
+  };
 
-      return checkedFilters.indexOf(item.categoria) !== -1;
+  const platformFilterRule = (item) => {
+    const plataformas = [...item.plataforma];
+
+    const platformCheckedFilters = getCheckedPlatformFilters();
+
+    if (platformCheckedFilters.length <= 0) {
+      return true;
+    } else {
+      const match = plataformas.filter((platform) => {
+        return platformCheckedFilters.includes(platform);
+      });
+
+      return match.length > 0;
     }
   };
 
@@ -147,36 +250,54 @@ export default function Home() {
       <main>
         <div className={styles.contentContainer}>
           {/* aqui entram os filtros */}
-          <div className="filter-container">
-            {categoryFilters.map((f) => (
-              <div className="filter" key={`${f.label}_key`}>
-                <input
-                  id={f.label}
-                  type="checkbox"
-                  value={f.label}
-                  onChange={onFilter}
-                  checked={f.isChecked}
-                />
-                <label htmlFor={f.label}>{f.label}</label>
-              </div>
-            ))}
+          <div className="filter-container d-flex flex-row justify-content-between">
+            {/* filtros de categoria */}
+            <div className="categoryFilters">
+              {categoryFilters.map((f) => (
+                <div className="filter" key={`${f.label}_key`}>
+                  <input
+                    id={f.label}
+                    type="checkbox"
+                    value={f.label}
+                    onChange={onCategoryFilter}
+                    checked={f.isChecked}
+                  />
+                  <label htmlFor={f.label}>{f.label}</label>
+                </div>
+              ))}
+            </div>
+            <div className="platformFilters">
+              {platformFilters.map((f) => (
+                <div className="filter" key={`${f.label}_key`}>
+                  <input
+                    id={f.label}
+                    type="checkbox"
+                    value={f.label}
+                    onChange={onPlatformFilter}
+                    checked={f.isChecked}
+                  />
+                  <label htmlFor={f.label}>{f.label}</label>
+                </div>
+              ))}
+            </div>
           </div>
 
           {toolsData.length > 0 ? (
             <div className={styles.resultsContainer}>
               <div className={styles.resultsInfo}>
                 <span className={styles.resultsNumber}>{toolsData.length}</span>{" "}
-                Resultados
+                {toolsData === 1 ? "Resultado" : "Resultados"}
               </div>
 
               <div className={styles.cardsContainer}>
                 {toolsData
-                  .filter(filterRule)
+                  .filter(removeUnactive)
+                  .filter(categoryFilterRule)
+                  .filter(platformFilterRule)
                   .sort(sortRule)
-                  .map(
-                    (tool, index) =>
-                      !tool.desativado && <Card key={index} toolData={tool} />
-                  )}
+                  .map((tool, index) => (
+                    <Card key={index} toolData={tool} platforms={platforms} />
+                  ))}
               </div>
             </div>
           ) : (

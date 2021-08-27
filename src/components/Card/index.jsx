@@ -5,9 +5,9 @@ import { Icon } from "@iconify/react";
 
 import styles from "./styles.module.scss";
 
-const Card = ({ toolData }) => {
-  const getCategoryStyle = (category) => {
-    switch (category) {
+const Card = ({ toolData, platforms }) => {
+  const getCategoryStyle = () => {
+    switch (toolData.categoria) {
       case "Visualização":
         return styles.visualizacao;
       case "Obtenção":
@@ -32,42 +32,11 @@ const Card = ({ toolData }) => {
   };
 
   const getPlatformIcon = (platform) => {
-    switch (platform) {
-      case "Windows":
-        return "mdi:microsoft-windows";
-      case "Mac OS":
-        return "simple-icons:macos";
-      case "Linux":
-        return "simple-icons:linux";
-      case "iOS":
-        return "simple-icons:ios";
-      case "Android":
-        return "simple-icons:android";
-      case "Web":
-        return "mdi:web";
-      case "Python":
-        return "mdi:language-python";
-      case "NodeJS":
-        return "mdi:nodejs";
-      case "R":
-        return "mdi:language-r";
-      case "Chrome OS":
-      case "Chrome":
-        return "mdi:google-chrome";
-      case "Firefox":
-        return "mdi:firefox";
-      case "Microsoft Power BI":
-        return "bi:bar-chart-fill";
-      case "Excel":
-        return "mdi:microsoft-excel";
-      case "Localhost":
-        return "mdi:home-floor-l";
-      case "JavaScript":
-        return "mdi:language-javascript";
-      case "Docker Compose":
-        return "mdi:docker";
-      default:
-        return "mdi:help";
+    try {
+      return platforms.find((item) => item.nome === platform).icone;
+    } catch (err) {
+      console.log("Plataforma não encontrada");
+      return "mdi:help";
     }
   };
 
@@ -80,11 +49,7 @@ const Card = ({ toolData }) => {
       <section className={styles.toolDetailsContainer}>
         <h3 className={styles.toolDetailsTitle}>Categorias</h3>
         <div>
-          <span
-            className={`${styles.toolCategory} ${getCategoryStyle(
-              toolData.categoria
-            )}`}
-          >
+          <span className={`${styles.toolCategory} ${getCategoryStyle()}`}>
             {toolData.categoria}
           </span>
         </div>
