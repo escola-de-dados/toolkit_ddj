@@ -78,6 +78,8 @@ export default function Home({
     ...initialPlatformFilters,
   ]);
 
+  const [onlyOpenSourceFilter, setOnlyOpenSourceFilter] = useState(false);
+
   const [isFiltered, setIsFiltered] = useState(false);
 
   const [showHowToModal, setShowHowToModal] = useState(false);
@@ -140,7 +142,7 @@ export default function Home({
       .map((filterItem) => filterItem.label);
   };
 
-  // Filter change handler
+  /*--- Filter Handlers ---*/
   const onCategoryFilter = (event) => {
     const {
       target: { value, checked },
@@ -159,7 +161,6 @@ export default function Home({
     );
   };
 
-  // Filter change handler
   const onPlatformFilter = (event) => {
     const {
       target: { value, checked },
@@ -178,11 +179,19 @@ export default function Home({
     );
   };
 
-  const removeUnactive = (item) => {
+  const onOnlyOpenSourceFilter = (event) => {
+    const {
+      target: { checked },
+    } = event;
+
+    setOnlyOpenSourceFilter(checked);
+  };
+
+  /*--- Filter Rules ---*/
+  const removeUnactiveRule = (item) => {
     return !item.desativado;
   };
 
-  //Category filtering function
   const categoryFilterRule = (item) => {
     const categoryCheckedFilters = getCheckedCategoryFilters();
     if (categoryCheckedFilters.length === 0) {
@@ -207,6 +216,9 @@ export default function Home({
       return match.length > 0;
     }
   };
+
+  const onlyOpenSourceFilterRule = (item) =>
+    onlyOpenSourceFilter ? item["open-source"] : true;
 
   const sortRule = (a, b) => {
     //Primeiro ordena pelos destaques, depois pelas categorias
@@ -249,9 +261,9 @@ export default function Home({
 
       <main>
         <div className={styles.contentContainer}>
-          {/* aqui entram os filtros */}
+          {/* Filtros */}
           <div className="filter-container d-flex flex-row justify-content-between">
-            {/* filtros de categoria */}
+            {/* Categoria */}
             <div className="categoryFilters">
               {categoryFilters.map((f) => (
                 <div className="filter" key={`${f.label}_key`}>
@@ -266,6 +278,7 @@ export default function Home({
                 </div>
               ))}
             </div>
+            {/* Plataforma */}
             <div className="platformFilters">
               {platformFilters.map((f) => (
                 <div className="filter" key={`${f.label}_key`}>
@@ -280,6 +293,21 @@ export default function Home({
                 </div>
               ))}
             </div>
+            {/* Open Source */}
+            <div className="openSourceFilter">
+              <div className="filter">
+                <input
+                  id="only-open-source"
+                  type="checkbox"
+                  value="only-open-source"
+                  onChange={onOnlyOpenSourceFilter}
+                  checked={onlyOpenSourceFilter}
+                />
+                <label htmlFor="only-open-source">
+                  Apenas ferramentas de código aberto
+                </label>
+              </div>
+            </div>
           </div>
 
           {toolsData.length > 0 ? (
@@ -291,9 +319,10 @@ export default function Home({
 
               <div className={styles.cardsContainer}>
                 {toolsData
-                  .filter(removeUnactive)
+                  .filter(removeUnactiveRule)
                   .filter(categoryFilterRule)
                   .filter(platformFilterRule)
+                  .filter(onlyOpenSourceFilterRule)
                   .sort(sortRule)
                   .map((tool, index) => (
                     <Card key={index} toolData={tool} platforms={platforms} />
