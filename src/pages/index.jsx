@@ -5,6 +5,8 @@ import yaml from "js-yaml";
 import Head from "next/head";
 import Script from "next/script";
 
+import { Form } from "react-bootstrap";
+
 import Header from "../components/Header";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
@@ -62,6 +64,8 @@ export default function Home({
 
   const [platforms, setPlatforms] = useState([...initialPlatformsData]);
 
+  const [searchInput, setSearchInput] = useState("");
+
   const [categoryFilters, setCategoryFilters] = useState([
     { label: "Visualização", isChecked: false },
     { label: "Obtenção", isChecked: false },
@@ -89,8 +93,6 @@ export default function Home({
     const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
       .then((res) => res.text())
       .then((data) => yaml.load(data));
-
-    // console.log("line 93 ", updatedToolsData);
 
     setToolsData([...updatedToolsData]);
 
@@ -143,6 +145,10 @@ export default function Home({
   };
 
   /*--- Filter Handlers ---*/
+  const onSearch = (event) => {
+    setSearchInput(event.target.value);
+  };
+
   const onCategoryFilter = (event) => {
     const {
       target: { value, checked },
@@ -220,6 +226,13 @@ export default function Home({
   const onlyOpenSourceFilterRule = (item) =>
     onlyOpenSourceFilter ? item["open-source"] : true;
 
+  const searchFilterRule = (item) => {
+    return Object.values(item)
+      .join("")
+      .toLowerCase()
+      .includes(searchInput.toLowerCase());
+  };
+
   const sortRule = (a, b) => {
     //Primeiro ordena pelos destaques, depois pelas categorias
     return b.destaque - a.destaque || a.categoria < b.categoria;
@@ -263,6 +276,13 @@ export default function Home({
         <div className={styles.contentContainer}>
           {/* Filtros */}
           <div className="filter-container d-flex flex-row justify-content-between">
+            {/* Pesquisa */}
+            <Form>
+              <Form.Control
+                placeholder="Search..."
+                onChange={(e) => onSearch(e)}
+              />
+            </Form>
             {/* Categoria */}
             <div className="categoryFilters">
               {categoryFilters.map((f) => (
@@ -323,6 +343,7 @@ export default function Home({
                   .filter(categoryFilterRule)
                   .filter(platformFilterRule)
                   .filter(onlyOpenSourceFilterRule)
+                  .filter(searchFilterRule)
                   .sort(sortRule)
                   .map((tool, index) => (
                     <Card key={index} toolData={tool} platforms={platforms} />
