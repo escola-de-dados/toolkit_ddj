@@ -63,14 +63,14 @@ const FilterGroup = ({
           </Form.Check>
         )
       )}
-      <div>
+      <div className={styles.cleanFiltersButtonContainer}>
         <Button
           className={styles.cleanFiltersButton}
           variant="light"
           title="Limpar filtros"
           onClick={clearFilters}
         >
-          <Icon icon={"mdi:restart"} />
+          <Icon icon={"mdi:restart"} color={styles.lightPurple} />
         </Button>
       </div>
     </div>

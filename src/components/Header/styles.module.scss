@@ -23,7 +23,7 @@ $dotSize: 30px;
 }
 
 h1.title{
-  width: 12em;
+  width: 25vw;
 }
 
 .logoImage{
@@ -33,7 +33,7 @@ h1.title{
 .subtitle{
   margin: 3rem 0;
   
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -70,8 +70,14 @@ h1.title{
     width: 100%;
     //TODO: Checar word-break
   }
+}
+
+@media #{$desktop-1600-and-up}{
+  h1.title{
+    width: 12em;
+  }
 
   .subtitle{
-    // font-size: 1em;
+    font-size: 1.5em;
   }
 }

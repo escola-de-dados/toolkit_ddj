@@ -2,7 +2,7 @@
 @import '../../styles/variables';
 
 :export { 
-  purple: $purple;
+  lightPurple: rgba($purple, .6);
 }
 
 .categoryFiltersContainer{
@@ -36,6 +36,7 @@
   opacity: .5;
 
   color: initial !important;
+  font-size: .9em;
 }
 
 .categoryLabel:hover{
@@ -53,7 +54,7 @@
 
 .platformLabel svg{
   color: $purple;
-  font-size: 1.6em;
+  font-size: 1.5em;
 }
 
 .platformLabel:hover svg{
@@ -67,4 +68,13 @@
 
 .platformCheckbox:checked + .platformLabel svg{
   color: $red;
+}
+
+.cleanFiltersButtonContainer{
+  padding-left: 1.5em;
+  display: inherit;
+}
+
+.cleanFiltersButton{
+  margin: 0 auto;
 }

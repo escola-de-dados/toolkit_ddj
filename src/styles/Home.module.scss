@@ -27,7 +27,7 @@
   flex-wrap: wrap;
 
   width: 100%;
-  padding: 2em;
+  padding: 1.5em;
   background-color: rgba($purple, .02);
 }
 
@@ -36,14 +36,14 @@
   flex-direction: column;
   align-items: center;
 
-  width: 80%;
+  width: 90%;
   margin: 0 auto 1em;
 
   border-bottom: 1px solid rgba($purple, .1);
 }
 
 .categoryFiltersTitle{
-  margin: 0 auto 2em;
+  margin: 0 auto 1em;
 }
 
 .categoryFilters, .platformFilters{
@@ -56,18 +56,20 @@
 }
 
 .platformFiltersContainer{
-  display: flex;
+  display: inherit;
+  flex-direction: inherit;
   align-items: center;
 
   flex-basis: 70%;
 }
 
 .platformFilters{
-  display: flex;
+  display: inherit;
 }
 
 .openSourceFilter{
   margin-left: auto;
+  font-size: .9em;
 }
 
 .resultsContainer{
