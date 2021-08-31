@@ -9,6 +9,7 @@ import { Form } from "react-bootstrap";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
+import FilterGroup from "../components/FilterGroup";
 import Footer from "../components/Footer";
 import InfoModal from "../components/InfoModal";
 
@@ -33,6 +34,21 @@ export async function getStaticProps(context) {
       throw new Error(err);
     });
 
+  const initialCategoriesData = await fetch(
+    "https://escola-de-dados.github.io/toolkit_ddj/data/categories.yml"
+  )
+    .then((res) => res.text())
+    .then((data) => yaml.load(data))
+    .catch((err) => {
+      throw new Error(err);
+    });
+
+  if (!initialPlatformsData || !initialToolsData || !initialCategoriesData) {
+    return {
+      notFound: true,
+    };
+  }
+
   const initialPlatformFilters = initialPlatformsData.map((platform) => {
     return {
       label: platform.nome,
@@ -40,17 +56,21 @@ export async function getStaticProps(context) {
     };
   });
 
-  if (!initialPlatformsData || !initialToolsData) {
+  const initialCategoryFilters = initialCategoriesData.map((category) => {
     return {
-      notFound: true,
+      slug: category.slug,
+      label: category.nome,
+      isChecked: false,
     };
-  }
+  });
 
   return {
     props: {
       initialToolsData,
       initialPlatformsData,
       initialPlatformFilters,
+      initialCategoriesData,
+      initialCategoryFilters,
     }, // will be passed to the page component as props
   };
 }
@@ -59,23 +79,19 @@ export default function Home({
   initialToolsData,
   initialPlatformsData,
   initialPlatformFilters,
+  initialCategoriesData,
+  initialCategoryFilters,
 }) {
   const [toolsData, setToolsData] = useState([]);
 
   const [platforms, setPlatforms] = useState([...initialPlatformsData]);
 
+  const [categories, setCategories] = useState([...initialCategoriesData]);
+
   const [searchInput, setSearchInput] = useState("");
 
   const [categoryFilters, setCategoryFilters] = useState([
-    { label: "Visualização", isChecked: false },
-    { label: "Obtenção", isChecked: false },
-    { label: "Análise", isChecked: false },
-    { label: "Cartografia", isChecked: false },
-    { label: "Publicação", isChecked: false },
-    { label: "Limpeza", isChecked: false },
-    { label: "Redes", isChecked: false },
-    { label: "Multi", isChecked: false },
-    { label: "Programação", isChecked: false },
+    ...initialCategoryFilters,
   ]);
 
   const [platformFilters, setPlatformFilters] = useState([
@@ -106,6 +122,24 @@ export default function Home({
       return platforms.map((platform) => {
         return {
           label: platform.nome,
+          isChecked: false,
+        };
+      });
+    });
+
+    const updatedCategoriesData = await fetch(
+      "/toolkit_ddj/data/categories.yml"
+    )
+      .then((res) => res.text())
+      .then((data) => yaml.load(data));
+
+    setCategories(updatedCategoriesData);
+
+    setCategoryFilters(() => {
+      return categories.map((category) => {
+        return {
+          slug: category.slug,
+          label: category.nome,
           isChecked: false,
         };
       });
@@ -167,6 +201,17 @@ export default function Home({
     );
   };
 
+  const clearCategoryFilters = () => {
+    setCategoryFilters((currentFilters) =>
+      currentFilters.map((f) => {
+        return {
+          ...f,
+          isChecked: false,
+        };
+      })
+    );
+  };
+
   const onPlatformFilter = (event) => {
     const {
       target: { value, checked },
@@ -185,6 +230,17 @@ export default function Home({
     );
   };
 
+  const clearPlatformFilters = () => {
+    setPlatformFilters((currentFilters) =>
+      currentFilters.map((f) => {
+        return {
+          ...f,
+          isChecked: false,
+        };
+      })
+    );
+  };
+
   const onOnlyOpenSourceFilter = (event) => {
     const {
       target: { checked },
@@ -194,7 +250,7 @@ export default function Home({
   };
 
   /*--- Filter Rules ---*/
-  const removeUnactiveRule = (item) => {
+  const removeInactiveRule = (item) => {
     return !item.desativado;
   };
 
@@ -275,57 +331,54 @@ export default function Home({
       <main>
         <div className={styles.contentContainer}>
           {/* Filtros */}
-          <div className="filter-container d-flex flex-row justify-content-between">
+          <div className={`${styles.filtersContainer}`}>
             {/* Pesquisa */}
-            <Form>
+            <Form className={styles.searchContainer}>
               <Form.Control
-                placeholder="Search..."
+                type="search"
+                placeholder="Pesquise por qualquer ferramenta..."
                 onChange={(e) => onSearch(e)}
               />
             </Form>
-            {/* Categoria */}
-            <div className="categoryFilters">
-              {categoryFilters.map((f) => (
-                <div className="filter" key={`${f.label}_key`}>
-                  <input
-                    id={f.label}
-                    type="checkbox"
-                    value={f.label}
-                    onChange={onCategoryFilter}
-                    checked={f.isChecked}
-                  />
-                  <label htmlFor={f.label}>{f.label}</label>
-                </div>
-              ))}
-            </div>
-            {/* Plataforma */}
-            <div className="platformFilters">
-              {platformFilters.map((f) => (
-                <div className="filter" key={`${f.label}_key`}>
-                  <input
-                    id={f.label}
-                    type="checkbox"
-                    value={f.label}
-                    onChange={onPlatformFilter}
-                    checked={f.isChecked}
-                  />
-                  <label htmlFor={f.label}>{f.label}</label>
-                </div>
-              ))}
-            </div>
-            {/* Open Source */}
-            <div className="openSourceFilter">
-              <div className="filter">
-                <input
-                  id="only-open-source"
-                  type="checkbox"
-                  value="only-open-source"
-                  onChange={onOnlyOpenSourceFilter}
-                  checked={onlyOpenSourceFilter}
+
+            <div className={styles.checkboxFiltersContainer}>
+              {/* Categoria */}
+              <div className={styles.categoryFiltersContainer}>
+                <span className={styles.categoryFiltersTitle}>Categorias</span>
+                <FilterGroup
+                  className={styles.categoryFilters}
+                  type="category"
+                  filters={categoryFilters}
+                  onFilter={onCategoryFilter}
+                  clearFilters={clearCategoryFilters}
                 />
-                <label htmlFor="only-open-source">
-                  Apenas ferramentas de código aberto
-                </label>
+              </div>
+              {/* Plataforma */}
+              <div className={styles.platformFiltersContainer}>
+                <span className={styles.platformFiltersTitle}>
+                  Plataformas:
+                </span>
+                <FilterGroup
+                  className={styles.platformFilters}
+                  type="platform"
+                  filters={platformFilters}
+                  platforms={platforms}
+                  onFilter={onPlatformFilter}
+                  clearFilters={clearPlatformFilters}
+                />
+              </div>
+              {/* Open Source */}
+              <div className={styles.openSourceFilter}>
+                <div className="filter">
+                  <Form.Check
+                    id="only-open-source"
+                    type="checkbox"
+                    value="only-open-source"
+                    onChange={onOnlyOpenSourceFilter}
+                    checked={onlyOpenSourceFilter}
+                    label="Apenas ferramentas de código aberto"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -339,14 +392,19 @@ export default function Home({
 
               <div className={styles.cardsContainer}>
                 {toolsData
-                  .filter(removeUnactiveRule)
+                  .filter(removeInactiveRule)
                   .filter(categoryFilterRule)
                   .filter(platformFilterRule)
                   .filter(onlyOpenSourceFilterRule)
                   .filter(searchFilterRule)
                   .sort(sortRule)
                   .map((tool, index) => (
-                    <Card key={index} toolData={tool} platforms={platforms} />
+                    <Card
+                      key={index}
+                      toolData={tool}
+                      categories={categories}
+                      platforms={platforms}
+                    />
                   ))}
               </div>
             </div>

@@ -1,0 +1,70 @@
+@use 'sass:math';
+@import '../../styles/variables';
+
+:export { 
+  purple: $purple;
+}
+
+.categoryFiltersContainer{
+  display: flex;
+}
+
+.platformFiltersContainer{
+  
+}
+
+.cleanFiltersButton{
+  margin: 0 2em;
+}
+
+.filterCheckbox{
+  position: absolute;
+  left: -9999px;
+}
+
+.filterLabel{
+  border-radius: .4em;
+}
+
+.filterLabel:hover{
+  cursor: pointer;  
+}
+
+.categoryLabel{
+  margin-bottom: 1em;
+  padding: .5em .8em;
+  opacity: .5;
+
+  color: initial !important;
+}
+
+.categoryLabel:hover{
+  opacity: .7;
+}
+
+.categoryCheckbox:checked + .categoryLabel{
+  opacity: 1;
+}
+
+.platformLabel{
+  margin: .5em 0;
+  padding: .45em .5em;
+}
+
+.platformLabel svg{
+  color: $purple;
+  font-size: 1.6em;
+}
+
+.platformLabel:hover svg{
+  color: $red;
+}
+
+.platformCheckbox:checked + .platformLabel{
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(darken($purple, 10%), .1);
+}
+
+.platformCheckbox:checked + .platformLabel svg{
+  color: $red;
+}

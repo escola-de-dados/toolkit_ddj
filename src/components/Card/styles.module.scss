@@ -49,36 +49,7 @@
 .toolCategory{
   padding: .2em .8em;
   font-size: .9em;
-  border-radius: 20px;
-  background-color: #adb5bd;
-
-  &.visualizacao{
-    background-color: $cat-visualizacao;
-  }
-  &.obtencao{
-    background-color: $cat-obtencao;
-  }
-  &.analise{
-    background-color: $cat-analise;
-  }
-  &.cartografia{
-    background-color: $cat-cartografia;
-  }
-  &.publicacao{
-    background-color: $cat-publicacao;
-  }
-  &.limpeza{
-    background-color: $cat-limpeza;
-  }
-  &.redes{
-    background-color: $cat-redes;
-  }
-  &.multi{
-    background-color: $cat-multi;
-  }
-  &.programacao{
-    background-color: $cat-programacao;
-  }
+  border-radius: 1.5em;
 }
 
 .platformList{

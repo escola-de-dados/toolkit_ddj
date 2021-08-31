@@ -51,3 +51,35 @@ a {
   font-size: 1em;
   margin-right: .2em;
 }
+
+//Default background-color for the category badges
+.noSlug{
+  background-color: $gray-600;
+}
+.visualizacao{
+  background-color: $cat-visualizacao;
+}
+.obtencao{
+  background-color: $cat-obtencao;
+}
+.analise{
+  background-color: $cat-analise;
+}
+.cartografia{
+  background-color: $cat-cartografia;
+}
+.publicacao{
+  background-color: $cat-publicacao;
+}
+.limpeza{
+  background-color: $cat-limpeza;
+}
+.redes{
+  background-color: $cat-redes;
+}
+.multi{
+  background-color: $cat-multi;
+}
+.programacao{
+  background-color: $cat-programacao;
+}

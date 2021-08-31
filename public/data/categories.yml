@@ -1,0 +1,27 @@
+- 
+  nome: Visualização
+  slug: visualizacao
+- 
+  nome: Obtenção
+  slug: obtencao
+- 
+  nome: Análise
+  slug: analise
+- 
+  nome: Cartografia
+  slug: cartografia
+- 
+  nome: Publicação
+  slug: publicacao
+- 
+  nome: Limpeza
+  slug: limpeza
+- 
+  nome: Redes
+  slug: redes
+- 
+  nome: Multi
+  slug: multi
+- 
+  nome: Programação
+  slug: programacao

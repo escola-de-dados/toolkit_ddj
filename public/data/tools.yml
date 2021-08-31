@@ -1410,7 +1410,9 @@
     github: https://github.com/apache/superset
     descrição: "Plataforma web de business intelligence (BI) para exploração de dados, com suporte a grandes volumes de dados. Para experimentar o software no Windows, é preciso utilizar uma máquina virtual, pois não há suporte nativo."
     categoria: Multi
-    plataforma: Mac OS,Linux
+    plataforma: 
+        - Mac OS
+        - Linux
     open-source: True
     destaque: False
     desativado: False
