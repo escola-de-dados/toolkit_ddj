@@ -30,9 +30,26 @@ a {
   border-color: $red;
 }
 
+.btn-secondary,
+.btn-check:checked + .btn-secondary,
+.btn-check:active + .btn-secondary,
+.btn-secondary:active,
+.btn-secondary.active,
+.show > .btn-secondary.dropdown-toggle{
+  white-space: nowrap;
+  color: #fff;
+  background-color: $yellow;
+  border-color: $yellow;
+}
+
 .btn-primary:hover{
   background-color: darken($red, 8%);
   border-color: darken($red, 8%);
+}
+
+.btn-secondary:hover{
+  background-color: darken($yellow, 3%);
+  border-color: darken($yellow, 3%);
 }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {

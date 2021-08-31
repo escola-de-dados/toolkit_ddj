@@ -19,7 +19,23 @@
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  border-radius: 0.65em;
+}
+
+.toolCardHighlight{
+  position: relative;
+  overflow: hidden;
+  border: 2px solid $yellow;
+}
+
+.toolCardHighlight::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 92px;
+  width: 79px;
+  background-image: url("data:image/svg+xml,%3Csvg width='79' height='92' viewBox='0 0 79 92' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M79.6093 -0.478111L79.6093 74.6117L-0.00011992 -0.478087L79.6093 -0.478111Z' fill='%23F4AD01'/%3E%3Cpath d='M54.9999 28.1483L62.2099 32.5L60.2966 24.2983L66.6666 18.78L58.2783 18.0566L54.9999 10.3333L51.7216 18.0566L43.3333 18.78L49.6916 24.2983L47.7899 32.5L54.9999 28.1483Z' fill='white'/%3E%3C/svg%3E");
 }
 
 .cardHeader{

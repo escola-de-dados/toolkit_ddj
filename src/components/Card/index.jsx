@@ -72,7 +72,11 @@ const Card = ({ toolData }) => {
   };
 
   return (
-    <article className={styles.toolCard}>
+    <article
+      className={`${styles.toolCard} ${
+        toolData.destaque && styles.toolCardHighlight
+      }`}
+    >
       <header className={styles.cardHeader}>
         <h2 className={styles.toolName}>{toolData.nome}</h2>
         <p className={styles.toolDescription}>{toolData["descrição"]}</p>
@@ -121,13 +125,21 @@ const Card = ({ toolData }) => {
 
       <footer className={styles.cardFooter}>
         {toolData.link && (
-          <Button className={styles.cardButton} href={toolData.link}>
+          <Button
+            variant={toolData.destaque ? "secondary" : "primary"}
+            className={styles.cardButton}
+            href={toolData.link}
+          >
             <Icon icon="mdi:link-variant" color="#fff" />
             Site
           </Button>
         )}
         {toolData.github && (
-          <Button className={styles.cardButton} href={toolData.github}>
+          <Button
+            variant={toolData.destaque ? "secondary" : "primary"}
+            className={styles.cardButton}
+            href={toolData.github}
+          >
             <Icon icon="octicon:repo-forked-16" color="#fff" />
             Repositório
           </Button>
