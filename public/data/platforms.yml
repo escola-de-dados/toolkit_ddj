@@ -30,7 +30,7 @@
   icone: mdi:google-chrome
 -
   nome: Chrome
-  icone: mdi:google-chrome
+  icone: ant-design:chrome-filled
 -
   nome: Firefox
   icone: mdi:firefox

@@ -1,6 +1,10 @@
 @use 'sass:math';
 @import './variables';
 
+:export { 
+  lightPurple: rgba($purple, .6);
+}
+
 .contentContainer{
   max-width: 1000px;
   margin: 0 auto;
@@ -20,6 +24,19 @@
   margin-bottom: 2em;
 }
 
+.searchContainer input{
+  text-align: center;
+  border-radius: 0;
+  border-right: none;
+}
+
+.searchContainer input::placeholder{
+  color: rgba($purple, .4);
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
 .checkboxFiltersContainer{
   display: flex;
   justify-content: center;
@@ -31,44 +48,8 @@
   background-color: rgba($purple, .02);
 }
 
-.categoryFiltersContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 90%;
-  margin: 0 auto 1em;
-
-  border-bottom: 1px solid rgba($purple, .1);
-}
-
-.categoryFiltersTitle{
-  margin: 0 auto 1em;
-}
-
-.categoryFilters, .platformFilters{
-  width: 80%;
-  margin: 1em 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.platformFiltersContainer{
-  display: inherit;
-  flex-direction: inherit;
-  align-items: center;
-
-  flex-basis: 70%;
-}
-
-.platformFilters{
-  display: inherit;
-}
-
 .openSourceFilter{
-  margin-left: auto;
+  margin: 0 auto;
   font-size: .9em;
 }
 

@@ -34,6 +34,11 @@ a {
   border-color: $red;
 }
 
+.btn-primary:hover{
+  background-color: darken($red, 8%);
+  border-color: darken($red, 8%);
+}
+
 .btn-secondary,
 .btn-check:checked + .btn-secondary,
 .btn-check:active + .btn-secondary,
@@ -46,14 +51,26 @@ a {
   border-color: $yellow;
 }
 
-.btn-primary:hover{
-  background-color: darken($red, 8%);
-  border-color: darken($red, 8%);
-}
-
 .btn-secondary:hover{
   background-color: darken($yellow, 3%);
   border-color: darken($yellow, 3%);
+}
+
+.btn-inside-input,
+.btn-check:checked + .btn-inside-input,
+.btn-check:active + .btn-inside-input,
+.btn-inside-input:active,
+.btn-inside-input.active,
+.show > .btn-inside-input.dropdown-toggle{
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid #ced4da;
+  border-left: none;
+  border-radius: 0;
+}
+
+.btn-inside-input:hover{
+  background-color: rgba($purple, .03);
 }
 
 .btn-check:focus + .btn-primary, .btn-primary:focus {

@@ -7,10 +7,38 @@
 
 .categoryFiltersContainer{
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90%;
+  margin: 0 auto 1.5em;
+
+  border-bottom: 1px solid rgba($purple, .1);
+}
+
+.categoryFiltersTitle{
+  margin: 0 auto 1em;
+}
+
+.categoryFilters, .platformFilters{
+  width: 80%;
+  margin: 1em 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .platformFiltersContainer{
-  
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+
+  flex-basis: 70%;
+}
+
+.platformFilters{
+  display: inherit;
 }
 
 .cleanFiltersButton{
@@ -47,9 +75,14 @@
   opacity: 1;
 }
 
+.categoryCheckbox:checked + .categoryLabel:hover{
+  opacity: .7;
+}
+
 .platformLabel{
   margin: .5em 0;
   padding: .45em .5em;
+  transition: .05s ease-out;
 }
 
 .platformLabel svg{
@@ -58,12 +91,16 @@
 }
 
 .platformLabel:hover svg{
-  color: $red;
+  color: lighten($purple, 15%);
 }
 
 .platformCheckbox:checked + .platformLabel{
-  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.1);
-  background-color: rgba(darken($purple, 10%), .1);
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
+  background-color: rgba(darken($purple, 5%), .08);
+}
+
+.platformCheckbox:checked + .platformLabel:hover{
+  background-color: rgba(darken($purple, 5%), .06);
 }
 
 .platformCheckbox:checked + .platformLabel svg{
@@ -72,6 +109,7 @@
 
 .cleanFiltersButtonContainer{
   padding-left: 1.5em;
+  margin-bottom: 1.5em;
   display: inherit;
 }
 

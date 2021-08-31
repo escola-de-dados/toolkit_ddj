@@ -5,7 +5,8 @@ import yaml from "js-yaml";
 import Head from "next/head";
 import Script from "next/script";
 
-import { Form } from "react-bootstrap";
+import { InputGroup, Form, Button } from "react-bootstrap";
+import { Icon } from "@iconify/react";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
@@ -52,7 +53,7 @@ export async function getStaticProps(context) {
   const initialPlatformFilters = initialPlatformsData.map((platform) => {
     return {
       label: platform.nome,
-      isChecked: false,
+      isChecked: true,
     };
   });
 
@@ -60,7 +61,7 @@ export async function getStaticProps(context) {
     return {
       slug: category.slug,
       label: category.nome,
-      isChecked: false,
+      isChecked: category.nome === "Visualização" ? true : false,
     };
   });
 
@@ -122,7 +123,7 @@ export default function Home({
       return platforms.map((platform) => {
         return {
           label: platform.nome,
-          isChecked: false,
+          isChecked: true,
         };
       });
     });
@@ -140,7 +141,7 @@ export default function Home({
         return {
           slug: category.slug,
           label: category.nome,
-          isChecked: false,
+          isChecked: category.nome === "Visualização" ? true : false,
         };
       });
     });
@@ -206,7 +207,7 @@ export default function Home({
       currentFilters.map((f) => {
         return {
           ...f,
-          isChecked: false,
+          isChecked: true,
         };
       })
     );
@@ -235,7 +236,7 @@ export default function Home({
       currentFilters.map((f) => {
         return {
           ...f,
-          isChecked: false,
+          isChecked: true,
         };
       })
     );
@@ -257,7 +258,7 @@ export default function Home({
   const categoryFilterRule = (item) => {
     const categoryCheckedFilters = getCheckedCategoryFilters();
     if (categoryCheckedFilters.length === 0) {
-      return true;
+      return false;
     } else {
       return categoryCheckedFilters.indexOf(item.categoria) !== -1;
     }
@@ -268,8 +269,8 @@ export default function Home({
 
     const platformCheckedFilters = getCheckedPlatformFilters();
 
-    if (platformCheckedFilters.length <= 0) {
-      return true;
+    if (platformCheckedFilters.length === 0) {
+      return false;
     } else {
       const match = plataformas.filter((platform) => {
         return platformCheckedFilters.includes(platform);
@@ -305,7 +306,11 @@ export default function Home({
         <link rel="icon" href="/favicon.ico" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap"
           rel="stylesheet"
@@ -333,40 +338,33 @@ export default function Home({
           {/* Filtros */}
           <div className={`${styles.filtersContainer}`}>
             {/* Pesquisa */}
-            <Form className={styles.searchContainer}>
+            <InputGroup className={styles.searchContainer}>
               <Form.Control
                 type="search"
                 placeholder="Pesquise por qualquer ferramenta..."
                 onChange={(e) => onSearch(e)}
               />
-            </Form>
+              <Button variant="inside-input" id="button-addon1">
+                <Icon icon={"mdi:search"} color={styles.lightPurple} />
+              </Button>
+            </InputGroup>
 
             <div className={styles.checkboxFiltersContainer}>
               {/* Categoria */}
-              <div className={styles.categoryFiltersContainer}>
-                <span className={styles.categoryFiltersTitle}>Categorias</span>
-                <FilterGroup
-                  className={styles.categoryFilters}
-                  type="category"
-                  filters={categoryFilters}
-                  onFilter={onCategoryFilter}
-                  clearFilters={clearCategoryFilters}
-                />
-              </div>
+              <FilterGroup
+                type="category"
+                filters={categoryFilters}
+                onFilter={onCategoryFilter}
+                clearFilters={clearCategoryFilters}
+              />
               {/* Plataforma */}
-              <div className={styles.platformFiltersContainer}>
-                <span className={styles.platformFiltersTitle}>
-                  Plataformas:
-                </span>
-                <FilterGroup
-                  className={styles.platformFilters}
-                  type="platform"
-                  filters={platformFilters}
-                  platforms={platforms}
-                  onFilter={onPlatformFilter}
-                  clearFilters={clearPlatformFilters}
-                />
-              </div>
+              <FilterGroup
+                type="platform"
+                filters={platformFilters}
+                platforms={platforms}
+                onFilter={onPlatformFilter}
+                clearFilters={clearPlatformFilters}
+              />
               {/* Open Source */}
               <div className={styles.openSourceFilter}>
                 <div className="filter">
