@@ -75,6 +75,18 @@
   justify-content: space-between;
 }
 
+@media #{$big-tablets-and-down}{
+  .contentContainer{
+    max-width: 90vw;
+  }
+}
+
+@media #{$big-phones-and-down}{
+  .filtersContainer{
+    width: 100%;
+  }
+}
+
 @media #{$desktop-1400-and-up}{
   .contentContainer{
     max-width: 1200px;

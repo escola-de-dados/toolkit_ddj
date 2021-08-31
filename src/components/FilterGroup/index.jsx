@@ -29,7 +29,7 @@ const FilterGroup = ({
           <div className={styles.categoryFilters}>
             {filters.map((f) => (
               <Form.Check
-                className={styles.categoryFilter}
+                className={`${styles.filter} ${styles.categoryFilter}`}
                 key={`${f.label}_key`}
                 id={f.slug}
                 type="checkbox"
@@ -57,7 +57,7 @@ const FilterGroup = ({
           <div className={styles.platformFilters}>
             {filters.map((f) => (
               <Form.Check
-                className={styles.platformFilter}
+                className={`${styles.filter} ${styles.platformFilter}`}
                 key={`${f.label}_key`}
                 id={f.label}
                 type="checkbox"

@@ -5,6 +5,19 @@
   lightPurple: rgba($purple, .6);
 }
 
+.filterCheckbox{
+  position: absolute;
+  left: -9999px;
+}
+
+.filterLabel{
+  border-radius: .4em;
+}
+
+.filterLabel:hover{
+  cursor: pointer;  
+}
+
 .categoryFiltersContainer{
   display: flex;
   flex-direction: column;
@@ -29,35 +42,6 @@
   justify-content: center;
 }
 
-.platformFiltersContainer{
-  display: inherit;
-  flex-direction: column;
-  align-items: center;
-
-  flex-basis: 70%;
-}
-
-.platformFilters{
-  display: inherit;
-}
-
-.cleanFiltersButton{
-  margin: 0 2em;
-}
-
-.filterCheckbox{
-  position: absolute;
-  left: -9999px;
-}
-
-.filterLabel{
-  border-radius: .4em;
-}
-
-.filterLabel:hover{
-  cursor: pointer;  
-}
-
 .categoryLabel{
   margin-bottom: 1em;
   padding: .5em .8em;
@@ -77,6 +61,18 @@
 
 .categoryCheckbox:checked + .categoryLabel:hover{
   opacity: .7;
+}
+
+.platformFiltersContainer{
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+
+  flex-basis: 70%;
+}
+
+.platformFilters{
+  display: inherit;
 }
 
 .platformLabel{
@@ -115,4 +111,18 @@
 
 .cleanFiltersButton{
   margin: 0 auto;
+}
+
+@media #{$big-tablets-and-down}{
+  .filter{
+    padding: 0;
+    margin: 0 .5em;
+  }
+}
+
+@media #{$big-phones-and-down}{
+  .categoryFilters, .platformFilters{
+    width: 100%;
+    margin-bottom: 0;
+  }
 }

@@ -92,6 +92,12 @@
 
 @media #{$big-tablets-and-down}{
   .toolCard{
+    width: 48%;
+  }
+}
+
+@media #{$big-phones-and-down}{
+  .toolCard{
     width: 100%;
   }
 }

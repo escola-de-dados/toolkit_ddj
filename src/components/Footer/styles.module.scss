@@ -74,6 +74,7 @@
 
 @media #{$big-tablets-and-down}{
   .pageFooter{
+    margin-top: 10em;
     padding: 4em 2em 12em;
   }
 
@@ -94,9 +95,11 @@
   .logoContainer{
     flex-direction: column;
   }
+}
 
-  .logoImgLink{
-    width: 100%;
-    margin-bottom: 3em;
-  }
+@media #{$big-phones-and-down}{
+    .logoImgLink{
+      width: 100%;
+      margin-bottom: 3em;
+    }
 }
