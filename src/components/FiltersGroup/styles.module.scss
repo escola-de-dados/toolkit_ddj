@@ -5,6 +5,44 @@
   lightPurple: rgba($purple, .6);
 }
 
+.filtersContainer{
+  width: 90%;
+  margin: 4em auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer{
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.searchContainer input{
+  text-align: center;
+  border-radius: 0;
+  border-right: none;
+}
+
+.searchContainer input::placeholder{
+  color: rgba($purple, .4);
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.checkboxFiltersContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 1.5em;
+  background-color: rgba($purple, .02);
+}
+
 .filterCheckbox{
   position: absolute;
   left: -9999px;
@@ -43,12 +81,11 @@
 }
 
 .categoryLabel{
-  margin-bottom: 1em;
+  margin: 0 .3em 1em;
   padding: .5em .8em;
   opacity: .5;
 
   color: initial !important;
-  font-size: .9em;
 }
 
 .categoryLabel:hover{
@@ -113,6 +150,12 @@
   margin: 0 auto;
 }
 
+.openSourceFilter{
+  margin: 0 auto;
+  font-size: .9em;
+}
+
+
 @media #{$big-tablets-and-down}{
   .filter{
     padding: 0;
@@ -121,6 +164,10 @@
 }
 
 @media #{$big-phones-and-down}{
+  .filtersContainer{
+    width: 100%;
+  }
+
   .categoryFilters, .platformFilters{
     width: 100%;
     margin-bottom: 0;

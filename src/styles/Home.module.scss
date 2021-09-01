@@ -10,49 +10,6 @@
   margin: 0 auto;
 }
 
-.filtersContainer{
-  width: 90%;
-  margin: 4em auto 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.searchContainer{
-  width: 100%;
-  margin-bottom: 2em;
-}
-
-.searchContainer input{
-  text-align: center;
-  border-radius: 0;
-  border-right: none;
-}
-
-.searchContainer input::placeholder{
-  color: rgba($purple, .4);
-  font-size: 1em;
-  font-weight: 300;
-  text-align: center;
-}
-
-.checkboxFiltersContainer{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-
-  width: 100%;
-  padding: 1.5em;
-  background-color: rgba($purple, .02);
-}
-
-.openSourceFilter{
-  margin: 0 auto;
-  font-size: .9em;
-}
-
 .resultsContainer{
   margin-top: 3.2em;
 }
@@ -75,15 +32,40 @@
   justify-content: space-between;
 }
 
+.openPopupFiltersButton{
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+
+  padding: .8em;
+
+  border-radius: 100px;
+}
+
+.openPopupFiltersButton svg{
+  font-size: 1.8em;
+  margin-right: 0;
+}
+
+.popupFiltersDrawerInner{
+  width: 20vw;
+}
+
+.popupFiltersCloseButton{
+  width: 10%;
+  margin-left: auto;
+  margin-right: 5%;
+  background: none;
+  border: none;
+}
+
+.popupFiltersCloseButton svg{
+  font-size: 1.2em;
+}
+
 @media #{$big-tablets-and-down}{
   .contentContainer{
     max-width: 90vw;
-  }
-}
-
-@media #{$big-phones-and-down}{
-  .filtersContainer{
-    width: 100%;
   }
 }
 

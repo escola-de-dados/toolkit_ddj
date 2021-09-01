@@ -3,14 +3,16 @@ import { useState, useEffect } from "react";
 import yaml from "js-yaml";
 
 import Head from "next/head";
-import Script from "next/script";
 
 import { InputGroup, Form, Button } from "react-bootstrap";
+import { sizing } from "@material-ui/system";
+import Drawer from "@bit/mui-org.material-ui.drawer";
 import { Icon } from "@iconify/react";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
-import FilterGroup from "../components/FilterGroup";
+import Filter from "../components/Filter";
+import FiltersGroup from "../components/FiltersGroup";
 import Footer from "../components/Footer";
 import InfoModal from "../components/InfoModal";
 
@@ -101,10 +103,21 @@ export default function Home({
 
   const [onlyOpenSourceFilter, setOnlyOpenSourceFilter] = useState(false);
 
-  const [isFiltered, setIsFiltered] = useState(false);
-
   const [showHowToModal, setShowHowToModal] = useState(false);
   const [showAboutPageModal, setShowAboutPageModal] = useState(false);
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setIsDrawerOpen(open);
+  };
 
   const fetchUpdatedData = async () => {
     const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
@@ -336,50 +349,20 @@ export default function Home({
       <main>
         <div className={styles.contentContainer}>
           {/* Filtros */}
-          <div className={`${styles.filtersContainer}`}>
-            {/* Pesquisa */}
-            <InputGroup className={styles.searchContainer}>
-              <Form.Control
-                type="search"
-                placeholder="Pesquise por qualquer ferramenta..."
-                onChange={(e) => onSearch(e)}
-              />
-              <Button variant="inside-input" id="button-addon1">
-                <Icon icon={"mdi:search"} color={styles.lightPurple} />
-              </Button>
-            </InputGroup>
-
-            <div className={styles.checkboxFiltersContainer}>
-              {/* Categoria */}
-              <FilterGroup
-                type="category"
-                filters={categoryFilters}
-                onFilter={onCategoryFilter}
-                clearFilters={clearCategoryFilters}
-              />
-              {/* Plataforma */}
-              <FilterGroup
-                type="platform"
-                filters={platformFilters}
-                platforms={platforms}
-                onFilter={onPlatformFilter}
-                clearFilters={clearPlatformFilters}
-              />
-              {/* Open Source */}
-              <div className={styles.openSourceFilter}>
-                <div className="filter">
-                  <Form.Check
-                    id="only-open-source"
-                    type="checkbox"
-                    value="only-open-source"
-                    onChange={onOnlyOpenSourceFilter}
-                    checked={onlyOpenSourceFilter}
-                    label="Apenas ferramentas de código aberto"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+          <FiltersGroup
+            filtersData={{
+              onSearch,
+              categoryFilters,
+              onCategoryFilter,
+              clearCategoryFilters,
+              platformFilters,
+              platforms,
+              onPlatformFilter,
+              clearPlatformFilters,
+              onOnlyOpenSourceFilter,
+              onlyOpenSourceFilter,
+            }}
+          />
 
           {toolsData.length > 0 ? (
             <div className={styles.resultsContainer}>
@@ -410,6 +393,41 @@ export default function Home({
             <div>Loading...</div>
           )}
         </div>
+        <Button
+          className={styles.openPopupFiltersButton}
+          onClick={toggleDrawer(true)}
+        >
+          <Icon icon="mdi:filter" color="#fff" />
+        </Button>
+
+        <Drawer
+          classes={{ paper: styles.popupFiltersDrawerInner }}
+          anchor="right"
+          open={isDrawerOpen}
+          onClose={toggleDrawer(false)}
+        >
+          <Button
+            variant="light"
+            className={styles.popupFiltersCloseButton}
+            onClick={toggleDrawer(false)}
+          >
+            <Icon icon="mdi:close" color="#000" />
+          </Button>
+          <FiltersGroup
+            filtersData={{
+              onSearch,
+              categoryFilters,
+              onCategoryFilter,
+              clearCategoryFilters,
+              platformFilters,
+              platforms,
+              onPlatformFilter,
+              clearPlatformFilters,
+              onOnlyOpenSourceFilter,
+              onlyOpenSourceFilter,
+            }}
+          />
+        </Drawer>
       </main>
 
       <Footer handleModalOpen={handleModalOpen} />

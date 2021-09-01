@@ -3,7 +3,6 @@ module.exports = {
     try {
       return platformList.find((item) => item.nome === platformName).icone;
     } catch (err) {
-      console.log(err);
       console.log("Plataforma não encontrada");
       return "mdi:help";
     }
