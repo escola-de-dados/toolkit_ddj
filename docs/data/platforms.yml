@@ -26,17 +26,20 @@
   nome: R
   icone: mdi:language-r
 -
-  nome: ChromeOS
+  nome: Chrome OS
   icone: mdi:google-chrome
 -
   nome: Chrome
-  icone: mdi:google-chrome
+  icone: ant-design:chrome-filled
 -
   nome: Firefox
   icone: mdi:firefox
 -
-  nome: Micosoft Power BI
+  nome: Microsoft Power BI
   icone: bi:bar-chart-fill
+-
+  nome: Excel
+  icone: mdi:microsoft-excel
 -
   nome: Localhost
   icone: mdi:home-floor-l
