@@ -5,7 +5,7 @@
   lightPurple: rgba($purple, .6);
 }
 
-.filtersContainer{
+.filters{
   width: 90%;
   margin: 4em auto 0;
   display: flex;
@@ -43,6 +43,38 @@
   background-color: rgba($purple, .02);
 }
 
+.categoryFilters{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90%;
+  margin: 0 auto 1.5em;
+
+  border-bottom: 1px solid rgba($purple, .1);
+}
+
+.platformFilters{
+  display: inherit;
+  flex-direction: column;
+  align-items: center;
+
+  flex-basis: 70%;
+}
+
+.filtersTitle{
+  margin: 0 auto 1em;
+}
+
+.filtersContainer{
+  width: 80%;
+  margin: 1em 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .filterCheckbox{
   position: absolute;
   left: -9999px;
@@ -56,87 +88,52 @@
   cursor: pointer;  
 }
 
-.categoryFiltersContainer{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  width: 90%;
-  margin: 0 auto 1.5em;
-
-  border-bottom: 1px solid rgba($purple, .1);
-}
-
-.categoryFiltersTitle{
-  margin: 0 auto 1em;
-}
-
-.categoryFilters, .platformFilters{
-  width: 80%;
-  margin: 1em 0;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.categoryLabel{
+.categoryFilterLabel{
   margin: 0 .3em 1em;
   padding: .5em .8em;
   opacity: .5;
 
+  text-align: center;
   color: initial !important;
 }
 
-.categoryLabel:hover{
+.categoryFilterLabel:hover{
   opacity: .7;
 }
 
-.categoryCheckbox:checked + .categoryLabel{
+.categoryFilterCheckbox:checked + .categoryFilterLabel{
   opacity: 1;
 }
 
-.categoryCheckbox:checked + .categoryLabel:hover{
+.categoryFilterCheckbox:checked + .categoryFilterLabel:hover{
   opacity: .7;
 }
 
-.platformFiltersContainer{
-  display: inherit;
-  flex-direction: column;
-  align-items: center;
-
-  flex-basis: 70%;
-}
-
-.platformFilters{
-  display: inherit;
-}
-
-.platformLabel{
+.platformFilterLabel{
   margin: .5em 0;
   padding: .45em .5em;
   transition: .05s ease-out;
 }
 
-.platformLabel svg{
+.platformFilterLabel svg{
   color: $purple;
   font-size: 1.5em;
 }
 
-.platformLabel:hover svg{
+.platformFilterLabel:hover svg{
   color: lighten($purple, 15%);
 }
 
-.platformCheckbox:checked + .platformLabel{
+.platformFilterCheckbox:checked + .platformFilterLabel{
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
   background-color: rgba(darken($purple, 5%), .08);
 }
 
-.platformCheckbox:checked + .platformLabel:hover{
+.platformFilterCheckbox:checked + .platformFilterLabel:hover{
   background-color: rgba(darken($purple, 5%), .06);
 }
 
-.platformCheckbox:checked + .platformLabel svg{
+.platformFilterCheckbox:checked + .platformFilterLabel svg{
   color: $red;
 }
 
@@ -155,21 +152,126 @@
   font-size: .9em;
 }
 
+//Filtros da barra lateral
+.drawerFilters .checkboxFiltersContainer{
+  background: none;
+}
+
+.drawerFilters .platformFilters, .categoryFilters{
+  flex-basis: 90%;
+  margin: 0 auto 1.5em;
+}
+
+.drawerFilters .filtersContainer{
+  width: 90%;
+  justify-content: space-between;
+}
+
+.drawerFilters .filter{
+  display: flex;
+  padding-left: 0;
+}
+
+.drawerFilters .filter:last-child{
+  margin: auto;
+}
+
+.drawerFilters .categoryFilter{
+  width: 46%;
+}
+
+.drawerFilters .platformFilter{
+  width: 28%;
+}
+
+.drawerFilters .categoryFilterLabel{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding: .4em .6em;
+  font-size: .95em;
+}
+
+.drawerFilters .platformFilterLabel{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.drawerFilters .cleanFiltersButtonContainer{
+  padding-left: 0;
+  margin: .5em auto 1.5em;
+}
+
 
 @media #{$big-tablets-and-down}{
-  .filter{
+  .filter:not(.drawerFilters .filter){
     padding: 0;
     margin: 0 .5em;
   }
 }
 
 @media #{$big-phones-and-down}{
-  .filtersContainer{
+  .filters{
     width: 100%;
   }
 
-  .categoryFilters, .platformFilters{
+  .categoryFilters{
+    flex-basis: 85%;
+  }
+
+  .filtersContainer{
     width: 100%;
     margin-bottom: 0;
+    justify-content: space-between;
+  }
+  
+  .filter{
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+  }
+  
+  .filter:last-child{
+    margin: auto;
+  }
+  
+  .categoryFilter{
+    width: 42%;
+  }
+  
+  .categoryFilter:last-child{
+    width: 50%;
+  }
+  
+  .platformFilter{
+    width: 28%;
+  }
+  
+  .categoryFilterLabel{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: .4em .6em;
+    font-size: .95em;
+  }
+  
+  .platformFilterLabel{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cleanFiltersButtonContainer{
+    padding-left: 0;
+    margin: 1em auto;
+  }
+  
+  .openSourceFilter{
+    margin: 2em auto;
+    font-size: 1em;
+  }
+
+  //Filtros da barra lateral
+  .drawerFilters .searchContainer{
+    padding: 1.5em;
   }
 }

@@ -7,12 +7,10 @@ import { getPlatformIcon } from "../../utils/utils";
 
 import styles from "./styles.module.scss";
 
-const FiltersGroup = ({ filtersData, isPopup }) => {
+const FiltersGroup = ({ filtersData, isSideDrawer }) => {
   return (
     <div
-      className={`${styles.filtersContainer} ${
-        isPopup && styles.popupContainer
-      }`}
+      className={`${styles.filters} ${isSideDrawer && styles.drawerFilters}`}
     >
       {/* Pesquisa */}
       <InputGroup className={styles.searchContainer}>
@@ -28,9 +26,11 @@ const FiltersGroup = ({ filtersData, isPopup }) => {
 
       <div className={styles.checkboxFiltersContainer}>
         {/* Categorias */}
-        <div className={styles.categoryFiltersContainer}>
-          <span className={styles.categoryFiltersTitle}>Categorias</span>
-          <div className={styles.categoryFilters}>
+        <div className={styles.categoryFilters}>
+          <span className={styles.filtersTitle}>Categorias</span>
+          <div
+            className={`${styles.filtersContainer} ${styles.categoryFiltersContainer}`}
+          >
             {filtersData.categoryFilters.map((f) => (
               <Form.Check
                 className={`${styles.filter} ${styles.categoryFilter}`}
@@ -39,7 +39,7 @@ const FiltersGroup = ({ filtersData, isPopup }) => {
                 type="checkbox"
               >
                 <Form.Check.Input
-                  className={`${styles.filterCheckbox} ${styles.categoryCheckbox}`}
+                  className={`${styles.filterCheckbox} ${styles.categoryFilterCheckbox}`}
                   type="checkbox"
                   value={f.label}
                   onChange={filtersData.onCategoryFilter}
@@ -47,7 +47,7 @@ const FiltersGroup = ({ filtersData, isPopup }) => {
                   isValid
                 />
                 <Form.Check.Label
-                  className={`${styles.filterLabel} ${styles.categoryLabel} ${f.slug}`}
+                  className={`${styles.filterLabel} ${styles.categoryFilterLabel} ${f.slug}`}
                 >
                   {f.label}
                 </Form.Check.Label>
@@ -67,9 +67,11 @@ const FiltersGroup = ({ filtersData, isPopup }) => {
         </div>
 
         {/* Plataformas */}
-        <div className={styles.platformFiltersContainer}>
-          <span className={styles.platformFiltersTitle}>Plataformas</span>
-          <div className={styles.platformFilters}>
+        <div className={styles.platformFilters}>
+          <span className={styles.filtersTitle}>Plataformas</span>
+          <div
+            className={`${styles.filtersContainer} ${styles.platformFiltersContainer}`}
+          >
             {filtersData.platformFilters.map((f) => (
               <Form.Check
                 className={`${styles.filter} ${styles.platformFilter}`}
@@ -78,7 +80,7 @@ const FiltersGroup = ({ filtersData, isPopup }) => {
                 type="checkbox"
               >
                 <Form.Check.Input
-                  className={`${styles.filterCheckbox} ${styles.platformCheckbox}`}
+                  className={`${styles.filterCheckbox} ${styles.platformFilterCheckbox}`}
                   type="checkbox"
                   value={f.label}
                   onChange={filtersData.onPlatformFilter}
@@ -87,7 +89,7 @@ const FiltersGroup = ({ filtersData, isPopup }) => {
                 />
                 <Form.Check.Label
                   title={f.label}
-                  className={`${styles.filterLabel} ${styles.platformLabel}`}
+                  className={`${styles.filterLabel} ${styles.platformFilterLabel}`}
                 >
                   <Icon
                     icon={`${getPlatformIcon(f.label, filtersData.platforms)}`}

@@ -5,13 +5,11 @@ import yaml from "js-yaml";
 import Head from "next/head";
 
 import { InputGroup, Form, Button } from "react-bootstrap";
-import { sizing } from "@material-ui/system";
 import Drawer from "@bit/mui-org.material-ui.drawer";
 import { Icon } from "@iconify/react";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
-import Filter from "../components/Filter";
 import FiltersGroup from "../components/FiltersGroup";
 import Footer from "../components/Footer";
 import InfoModal from "../components/InfoModal";
@@ -108,17 +106,6 @@ export default function Home({
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setIsDrawerOpen(open);
-  };
-
   const fetchUpdatedData = async () => {
     const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
       .then((res) => res.text())
@@ -180,6 +167,18 @@ export default function Home({
     }
   };
 
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setIsDrawerOpen(open);
+  };
+
+  //TODO: Refatorar para DRY
   const getCheckedCategoryFilters = () => {
     return categoryFilters
       .filter((filterItem) => filterItem.isChecked)
@@ -394,26 +393,27 @@ export default function Home({
           )}
         </div>
         <Button
-          className={styles.openPopupFiltersButton}
+          className={styles.openDrawerFiltersButton}
           onClick={toggleDrawer(true)}
         >
           <Icon icon="mdi:filter" color="#fff" />
         </Button>
 
         <Drawer
-          classes={{ paper: styles.popupFiltersDrawerInner }}
+          classes={{ paper: styles.drawerInner }}
           anchor="right"
           open={isDrawerOpen}
           onClose={toggleDrawer(false)}
         >
           <Button
             variant="light"
-            className={styles.popupFiltersCloseButton}
+            className={styles.drawerCloseButton}
             onClick={toggleDrawer(false)}
           >
             <Icon icon="mdi:close" color="#000" />
           </Button>
           <FiltersGroup
+            isSideDrawer={true}
             filtersData={{
               onSearch,
               categoryFilters,
@@ -427,6 +427,12 @@ export default function Home({
               onlyOpenSourceFilter,
             }}
           />
+          <Button
+            className={styles.drawerApplyFiltersButton}
+            onClick={toggleDrawer(false)}
+          >
+            Aplicar filtros
+          </Button>
         </Drawer>
       </main>
 
