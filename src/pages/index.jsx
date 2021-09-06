@@ -392,12 +392,24 @@ export default function Home({
             <div>Loading...</div>
           )}
         </div>
-        <Button
-          className={styles.openDrawerFiltersButton}
-          onClick={toggleDrawer(true)}
-        >
-          <Icon icon="mdi:filter" color="#fff" />
-        </Button>
+
+        <div className={styles.fabButtonsContainer}>
+          {/* Abrir painel com os filtros */}
+          <Button
+            className={`${styles.backToTopButton} ${styles.fabButton}`}
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            <Icon icon="mdi:chevron-up" color="#fff" />
+          </Button>
+
+          {/* Voltar ao topo da página */}
+          <Button
+            className={`${styles.openDrawerFiltersButton} ${styles.fabButton}`}
+            onClick={toggleDrawer(true)}
+          >
+            <Icon icon="mdi:filter" color="#fff" />
+          </Button>
+        </div>
 
         <Drawer
           classes={{ paper: styles.drawerInner }}

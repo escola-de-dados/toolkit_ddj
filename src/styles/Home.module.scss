@@ -34,19 +34,38 @@ $light-purple:rgba($purple, .6);
   justify-content: space-between;
 }
 
-.openDrawerFiltersButton{
+.fabButtonsContainer{
   position: fixed;
   bottom: 1em;
   right: 1em;
 
-  padding: .8em;
+  display: flex;
+  flex-wrap: wrap;
 
+  z-index: 1100;
+}
+
+.fabButton:first-child{
+  margin-right: 2rem;
+}
+
+.fabButton{
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0;
   border-radius: 100px;
 }
 
+.fabButton svg{
+  margin: auto;
+}
+
+.backToTopButton svg{
+  font-size: 2.5rem;
+}
+
 .openDrawerFiltersButton svg{
-  font-size: 1.8em;
-  margin-right: 0;
+  font-size: 1.5rem;
 }
 
 .drawerInner{
@@ -77,6 +96,15 @@ $light-purple:rgba($purple, .6);
 @media #{$big-tablets-and-down}{
   .contentContainer{
     max-width: 90vw;
+  }
+
+  .fabButtonsContainer{
+    flex-direction: column;
+  }
+
+  .fabButton:first-child{
+    margin-right: 0;
+    margin-bottom: 1rem;
   }
 }
 
