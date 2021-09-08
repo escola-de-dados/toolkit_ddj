@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import yaml from "js-yaml";
 
 import Head from "next/head";
 
-import { InputGroup, Form, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Drawer from "@bit/mui-org.material-ui.drawer";
 import { Icon } from "@iconify/react";
+
+import InfiniteScroll from "react-infinite-scroll-component";
 
 import Header from "../components/Header";
 import Card from "../components/Card";
@@ -83,7 +85,13 @@ export default function Home({
   initialCategoriesData,
   initialCategoryFilters,
 }) {
-  const [toolsData, setToolsData] = useState([]);
+  const cardNumberPerLoading = 12;
+
+  const [toolsData, setToolsData] = useState([...initialToolsData]);
+
+  const [filteredToolsData, setFilteredToolsData] = useState([
+    ...initialToolsData,
+  ]);
 
   const [platforms, setPlatforms] = useState([...initialPlatformsData]);
 
@@ -106,36 +114,55 @@ export default function Home({
 
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-  const fetchUpdatedData = async () => {
-    const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
-      .then((res) => res.text())
-      .then((data) => yaml.load(data));
+  // Infinite Scroll
+  const [count, setCount] = useState({
+    prev: 0,
+    next: cardNumberPerLoading,
+  });
 
-    setToolsData([...updatedToolsData]);
+  const [hasMore, setHasMore] = useState(true);
 
-    const updatedPlatformsData = await fetch("/toolkit_ddj/data/platforms.yml")
-      .then((res) => res.text())
-      .then((data) => yaml.load(data));
+  const [current, setCurrent] = useState(
+    initialToolsData.slice(count.prev, count.next)
+  );
 
-    setPlatforms(updatedPlatformsData);
+  // Ao inicializar o componente
+  useEffect(() => {
+    const fetchUpdatedData = async () => {
+      //Lista de ferramentas
+      const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
+        .then((res) => res.text())
+        .then((data) => yaml.load(data));
 
-    setPlatformFilters(() => {
-      return platforms.map((platform) => {
-        return {
-          label: platform.nome,
-          isChecked: true,
-        };
-      });
-    });
+      setToolsData([...updatedToolsData]);
 
-    const updatedCategoriesData = await fetch(
-      "/toolkit_ddj/data/categories.yml"
-    )
-      .then((res) => res.text())
-      .then((data) => yaml.load(data));
+      //Lista de plataformas
+      const updatedPlatformsData = await fetch(
+        "/toolkit_ddj/data/platforms.yml"
+      )
+        .then((res) => res.text())
+        .then((data) => yaml.load(data));
 
-    setCategories(updatedCategoriesData);
+      setPlatforms(updatedPlatformsData);
 
+      //Lista de categorias
+      const updatedCategoriesData = await fetch(
+        "/toolkit_ddj/data/categories.yml"
+      )
+        .then((res) => res.text())
+        .then((data) => yaml.load(data));
+
+      setCategories(updatedCategoriesData);
+    };
+
+    fetchUpdatedData();
+
+    const filteredDatabase = filterDatabase();
+    setFilteredToolsData(filteredDatabase);
+  }, []);
+
+  //Atualiza os filtros de categorias
+  useEffect(() => {
     setCategoryFilters(() => {
       return categories.map((category) => {
         return {
@@ -145,11 +172,44 @@ export default function Home({
         };
       });
     });
-  };
+  }, [categories]);
+
+  //Atualiza os filtros de plataformas
+  useEffect(() => {
+    setPlatformFilters(() => {
+      return platforms.map((platform) => {
+        return {
+          label: platform.nome,
+          isChecked: true,
+        };
+      });
+    });
+  }, [platforms]);
+
+  // Filtra novamente base de dados original toda vez que um dos filtros muda
+  useEffect(() => {
+    const filteredDatabase = filterDatabase();
+    setFilteredToolsData(filteredDatabase);
+  }, [
+    toolsData,
+    categoryFilters,
+    platformFilters,
+    onlyOpenSourceFilter,
+    searchInput,
+  ]);
 
   useEffect(() => {
-    fetchUpdatedData();
-  }, []);
+    setCount({ prev: 0, next: cardNumberPerLoading });
+    setCurrent(filteredToolsData.slice(0, cardNumberPerLoading));
+    setHasMore(true);
+  }, [filteredToolsData]);
+
+  // Checa se ainda tem mais ferramentas toda vez que o current muda
+  useEffect(() => {
+    if (current.length === filteredToolsData.length) {
+      setHasMore(false);
+    }
+  }, [current, filteredToolsData]);
 
   const handleModalClose = () => {
     if (showHowToModal) {
@@ -178,17 +238,91 @@ export default function Home({
     setIsDrawerOpen(open);
   };
 
-  //TODO: Refatorar para DRY
-  const getCheckedCategoryFilters = () => {
-    return categoryFilters
-      .filter((filterItem) => filterItem.isChecked)
-      .map((filterItem) => filterItem.label);
+  const handleMoreDataButtonClick = () => {
+    if (current.length === filteredToolsData.length) {
+      setHasMore(false);
+      return;
+    }
+
+    setCurrent(
+      current.concat(
+        filteredToolsData.slice(
+          count.prev + cardNumberPerLoading,
+          count.next + cardNumberPerLoading
+        )
+      )
+    );
+
+    setCount((prevState) => ({
+      prev: prevState.prev + cardNumberPerLoading,
+      next: prevState.next + cardNumberPerLoading,
+    }));
   };
 
-  const getCheckedPlatformFilters = () => {
-    return platformFilters
+  //Aplica todos os filtros à base original de dados e retorna a base filtrada e ordenada
+  const filterDatabase = () => {
+    return toolsData
+      .filter((item) => !item.desativado) //remove itens desativados
+      .filter(categoryFilterRule)
+      .filter(platformFilterRule)
+      .filter(onlyOpenSourceFilterRule)
+      .filter(searchFilterRule)
+      .sort(sortRule);
+  };
+
+  /*--- Filter Rules ---*/
+  //Remove itens inativos
+  const removeInactiveRule = (item) => {
+    return !item.desativado;
+  };
+
+  // Retorna o item se a categoria dele for encontrada dentre os filtros de categoria marcados
+  const categoryFilterRule = (item) => {
+    const categoryCheckedFilters = categoryFilters
       .filter((filterItem) => filterItem.isChecked)
       .map((filterItem) => filterItem.label);
+
+    if (categoryCheckedFilters.length === 0) {
+      return false;
+    } else {
+      return categoryCheckedFilters.indexOf(item.categoria) !== -1;
+    }
+  };
+
+  // Retorna o item se a quantidade de suas plataformas que for igual às plataformas marcadas for maior que zero
+  const platformFilterRule = (item) => {
+    // Copia a array de plataformas do item para uma nova variável
+    const itemPlatforms = [...item.plataforma];
+
+    const platformCheckedFilters = platformFilters
+      .filter((filterItem) => filterItem.isChecked)
+      .map((filterItem) => filterItem.label);
+
+    if (platformCheckedFilters.length === 0) {
+      return false;
+    } else {
+      // 'match' guarda todas as plataformas do item que estão inclusas na array de plataformas marcadas
+      const match = itemPlatforms.filter((platform) => {
+        return platformCheckedFilters.includes(platform);
+      });
+
+      // se o nº de plataformas do item inclusas nas plataformas marcadas for maior que 0, retorna o item
+      return match.length > 0;
+    }
+  };
+
+  const onlyOpenSourceFilterRule = (item) =>
+    onlyOpenSourceFilter ? item["open-source"] : true;
+
+  const searchFilterRule = (item) => {
+    return Object.values(item)
+      .join("")
+      .toLowerCase()
+      .includes(searchInput.toLowerCase());
+  };
+
+  const sortRule = (a, b) => {
+    return b.destaque - a.destaque || a.categoria < b.categoria;
   };
 
   /*--- Filter Handlers ---*/
@@ -262,58 +396,15 @@ export default function Home({
     setOnlyOpenSourceFilter(checked);
   };
 
-  /*--- Filter Rules ---*/
-  const removeInactiveRule = (item) => {
-    return !item.desativado;
-  };
-
-  const categoryFilterRule = (item) => {
-    const categoryCheckedFilters = getCheckedCategoryFilters();
-    if (categoryCheckedFilters.length === 0) {
-      return false;
-    } else {
-      return categoryCheckedFilters.indexOf(item.categoria) !== -1;
-    }
-  };
-
-  const platformFilterRule = (item) => {
-    const plataformas = [...item.plataforma];
-
-    const platformCheckedFilters = getCheckedPlatformFilters();
-
-    if (platformCheckedFilters.length === 0) {
-      return false;
-    } else {
-      const match = plataformas.filter((platform) => {
-        return platformCheckedFilters.includes(platform);
-      });
-
-      return match.length > 0;
-    }
-  };
-
-  const onlyOpenSourceFilterRule = (item) =>
-    onlyOpenSourceFilter ? item["open-source"] : true;
-
-  const searchFilterRule = (item) => {
-    return Object.values(item)
-      .join("")
-      .toLowerCase()
-      .includes(searchInput.toLowerCase());
-  };
-
-  const sortRule = (a, b) => {
-    //Primeiro ordena pelos destaques, depois pelas categorias
-    return b.destaque - a.destaque || a.categoria < b.categoria;
-  };
-
   return (
     <div>
       <Head>
         <title>Caixa de Ferramentas | Jornalismo de Dados</title>
         <meta
           name="description"
-          content="Explore mais de 140 ferramentas para jornalistas de dados e colabore para aumentar a base."
+          content={`Explore mais de ${
+            toolsData.filter(removeInactiveRule).length
+          } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
         />
         <link rel="icon" href="/favicon.ico" />
 
@@ -330,7 +421,11 @@ export default function Home({
       </Head>
 
       <Header
-        toolsNumber={toolsData.length > 0 ? toolsData.length : 144}
+        toolsNumber={
+          toolsData.length > 0
+            ? toolsData.filter(removeInactiveRule).length
+            : 144
+        }
         handleModalOpen={handleModalOpen}
       />
 
@@ -363,22 +458,30 @@ export default function Home({
             }}
           />
 
-          {toolsData.length > 0 ? (
+          {filteredToolsData.length > 0 ? (
             <div className={styles.resultsContainer}>
               <div className={styles.resultsInfo}>
-                <span className={styles.resultsNumber}>{toolsData.length}</span>{" "}
-                {toolsData === 1 ? "Resultado" : "Resultados"}
+                <span className={styles.resultsNumber}>
+                  {filteredToolsData.length}
+                </span>{" "}
+                {filteredToolsData === 1 ? "Resultado" : "Resultados"}
               </div>
-
-              <div className={styles.cardsContainer}>
-                {toolsData
-                  .filter(removeInactiveRule)
-                  .filter(categoryFilterRule)
-                  .filter(platformFilterRule)
-                  .filter(onlyOpenSourceFilterRule)
-                  .filter(searchFilterRule)
-                  .sort(sortRule)
-                  .map((tool, index) => (
+              <InfiniteScroll
+                className={styles.cardsContainer}
+                dataLength={current.length}
+                hasMore={hasMore}
+                // loader={<h4>Carregando mais resultados...</h4>}
+                endMessage={
+                  <div
+                    className={styles.allResultsLoadedMessage}
+                    style={{ textAlign: "center" }}
+                  >
+                    <strong>Todos os resultados foram carregados!</strong>
+                  </div>
+                }
+              >
+                {current &&
+                  current.map((tool, index) => (
                     <Card
                       key={index}
                       toolData={tool}
@@ -386,10 +489,24 @@ export default function Home({
                       platforms={platforms}
                     />
                   ))}
-              </div>
+              </InfiniteScroll>
+              {hasMore && (
+                <div className={styles.loadMoreButtonContainer}>
+                  <Button
+                    variant="load-more"
+                    className={styles.loadMoreButton}
+                    onClick={handleMoreDataButtonClick}
+                  >
+                    <Icon icon="mdi:plus" color={styles.red} />
+                    Carregar mais
+                  </Button>
+                </div>
+              )}
             </div>
           ) : (
-            <div>Loading...</div>
+            <div>
+              <h4>Carregando resultados...</h4>
+            </div>
           )}
         </div>
 

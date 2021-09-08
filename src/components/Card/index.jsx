@@ -35,20 +35,21 @@ const Card = ({ toolData, platforms, categories }) => {
       <section className={styles.toolDetailsContainer}>
         <h3 className={styles.toolDetailsTitle}>Plataformas</h3>
         <ul className={styles.platformList}>
-          {toolData.plataforma.map((plataforma, index) => {
-            return (
-              <span
-                title={plataforma}
-                className={styles.platformIcon}
-                key={index}
-              >
-                <Icon
-                  icon={`${getPlatformIcon(plataforma, platforms)}`}
-                  color={styles.purple}
-                />
-              </span>
-            );
-          })}
+          {toolData.plataforma &&
+            toolData.plataforma.map((plataforma, index) => {
+              return (
+                <span
+                  title={plataforma}
+                  className={styles.platformIcon}
+                  key={index}
+                >
+                  <Icon
+                    icon={`${getPlatformIcon(plataforma, platforms)}`}
+                    color={styles.purple}
+                  />
+                </span>
+              );
+            })}
         </ul>
       </section>
 

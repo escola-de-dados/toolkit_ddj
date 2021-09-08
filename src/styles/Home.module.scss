@@ -5,6 +5,7 @@ $light-purple:rgba($purple, .6);
 
 :export { 
   lightPurple: $light-purple;
+  red: $red;
 }
 
 .contentContainer{
@@ -33,6 +34,30 @@ $light-purple:rgba($purple, .6);
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.allResultsLoadedMessage{
+  margin: 2em 0;
+  width: 100%;
+}
+
+.loadMoreButtonContainer{
+  width: 100%;
+  text-align: center;
+}
+
+.loadMoreButton{
+  display: flex;
+  margin: 2em auto;
+  padding: .9rem 1.1rem;
+  
+  font-size: 1rem;
+}
+
+.loadMoreButton svg{
+  font-size: 1.5rem;
+  margin: 0;
+}
+
 
 .fabButtonsContainer{
   position: fixed;

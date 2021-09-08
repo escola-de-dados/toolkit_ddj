@@ -81,6 +81,29 @@ a {
   box-shadow: 0 0 0 0.25rem rgba($red, .5);
 }
 
+.btn-load-more,
+.btn-check:checked + .btn-load-more,
+.btn-check:active + .btn-load-more,
+.btn-load-more:active,
+.btn-load-more.active,
+.show > .btn-load-more.dropdown-toggle{
+  white-space: nowrap;
+  color: $red;
+  border: none;
+  border-radius: 100px;
+  background-color: rgba($red, .07);
+}
+
+.btn-load-more:hover{
+  color: $red;
+  background-color: rgba($red, .20);
+}
+
+.btn-load-more:active{
+  color: $red;
+  background-color: rgba($red, .40);
+}
+
 .btn svg{
   font-size: 1em;
   margin-right: .2em;
