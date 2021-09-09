@@ -9,7 +9,7 @@
 }
 
 .forumBanner{
-  margin-top: 6em; //provisório
+  margin-top: 6em;
   padding: 6em;
   text-align: center;
   
@@ -49,8 +49,10 @@
 }
 
 .footerLink{
-  font-size: .9em;
-  flex-basis: 47%;
+  margin-bottom: 1rem;
+  flex-basis: 100%;
+  
+  font-size: 1rem;
   font-weight: 300;
 }
 
@@ -113,8 +115,7 @@
   }
 
   .footerLink{
-    flex-basis: 100%;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
 }
 
@@ -132,6 +133,6 @@
 
 @media #{$desktop-1600-and-up}{
   .footerLink{
-    font-size: 1em;
+    font-size: 1rem;
   }
 }

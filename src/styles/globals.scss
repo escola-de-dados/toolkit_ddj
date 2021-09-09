@@ -77,8 +77,9 @@ a {
 }
 
 .btn-white:hover{
-  background-color: darken($white, 3%);
-  border-color: darken($white, 3%);
+  color: $red;
+  background-color: darken($white, 8%);
+  border-color: darken($white, 8%);
 }
 
 .btn-load-more,
