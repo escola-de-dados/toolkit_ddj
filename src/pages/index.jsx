@@ -464,13 +464,12 @@ export default function Home({
                 <span className={styles.resultsNumber}>
                   {filteredToolsData.length}
                 </span>{" "}
-                {filteredToolsData === 1 ? "Resultado" : "Resultados"}
+                {filteredToolsData.length === 1 ? "Resultado" : "Resultados"}
               </div>
               <InfiniteScroll
                 className={styles.cardsContainer}
                 dataLength={current.length}
                 hasMore={hasMore}
-                // loader={<h4>Carregando mais resultados...</h4>}
                 endMessage={
                   <div
                     className={styles.allResultsLoadedMessage}
@@ -504,8 +503,13 @@ export default function Home({
               )}
             </div>
           ) : (
-            <div>
-              <h4>Carregando resultados...</h4>
+            <div
+              className={styles.allResultsLoadedMessage}
+              style={{ textAlign: "center" }}
+            >
+              <strong>
+                Não foi encontrado nenhum resultado para esta filtragem
+              </strong>
             </div>
           )}
         </div>
