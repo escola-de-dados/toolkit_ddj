@@ -1,17 +1,36 @@
 @use 'sass:math';
 @import '../../styles/variables';
 
-.pageFooter{
-  margin-top: 6em; //provisório
-  padding: 4em 5em 3em;
-
+.forumBanner, .mainBanner{
+  
   color: #fff;
   font-family: 'Raleway', Segoe UI, -apple-system, BlinkMacSystemFont, Roboto, Oxygen,
   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.forumBanner{
+  margin-top: 6em; //provisório
+  padding: 6em;
+  text-align: center;
+  
+  background-color: $red;
+}
+
+.forumBanner h2{
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.forumBanner p{
+  margin-bottom: 3.2rem;
+}
+
+.mainBanner{
+  padding: 4em 5em 3em;
   background-color: $purple;
 }
 
-.pageFooter a:hover{
+.mainBanner a:hover{
   color: darken(#fff, 20%);
 }
 
@@ -74,8 +93,12 @@
 }
 
 @media #{$big-tablets-and-down}{
-  .pageFooter{
+  .forumBanner{
     margin-top: 10em;
+    padding: 6em 2em;
+  }
+  
+  .mainBanner{
     padding: 4em 2em 12em;
   }
 
@@ -98,6 +121,8 @@
 @media #{$big-phones-and-down}{
   .logoImgLink{
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 3em;
   }
   .logoContainer{
