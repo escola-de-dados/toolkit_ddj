@@ -17,7 +17,7 @@ $dotSize: 30px;
 
   background-color: $purple;
 
-  background-image: radial-gradient(rgba($red, 2%) 15%, transparent 16%);
+  background-image: radial-gradient(rgba($red, 2%) 15%, transparent 25%);
   background-size: $dotSize $dotSize;
   background-position: math.div($dotSize, 2) math.div($dotSize, 2);
 }
