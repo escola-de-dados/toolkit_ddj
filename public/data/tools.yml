@@ -32,7 +32,6 @@
     categoria: Redes
     plataforma:
         - Web
-        - NodeJS
     open-source: True
     destaque: False
     desativado: False
@@ -41,10 +40,12 @@
     nome: "Data Plotly"
     link: https://github.com/ghtmtt/DataPlotly
     github: https://github.com/ghtmtt/DataPlotly
-    descrição: "Permite trabalhar com gráficos no estilo daqueles feitos com https://D3.JS, dentro do QGIS."
+    descrição: "Permite trabalhar com gráficos no estilo daqueles feitos com D3.JS, dentro do QGIS."
     categoria: Cartografia
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -57,7 +58,6 @@
     categoria: Obtenção
     plataforma:
         - Web
-        - Python
     open-source: True
     destaque: False
     desativado: False
@@ -145,7 +145,9 @@
     descrição: "Raspador automatizado de dados estruturados de páginas da web, que não requer programações específicas para cada site. "
     categoria: Obtenção
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -231,9 +233,6 @@
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
     plataforma:
-        - Android
-        - iOS
-        - Mac OS
     open-source: False
     destaque: True
     desativado: False
@@ -1747,8 +1746,7 @@
     descrição: "Plataforma para integração e processamento ETL de armazenamento de dados."
     categoria: Multi
     plataforma:
-        - Localhost
-        - Docker Compose
+        - Web
     open-source: True
     destaque: False
     desativado: False
@@ -1810,3 +1808,18 @@
     open-source: False
     destaque: False
     desativado: True
+-
+    id: 144
+    nome: "Twine"
+    link: https://twinery.org/
+    github: https://github.com/klembot/twinejs/
+    descrição: "Twine é uma ferramenta para publicar histórias interativas e não lineares."
+    categoria: Publicação
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
+    open-source: True
+    destaque: False
+    desativado: False
