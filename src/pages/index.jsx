@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import yaml from "js-yaml";
 
 import Head from "next/head";
@@ -85,7 +85,7 @@ export default function Home({
   initialCategoriesData,
   initialCategoryFilters,
 }) {
-  const cardNumberPerLoading = 12;
+  const cardNumberPerLoading = useRef(12);
 
   const [toolsData, setToolsData] = useState([...initialToolsData]);
 
@@ -128,6 +128,11 @@ export default function Home({
 
   // Ao inicializar o componente
   useEffect(() => {
+    //Muda o número de cards carregados por vez se a tela for pequena
+    if (window.innerWidth <= 576) {
+      cardNumberPerLoading.current = 6;
+    }
+
     const fetchUpdatedData = async () => {
       //Lista de ferramentas
       const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
@@ -199,8 +204,8 @@ export default function Home({
   ]);
 
   useEffect(() => {
-    setCount({ prev: 0, next: cardNumberPerLoading });
-    setCurrent(filteredToolsData.slice(0, cardNumberPerLoading));
+    setCount({ prev: 0, next: cardNumberPerLoading.current });
+    setCurrent(filteredToolsData.slice(0, cardNumberPerLoading.current));
     setHasMore(true);
   }, [filteredToolsData]);
 
@@ -247,15 +252,15 @@ export default function Home({
     setCurrent(
       current.concat(
         filteredToolsData.slice(
-          count.prev + cardNumberPerLoading,
-          count.next + cardNumberPerLoading
+          count.prev + cardNumberPerLoading.current,
+          count.next + cardNumberPerLoading.current
         )
       )
     );
 
     setCount((prevState) => ({
-      prev: prevState.prev + cardNumberPerLoading,
-      next: prevState.next + cardNumberPerLoading,
+      prev: prevState.prev + cardNumberPerLoading.current,
+      next: prevState.next + cardNumberPerLoading.current,
     }));
   };
 
@@ -271,6 +276,11 @@ export default function Home({
   };
 
   /*--- Filter Rules ---*/
+  //Retorna só itens em destaque
+  const onlyHighlightsRule = (item) => {
+    return item.destaque;
+  };
+
   //Remove itens inativos
   const removeInactiveRule = (item) => {
     return !item.desativado;
@@ -466,6 +476,12 @@ export default function Home({
                 </span>{" "}
                 {filteredToolsData.length === 1 ? "Resultado" : "Resultados"}
               </div>
+              {filteredToolsData.filter((item) => item.destaque).length > 0 && (
+                <div className={styles.highlightsTitleContainer}>
+                  <Icon icon="mdi:star" color={styles.yellow} />
+                  <span className={styles.highlightsTitle}>Destaques</span>
+                </div>
+              )}
               <InfiniteScroll
                 className={styles.cardsContainer}
                 dataLength={current.length}
@@ -480,14 +496,36 @@ export default function Home({
                 }
               >
                 {current &&
-                  current.map((tool, index) => (
-                    <Card
-                      key={index}
-                      toolData={tool}
-                      categories={categories}
-                      platforms={platforms}
-                    />
-                  ))}
+                  current.map((tool, index) => {
+                    const currentHighlightsNumber = current.filter(
+                      (item) => item.destaque
+                    ).length;
+                    if (
+                      tool.destaque &&
+                      index === currentHighlightsNumber - 1
+                    ) {
+                      return (
+                        <>
+                          <Card
+                            key={index}
+                            toolData={tool}
+                            categories={categories}
+                            platforms={platforms}
+                          />
+                          <div className={styles.highlightsSeparator}></div>
+                        </>
+                      );
+                    } else {
+                      return (
+                        <Card
+                          key={index}
+                          toolData={tool}
+                          categories={categories}
+                          platforms={platforms}
+                        />
+                      );
+                    }
+                  })}
               </InfiniteScroll>
               {hasMore && (
                 <div className={styles.loadMoreButtonContainer}>

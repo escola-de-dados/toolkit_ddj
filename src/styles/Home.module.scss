@@ -1,16 +1,44 @@
 @use 'sass:math';
 @import './variables';
 
-$light-purple:rgba($purple, .6);
+$light-purple: rgba($purple, .6);
 
 :export { 
   lightPurple: $light-purple;
-  red: $red;
+  grayPurple: $gray-purple-font;
 }
 
 .contentContainer{
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.highlightsTitleContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 1.3em;
+
+  text-align: center;
+  color: $yellow;
+  font-size: 1.8em;
+  font-weight: 300;
+}
+
+.highlightsTitle{
+  margin-left: .2em;
+}
+
+.highlightsTitleContainer svg{
+  font-size: 1.2em;
+}
+
+.highlightsSeparator{
+  width: 95%;
+  height: 1px;
+  border-bottom: 1px solid rgba($yellow, .4);
+  margin: 1.5em auto 4em;
 }
 
 .resultsContainer{
@@ -22,7 +50,7 @@ $light-purple:rgba($purple, .6);
 
   text-align: right;
   font-size: 1.3em;
-  color: rgba($purple, .4);
+  color: $gray-purple-font;
 }
 
 .resultsNumber{
@@ -145,7 +173,7 @@ $light-purple:rgba($purple, .6);
   }
 }
 
-@media #{$desktop-1400-and-up}{
+@media #{$desktop-1300-and-up}{
   .contentContainer{
     max-width: 1200px;
   }
