@@ -59,6 +59,7 @@ const Card = ({ toolData, platforms, categories }) => {
             variant={toolData.destaque ? "secondary" : "primary"}
             className={styles.cardButton}
             href={toolData.link}
+            target="_blank"
           >
             <Icon icon="mdi:link-variant" color="#fff" />
             Site
@@ -69,6 +70,7 @@ const Card = ({ toolData, platforms, categories }) => {
             variant={toolData.destaque ? "secondary" : "primary"}
             className={styles.cardButton}
             href={toolData.github}
+            target="_blank"
           >
             <Icon icon="octicon:repo-forked-16" color="#fff" />
             Repositório
