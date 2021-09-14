@@ -416,8 +416,31 @@ export default function Home({
             toolsData.filter(removeInactiveRule).length
           } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
         />
-        <link rel="icon" href="/favicon.ico" />
 
+        {/* Icons */}
+        <link rel="icon" href="toolkit_ddj/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="toolkit_ddj/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="toolkit_ddj/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="toolkit_ddj/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
