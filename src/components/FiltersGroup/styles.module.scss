@@ -109,8 +109,9 @@
   opacity: 1;
 }
 
-.categoryFilterCheckbox:checked + .categoryFilterLabel:hover{
-  opacity: .7;
+.categoryFilterCheckbox:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
+  -webkit-box-shadow: 0 0 0 0.25rem rgba($purple, .2);
+  box-shadow: 0 0 0 0.25rem rgba($purple, .2);
 }
 
 .platformFilterLabel{
@@ -139,6 +140,11 @@
 
 .platformFilterCheckbox:checked + .platformFilterLabel svg{
   color: $red;
+}
+
+.platformFilterCheckbox:focus + .platformFilterLabel, .platformFilterLabel:focus{
+  -webkit-box-shadow: 0 0 0 0.25rem rgba($purple, .2);
+  box-shadow: 0 0 0 0.25rem rgba($purple, .2);
 }
 
 .cleanFiltersButtonContainer{

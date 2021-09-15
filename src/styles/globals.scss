@@ -64,6 +64,14 @@ a {
   border-color: darken($yellow, 3%);
 }
 
+.btn-check:focus + .btn-secondary, .btn-secondary:focus {
+  color: #fff;
+  background-color: $yellow;
+  border-color: $yellow;
+  -webkit-box-shadow: 0 0 0 0.25rem rgba($yellow, .5);
+  box-shadow: 0 0 0 0.25rem rgba($yellow, .5);
+}
+
 .btn-white,
 .btn-check:checked + .btn-white,
 .btn-check:active + .btn-white,
