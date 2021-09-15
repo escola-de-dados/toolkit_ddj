@@ -535,7 +535,22 @@ export default function Home({
                             categories={categories}
                             platforms={platforms}
                           />
-                          <div className={styles.highlightsSeparator}></div>
+                          <div
+                            tabIndex="0"
+                            className={styles.highlightsSeparator}
+                          >
+                            <span
+                              style={{
+                                height: "0",
+                                width: "0",
+                                opacity: "0",
+                                position: "absolute",
+                                left: "-9999px",
+                              }}
+                            >
+                              Fim dos destaques
+                            </span>
+                          </div>
                         </>
                       );
                     } else {
@@ -554,6 +569,7 @@ export default function Home({
                 <div className={styles.loadMoreButtonContainer}>
                   <Button
                     variant="load-more"
+                    aria-label="Carregar mais ferramentas"
                     className={styles.loadMoreButton}
                     onClick={handleMoreDataButtonClick}
                   >
@@ -578,6 +594,7 @@ export default function Home({
         <div className={styles.fabButtonsContainer}>
           {/* Abrir painel com os filtros */}
           <Button
+            aria-label="Voltar ao início da página"
             className={`${styles.backToTopButton} ${styles.fabButton}`}
             onClick={() => window.scrollTo(0, 0)}
           >
@@ -586,6 +603,7 @@ export default function Home({
 
           {/* Voltar ao topo da página */}
           <Button
+            aria-label="Abrir janela de filtros"
             className={`${styles.openDrawerFiltersButton} ${styles.fabButton}`}
             onClick={toggleDrawer(true)}
           >
@@ -601,6 +619,7 @@ export default function Home({
         >
           <Button
             variant="light"
+            aria-label="Fechar janela de filtros"
             className={styles.drawerCloseButton}
             onClick={toggleDrawer(false)}
           >

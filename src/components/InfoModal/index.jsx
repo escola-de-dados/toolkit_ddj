@@ -16,7 +16,9 @@ const InfoModal = ({ type, showModal, onHide }) => {
       onHide={onHide}
     >
       <Modal.Header className={styles.modalHeader}>
-        <button onClick={onHide}>&times;</button>
+        <Button aria-label="Fechar pop-up" variant="light" onClick={onHide}>
+          &times;
+        </Button>
       </Modal.Header>
       <Modal.Body className={styles.modalBody}>
         {type === "howTo" ? (
@@ -24,7 +26,7 @@ const InfoModal = ({ type, showModal, onHide }) => {
             <h2 className={`${styles.modalTitle} mb-4`}>Como contribuir?</h2>
             <p>
               A base que reúne as ferramentas mostradas nesta página está
-              disponível no respositório da página no Github.
+              disponível no repositório da página no Github.
             </p>
             <p>
               Para adicionar uma ferramenta à base você pode fazer um{" "}

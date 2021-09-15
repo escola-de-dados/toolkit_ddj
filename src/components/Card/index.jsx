@@ -38,16 +38,29 @@ const Card = ({ toolData, platforms, categories }) => {
           {toolData.plataforma &&
             toolData.plataforma.map((plataforma, index) => {
               return (
-                <span
+                <li
+                  tabIndex="0"
+                  aria-label={plataforma}
                   title={plataforma}
                   className={styles.platformIcon}
                   key={index}
                 >
+                  <span
+                    style={{
+                      height: "0",
+                      width: "0",
+                      opacity: "0",
+                      position: "absolute",
+                      left: "-9999px",
+                    }}
+                  >
+                    {plataforma}
+                  </span>
                   <Icon
                     icon={`${getPlatformIcon(plataforma, platforms)}`}
                     color={styles.purple}
                   />
-                </span>
+                </li>
               );
             })}
         </ul>
