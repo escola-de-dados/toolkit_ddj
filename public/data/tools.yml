@@ -568,7 +568,7 @@
     link: https://rnotebook.io/
     github:
     descrição: "Bloco de notas e editor de códigos disponível para uso na web."
-    categoria: Programação
+    categoria: Multi
     plataforma:
         - Web
     open-source: False
@@ -694,7 +694,7 @@
     link: https://typing.io/
     github:
     descrição: "Serviço web para treinar escrita de código. Serve para diferentes linguagens (JavaScript, Ruby, C, C ++, Java, PHP, Perl, Haskell, Scala e outras)."
-    categoria: Programação
+    categoria: Multi
     plataforma:
         - Web
     open-source: False
@@ -784,7 +784,7 @@
     link: https://deepnote.com/
     github: https://github.com/deepnote
     descrição: "Bloco de notas editor de códigos."
-    categoria: Programação
+    categoria: Multi
     plataforma:
         - Web
     open-source: True
@@ -1803,7 +1803,7 @@
     link: https://quickcode.io/
     github:
     descrição: "Ferramenta que permite programar em R e Python sem precisar instalar programas. Possui suporte de uma comunidade de desenvolvedores. Tem biblioteca de códigos bem indexada."
-    categoria: Programação
+    categoria: Multi
     plataforma:
     open-source: False
     destaque: False
