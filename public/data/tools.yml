@@ -233,6 +233,8 @@
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
     plataforma:
+        - iOS
+        - Android
     open-source: False
     destaque: True
     desativado: False
@@ -1424,7 +1426,7 @@
     github: https://github.com/apache/superset
     descrição: "Plataforma web de business intelligence (BI) para exploração de dados, com suporte a grandes volumes de dados. Para experimentar o software no Windows, é preciso utilizar uma máquina virtual, pois não há suporte nativo."
     categoria: Multi
-    plataforma: 
+    plataforma:
         - Mac OS
         - Linux
     open-source: True
@@ -1593,7 +1595,6 @@
     categoria: Cartografia
     plataforma:
         - Web
-        - Localhost
     open-source: True
     destaque: True
     desativado: False
