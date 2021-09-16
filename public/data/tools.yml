@@ -1838,3 +1838,15 @@
     open-source: True
     destaque: False
     desativado: False
+-
+    id: 145
+    nome: "Pattrn"
+    link: http://pattrn.co/
+    github: https://github.com/pattrn-project/pattrn
+    descrição: "Pattrn é uma plataforma da web para mapeamento de fatos participativo e orientado por dados."
+    categoria: Visualização
+    plataforma:
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
