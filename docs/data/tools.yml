@@ -32,7 +32,6 @@
     categoria: Redes
     plataforma:
         - Web
-        - NodeJS
     open-source: True
     destaque: False
     desativado: False
@@ -41,10 +40,12 @@
     nome: "Data Plotly"
     link: https://github.com/ghtmtt/DataPlotly
     github: https://github.com/ghtmtt/DataPlotly
-    descrição: "Permite trabalhar com gráficos no estilo daqueles feitos com https://D3.JS, dentro do QGIS."
+    descrição: "Permite trabalhar com gráficos no estilo daqueles feitos com D3.JS, dentro do QGIS."
     categoria: Cartografia
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -57,7 +58,6 @@
     categoria: Obtenção
     plataforma:
         - Web
-        - Python
     open-source: True
     destaque: False
     desativado: False
@@ -145,7 +145,9 @@
     descrição: "Raspador automatizado de dados estruturados de páginas da web, que não requer programações específicas para cada site. "
     categoria: Obtenção
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -231,9 +233,6 @@
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
     plataforma:
-        - Android
-        - iOS
-        - Mac OS
     open-source: False
     destaque: True
     desativado: False
@@ -273,7 +272,6 @@
     categoria: Cartografia
     plataforma:
         - Web
-        - Python
     open-source: True
     destaque: True
     desativado: False
@@ -297,7 +295,9 @@
     descrição: "Permite utilizar bibliotecas de visualização de dados de JavaScript (como D3) diretamente no R."
     categoria: Visualização
     plataforma:
-        - R
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -338,7 +338,9 @@
     descrição: "Plataforma da Open Knowledge para portais de dados abertos, que permite organizar repositórios de conjuntos de dados (datasets)."
     categoria: Publicação
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -535,7 +537,6 @@
     categoria: Obtenção
     plataforma:
         - Web
-        - Chrome OS
     open-source:
     destaque: False
     desativado: False
@@ -569,7 +570,7 @@
     link: https://rnotebook.io/
     github:
     descrição: "Bloco de notas e editor de códigos disponível para uso na web."
-    categoria: Programação
+    categoria: Multi
     plataforma:
         - Web
     open-source: False
@@ -622,7 +623,7 @@
     categoria: Visualização
     plataforma:
         - Web
-        - Microsoft Power BI
+        - Windows
     open-source: True
     destaque: False
     desativado: False
@@ -661,7 +662,10 @@
     descrição: "Ferramenta de código-aberto para transformar PDFs em tabelas."
     categoria: Limpeza
     plataforma:
-        - Python
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: True
     desativado: False
@@ -695,7 +699,7 @@
     link: https://typing.io/
     github:
     descrição: "Serviço web para treinar escrita de código. Serve para diferentes linguagens (JavaScript, Ruby, C, C ++, Java, PHP, Perl, Haskell, Scala e outras)."
-    categoria: Programação
+    categoria: Multi
     plataforma:
         - Web
     open-source: False
@@ -785,7 +789,7 @@
     link: https://deepnote.com/
     github: https://github.com/deepnote
     descrição: "Bloco de notas editor de códigos."
-    categoria: Programação
+    categoria: Multi
     plataforma:
         - Web
     open-source: True
@@ -837,7 +841,10 @@
     descrição: "Aplicativo que produz documentos com códigos de programação (por exemplo, em Python) e elementos de texto (parágrafo, equações, figuras, links, etc). São documentos legíveis por humanos e executáveis por computador (para realizar a análise de dados, por exemplo)."
     categoria: Multi
     plataforma:
-        - Python
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: False
     desativado: False
@@ -902,7 +909,9 @@
     descrição: "Ferramenta de organização para projetos baseados em dados, criada pela agência jornalística The Associated Press."
     categoria: Publicação
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: True
     desativado: False
@@ -988,7 +997,8 @@
     descrição: "Extensão do Microsoft Excel. Permite a análise de redes e tem a opção de captura de dados do Twitter, Facebook, Youtube e Flickr."
     categoria: Redes
     plataforma:
-        - Excel
+        - Windows
+        - Mac OS
     open-source: False
     destaque: False
     desativado: False
@@ -1060,8 +1070,7 @@
     descrição: "Verifica a confiabilidade e precisão de arquivos de vídeo. "
     categoria: Análise
     plataforma:
-        - Chrome
-        - Firefox
+        - Web
     open-source: True
     destaque: False
     desativado: False
@@ -1271,7 +1280,9 @@
     categoria: Cartografia
     plataforma:
         - Web
-        - JavaScript
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: False
     desativado: False
@@ -1297,7 +1308,10 @@
     descrição: "Navegador de bancos de dados com linguagem SQL."
     categoria: Análise
     plataforma:
-        - Localhost
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: False
     desativado: False
@@ -1643,8 +1657,7 @@
     descrição: "Extensão do Chrome. Funciona dentro do webinspector. Raspa dados sem necessidade de programação."
     categoria: Obtenção
     plataforma:
-        - Chrome OS
-        - Firefox
+        - Web
     open-source: True
     destaque: True
     desativado: False
@@ -1656,7 +1669,8 @@
     descrição: "Converte documentos feitos no Adobe Illustrator em arquivos HTML e CSS. Assim, é possível aumentar a escala do gráfico, mantendo o texto legível."
     categoria: Visualização
     plataforma:
-        - JavaScript
+        - Mac OS
+        - Windows
     open-source: True
     destaque: False
     desativado: False
@@ -1733,9 +1747,9 @@
     descrição: "Ferramenta de catálogo para gerenciar recursos georreferenciados. Disponibiliza funções de edição, pesquisa de metadados e visualização de mapa interativo."
     categoria: Cartografia
     plataforma:
+        - Web
         - Windows
         - Linux
-        - Localhost
     open-source: True
     destaque: False
     desativado: False
@@ -1747,8 +1761,7 @@
     descrição: "Plataforma para integração e processamento ETL de armazenamento de dados."
     categoria: Multi
     plataforma:
-        - Localhost
-        - Docker Compose
+        - Web
     open-source: True
     destaque: False
     desativado: False
@@ -1805,8 +1818,139 @@
     link: https://quickcode.io/
     github:
     descrição: "Ferramenta que permite programar em R e Python sem precisar instalar programas. Possui suporte de uma comunidade de desenvolvedores. Tem biblioteca de códigos bem indexada."
-    categoria: Programação
+    categoria: Multi
     plataforma:
     open-source: False
     destaque: False
     desativado: True
+-
+    id: 144
+    nome: "Twine"
+    link: https://twinery.org/
+    github: https://github.com/klembot/twinejs/
+    descrição: "Twine é uma ferramenta para publicar histórias interativas e não lineares."
+    categoria: Publicação
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 145
+    nome: "Pattrn"
+    link: http://pattrn.co/
+    github: https://github.com/pattrn-project/pattrn
+    descrição: "Pattrn é uma plataforma da web para mapeamento de fatos participativo e orientado por dados."
+    categoria: Visualização
+    plataforma:
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 146
+    nome: "Boxy SVG"
+    link: https://boxy-svg.com/
+    github: 
+    descrição: "Ferramenta para editar arquivos SVG."
+    categoria: Visualização
+    plataforma:
+        - Web
+        - Linux
+        - Mac OS
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 147
+    nome: "SVG Crowbar"
+    link: https://nytimes.github.io/svg-crowbar/
+    github: https://github.com/NYTimes/svg-crowbar
+    descrição: "Ferramenta para extrair nós SVG e estilos de acompanhamento de um documento HTML e os baixar como um arquivo SVG."
+    categoria: Obtenção
+    plataforma:
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 148
+    nome: "pdfplumber"
+    link: https://github.com/jsvine/pdfplumber
+    github: https://github.com/jsvine/pdfplumber
+    descrição: "Ferramenta para extrair informações detalhadas sobre cada caractere de PDFs."
+    categoria: Obtenção
+    plataforma:
+        - Mac OS
+        - Windows
+        - Linux
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 149
+    nome: "TAMU GeoServices"
+    link: https://geoservices.tamu.edu/
+    github: 
+    descrição: "Serviços de processamento de informações geográficas."
+    categoria: Cartografia
+    plataforma:
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 150
+    nome: "Hydrator"
+    link: https://github.com/DocNow/hydrator
+    github: https://github.com/DocNow/hydrator
+    descrição: "Aplicativo de desktop para hidratar conjuntos de dados de ID do Twitter."
+    categoria: Obtenção
+    plataforma:
+        - Mac OS
+        - Windows
+        - Linux
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 151
+    nome: "LIT"
+    link: https://pair-code.github.io/lit/
+    github: https://github.com/PAIR-code/lit/
+    descrição: "Ferramenta para visualização e compreensão de modelos de PNL."
+    categoria: Multi
+    plataforma:
+        - Mac OS
+        - Windows
+        - Linux
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 152
+    nome: "Cables"
+    link: https://cables.gl/
+    github: 
+    descrição: "Ferramenta para criar conteúdos visuais interativos."
+    categoria: Visualização
+    plataforma:
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 153
+    nome: "Datoris Chrome Extension"
+    link: https://chrome.google.com/webstore/detail/datoris-interactive-data/kfjhkjmhmhbaafplpdocolmcedpaggjm
+    github: 
+    descrição: "Ferramenta para extração e visualização de dados tabulares de sites."
+    categoria: Multi
+    plataforma:
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
