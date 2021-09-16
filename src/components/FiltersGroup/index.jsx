@@ -15,11 +15,16 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
       {/* Pesquisa */}
       <InputGroup className={styles.searchContainer}>
         <Form.Control
+          id={isSideDrawer && "drawer-search-input"}
           type="search"
           placeholder="Pesquise por qualquer ferramenta..."
           onChange={(e) => filtersData.onSearch(e)}
         />
-        <Button variant="inside-input" id="button-addon1">
+        <Button
+          aria-label="Pesquisar"
+          variant="inside-input"
+          id="button-addon1"
+        >
           <Icon icon={"mdi:search"} color={styles.lightPurple} />
         </Button>
       </InputGroup>
@@ -58,7 +63,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
             <Button
               className={styles.cleanFiltersButton}
               variant="light"
-              title="Limpar filtros"
+              title="Selecionar todos os filtros de categorias"
               onClick={filtersData.clearCategoryFilters}
             >
               <Icon icon={"mdi:restart"} color={styles.lightPurple} />
@@ -80,6 +85,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
                 type="checkbox"
               >
                 <Form.Check.Input
+                  aria-label={f.label}
                   className={`${styles.filterCheckbox} ${styles.platformFilterCheckbox}`}
                   type="checkbox"
                   value={f.label}
@@ -102,7 +108,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
             <Button
               className={styles.cleanFiltersButton}
               variant="light"
-              title="Limpar filtros"
+              title="Selecionar todos os filtros de plataformas"
               onClick={filtersData.clearPlatformFilters}
             >
               <Icon icon={"mdi:restart"} color={styles.lightPurple} />

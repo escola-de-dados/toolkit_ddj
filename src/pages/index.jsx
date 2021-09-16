@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-page-custom-font */
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import yaml from "js-yaml";
 
 import Head from "next/head";
@@ -85,7 +85,10 @@ export default function Home({
   initialCategoriesData,
   initialCategoryFilters,
 }) {
-  const cardNumberPerLoading = 12;
+  //Refs
+  const cardNumberPerLoading = useRef(12);
+
+  const isInitialCountMount = useRef(true);
 
   const [toolsData, setToolsData] = useState([...initialToolsData]);
 
@@ -117,7 +120,7 @@ export default function Home({
   // Infinite Scroll
   const [count, setCount] = useState({
     prev: 0,
-    next: cardNumberPerLoading,
+    next: cardNumberPerLoading.current,
   });
 
   const [hasMore, setHasMore] = useState(true);
@@ -128,6 +131,11 @@ export default function Home({
 
   // Ao inicializar o componente
   useEffect(() => {
+    //Muda o número de cards carregados por vez se a tela for pequena
+    if (window.innerWidth <= 576) {
+      cardNumberPerLoading.current = 6;
+    }
+
     const fetchUpdatedData = async () => {
       //Lista de ferramentas
       const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
@@ -199,8 +207,8 @@ export default function Home({
   ]);
 
   useEffect(() => {
-    setCount({ prev: 0, next: cardNumberPerLoading });
-    setCurrent(filteredToolsData.slice(0, cardNumberPerLoading));
+    setCount({ prev: 0, next: cardNumberPerLoading.current });
+    setCurrent(filteredToolsData.slice(0, cardNumberPerLoading.current));
     setHasMore(true);
   }, [filteredToolsData]);
 
@@ -210,6 +218,22 @@ export default function Home({
       setHasMore(false);
     }
   }, [current, filteredToolsData]);
+
+  //Muda o foco para o primeiro novo card após a mudança de count
+  useEffect(() => {
+    if (isInitialCountMount.current) {
+      isInitialCountMount.current = false;
+    } else {
+      //TODO: Resolver isso aqui. Tá focando pelo tab, mas não no Voiceover
+      if (
+        (count.next > 12 && window.innerWidth > 576) ||
+        (count.next > 6 && window.innerWidth <= 576)
+      ) {
+        console.log(cardNumberPerLoading.current);
+        document.getElementById("new-first-card").focus();
+      }
+    }
+  }, [count]);
 
   const handleModalClose = () => {
     if (showHowToModal) {
@@ -247,15 +271,15 @@ export default function Home({
     setCurrent(
       current.concat(
         filteredToolsData.slice(
-          count.prev + cardNumberPerLoading,
-          count.next + cardNumberPerLoading
+          count.prev + cardNumberPerLoading.current,
+          count.next + cardNumberPerLoading.current
         )
       )
     );
 
     setCount((prevState) => ({
-      prev: prevState.prev + cardNumberPerLoading,
-      next: prevState.next + cardNumberPerLoading,
+      prev: prevState.prev + cardNumberPerLoading.current,
+      next: prevState.next + cardNumberPerLoading.current,
     }));
   };
 
@@ -271,6 +295,7 @@ export default function Home({
   };
 
   /*--- Filter Rules ---*/
+
   //Remove itens inativos
   const removeInactiveRule = (item) => {
     return !item.desativado;
@@ -406,8 +431,31 @@ export default function Home({
             toolsData.filter(removeInactiveRule).length
           } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
         />
-        <link rel="icon" href="/favicon.ico" />
 
+        {/* Icons */}
+        <link rel="icon" href="toolkit_ddj/favicon.ico" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="toolkit_ddj/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="toolkit_ddj/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="toolkit_ddj/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+
+        {/* Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -441,6 +489,29 @@ export default function Home({
       />
 
       <main>
+        <div className={styles.fabButtonsContainer}>
+          {/* Abrir painel com os filtros */}
+          <Button
+            aria-label="Voltar ao início da página"
+            className={`${styles.backToTopButton} ${styles.fabButton}`}
+            onClick={() => {
+              document.getElementById("github-corner").focus();
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Icon icon="mdi:chevron-up" color="#fff" />
+          </Button>
+
+          {/* Voltar ao topo da página */}
+          <Button
+            aria-label="Abrir janela de filtros"
+            className={`${styles.openDrawerFiltersButton} ${styles.fabButton}`}
+            onClick={toggleDrawer(true)}
+          >
+            <Icon icon="mdi:filter" color="#fff" />
+          </Button>
+        </div>
+
         <div className={styles.contentContainer}>
           {/* Filtros */}
           <FiltersGroup
@@ -466,6 +537,12 @@ export default function Home({
                 </span>{" "}
                 {filteredToolsData.length === 1 ? "Resultado" : "Resultados"}
               </div>
+              {filteredToolsData.filter((item) => item.destaque).length > 0 && (
+                <div className={styles.highlightsTitleContainer}>
+                  <Icon icon="mdi:star" color={styles.yellow} />
+                  <span className={styles.highlightsTitle}>Destaques</span>
+                </div>
+              )}
               <InfiniteScroll
                 className={styles.cardsContainer}
                 dataLength={current.length}
@@ -480,19 +557,70 @@ export default function Home({
                 }
               >
                 {current &&
-                  current.map((tool, index) => (
-                    <Card
-                      key={index}
-                      toolData={tool}
-                      categories={categories}
-                      platforms={platforms}
-                    />
-                  ))}
+                  current.map((tool, index) => {
+                    const currentHighlightsNumber = current.filter(
+                      (item) => item.destaque
+                    ).length;
+                    if (
+                      tool.destaque &&
+                      index === currentHighlightsNumber - 1
+                    ) {
+                      return (
+                        <>
+                          <Card
+                            key={index}
+                            toolData={tool}
+                            categories={categories}
+                            platforms={platforms}
+                          />
+                          <div
+                            tabIndex="0"
+                            className={styles.highlightsSeparator}
+                          >
+                            <span
+                              style={{
+                                height: "0",
+                                width: "0",
+                                opacity: "0",
+                                position: "absolute",
+                                left: "-9999px",
+                              }}
+                            >
+                              Fim dos destaques
+                            </span>
+                          </div>
+                        </>
+                      );
+                    } else if (
+                      index ===
+                      current.length - cardNumberPerLoading.current
+                    ) {
+                      return (
+                        <Card
+                          id="new-first-card"
+                          key={index}
+                          toolData={tool}
+                          categories={categories}
+                          platforms={platforms}
+                        />
+                      );
+                    } else {
+                      return (
+                        <Card
+                          key={index}
+                          toolData={tool}
+                          categories={categories}
+                          platforms={platforms}
+                        />
+                      );
+                    }
+                  })}
               </InfiniteScroll>
               {hasMore && (
                 <div className={styles.loadMoreButtonContainer}>
                   <Button
                     variant="load-more"
+                    aria-label="Carregar mais ferramentas"
                     className={styles.loadMoreButton}
                     onClick={handleMoreDataButtonClick}
                   >
@@ -514,32 +642,18 @@ export default function Home({
           )}
         </div>
 
-        <div className={styles.fabButtonsContainer}>
-          {/* Abrir painel com os filtros */}
-          <Button
-            className={`${styles.backToTopButton} ${styles.fabButton}`}
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            <Icon icon="mdi:chevron-up" color="#fff" />
-          </Button>
-
-          {/* Voltar ao topo da página */}
-          <Button
-            className={`${styles.openDrawerFiltersButton} ${styles.fabButton}`}
-            onClick={toggleDrawer(true)}
-          >
-            <Icon icon="mdi:filter" color="#fff" />
-          </Button>
-        </div>
-
         <Drawer
+          PaperProps={{ id: "filter-drawer", tabindex: "0" }}
           classes={{ paper: styles.drawerInner }}
           anchor="right"
           open={isDrawerOpen}
           onClose={toggleDrawer(false)}
         >
           <Button
+            autoFocus
+            id="close-drawer-button"
             variant="light"
+            aria-label="Fechar janela de filtros"
             className={styles.drawerCloseButton}
             onClick={toggleDrawer(false)}
           >
