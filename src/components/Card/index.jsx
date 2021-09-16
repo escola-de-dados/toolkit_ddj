@@ -7,9 +7,11 @@ import { getPlatformIcon, getCategorySlug } from "../../utils/utils";
 
 import styles from "./styles.module.scss";
 
-const Card = ({ toolData, platforms, categories }) => {
+const Card = ({ id, toolData, platforms, categories }) => {
   return (
     <article
+      id={id}
+      tabIndex="-1"
       className={`${styles.toolCard} ${
         toolData.destaque && styles.toolCardHighlight
       }`}

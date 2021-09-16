@@ -99,6 +99,8 @@
 
   text-align: center;
   color: initial !important;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
 .categoryFilterLabel:hover{
@@ -117,7 +119,8 @@
 .platformFilterLabel{
   margin: .5em 0;
   padding: .45em .5em;
-  transition: .05s ease-out;
+
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
 .platformFilterLabel svg{

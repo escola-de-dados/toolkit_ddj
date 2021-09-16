@@ -85,7 +85,10 @@ export default function Home({
   initialCategoriesData,
   initialCategoryFilters,
 }) {
+  //Refs
   const cardNumberPerLoading = useRef(12);
+
+  const isInitialCountMount = useRef(true);
 
   const [toolsData, setToolsData] = useState([...initialToolsData]);
 
@@ -117,7 +120,7 @@ export default function Home({
   // Infinite Scroll
   const [count, setCount] = useState({
     prev: 0,
-    next: cardNumberPerLoading,
+    next: cardNumberPerLoading.current,
   });
 
   const [hasMore, setHasMore] = useState(true);
@@ -216,6 +219,22 @@ export default function Home({
     }
   }, [current, filteredToolsData]);
 
+  //Muda o foco para o primeiro novo card após a mudança de count
+  useEffect(() => {
+    if (isInitialCountMount.current) {
+      isInitialCountMount.current = false;
+    } else {
+      //TODO: Resolver isso aqui. Tá focando pelo tab, mas não no Voiceover
+      if (
+        (count.next > 12 && window.innerWidth > 576) ||
+        (count.next > 6 && window.innerWidth <= 576)
+      ) {
+        console.log(cardNumberPerLoading.current);
+        document.getElementById("new-first-card").focus();
+      }
+    }
+  }, [count]);
+
   const handleModalClose = () => {
     if (showHowToModal) {
       setShowHowToModal(false);
@@ -276,10 +295,6 @@ export default function Home({
   };
 
   /*--- Filter Rules ---*/
-  //Retorna só itens em destaque
-  const onlyHighlightsRule = (item) => {
-    return item.destaque;
-  };
 
   //Remove itens inativos
   const removeInactiveRule = (item) => {
@@ -474,6 +489,29 @@ export default function Home({
       />
 
       <main>
+        <div className={styles.fabButtonsContainer}>
+          {/* Abrir painel com os filtros */}
+          <Button
+            aria-label="Voltar ao início da página"
+            className={`${styles.backToTopButton} ${styles.fabButton}`}
+            onClick={() => {
+              document.getElementById("github-corner").focus();
+              window.scrollTo(0, 0);
+            }}
+          >
+            <Icon icon="mdi:chevron-up" color="#fff" />
+          </Button>
+
+          {/* Voltar ao topo da página */}
+          <Button
+            aria-label="Abrir janela de filtros"
+            className={`${styles.openDrawerFiltersButton} ${styles.fabButton}`}
+            onClick={toggleDrawer(true)}
+          >
+            <Icon icon="mdi:filter" color="#fff" />
+          </Button>
+        </div>
+
         <div className={styles.contentContainer}>
           {/* Filtros */}
           <FiltersGroup
@@ -553,6 +591,19 @@ export default function Home({
                           </div>
                         </>
                       );
+                    } else if (
+                      index ===
+                      current.length - cardNumberPerLoading.current
+                    ) {
+                      return (
+                        <Card
+                          id="new-first-card"
+                          key={index}
+                          toolData={tool}
+                          categories={categories}
+                          platforms={platforms}
+                        />
+                      );
                     } else {
                       return (
                         <Card
@@ -591,33 +642,16 @@ export default function Home({
           )}
         </div>
 
-        <div className={styles.fabButtonsContainer}>
-          {/* Abrir painel com os filtros */}
-          <Button
-            aria-label="Voltar ao início da página"
-            className={`${styles.backToTopButton} ${styles.fabButton}`}
-            onClick={() => window.scrollTo(0, 0)}
-          >
-            <Icon icon="mdi:chevron-up" color="#fff" />
-          </Button>
-
-          {/* Voltar ao topo da página */}
-          <Button
-            aria-label="Abrir janela de filtros"
-            className={`${styles.openDrawerFiltersButton} ${styles.fabButton}`}
-            onClick={toggleDrawer(true)}
-          >
-            <Icon icon="mdi:filter" color="#fff" />
-          </Button>
-        </div>
-
         <Drawer
+          PaperProps={{ id: "filter-drawer", tabindex: "0" }}
           classes={{ paper: styles.drawerInner }}
           anchor="right"
           open={isDrawerOpen}
           onClose={toggleDrawer(false)}
         >
           <Button
+            autoFocus
+            id="close-drawer-button"
             variant="light"
             aria-label="Fechar janela de filtros"
             className={styles.drawerCloseButton}

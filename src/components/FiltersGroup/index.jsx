@@ -15,6 +15,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
       {/* Pesquisa */}
       <InputGroup className={styles.searchContainer}>
         <Form.Control
+          id={isSideDrawer && "drawer-search-input"}
           type="search"
           placeholder="Pesquise por qualquer ferramenta..."
           onChange={(e) => filtersData.onSearch(e)}

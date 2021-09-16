@@ -4,6 +4,7 @@ import styles from "./styles.module.scss";
 const GithubCorner = () => {
   return (
     <a
+      id="github-corner"
       href="https://github.com/escola-de-dados/toolkit_ddj"
       className={styles.githubCorner}
       aria-label="Ver código-fonte do projeto no GitHub"
