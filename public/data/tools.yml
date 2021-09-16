@@ -272,7 +272,6 @@
     categoria: Cartografia
     plataforma:
         - Web
-        - Python
     open-source: True
     destaque: True
     desativado: False
@@ -296,7 +295,9 @@
     descrição: "Permite utilizar bibliotecas de visualização de dados de JavaScript (como D3) diretamente no R."
     categoria: Visualização
     plataforma:
-        - R
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -337,7 +338,9 @@
     descrição: "Plataforma da Open Knowledge para portais de dados abertos, que permite organizar repositórios de conjuntos de dados (datasets)."
     categoria: Publicação
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
@@ -534,7 +537,6 @@
     categoria: Obtenção
     plataforma:
         - Web
-        - Chrome OS
     open-source:
     destaque: False
     desativado: False
@@ -621,7 +623,7 @@
     categoria: Visualização
     plataforma:
         - Web
-        - Microsoft Power BI
+        - Windows
     open-source: True
     destaque: False
     desativado: False
@@ -660,7 +662,10 @@
     descrição: "Ferramenta de código-aberto para transformar PDFs em tabelas."
     categoria: Limpeza
     plataforma:
-        - Python
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: True
     desativado: False
@@ -836,7 +841,10 @@
     descrição: "Aplicativo que produz documentos com códigos de programação (por exemplo, em Python) e elementos de texto (parágrafo, equações, figuras, links, etc). São documentos legíveis por humanos e executáveis por computador (para realizar a análise de dados, por exemplo)."
     categoria: Multi
     plataforma:
-        - Python
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: False
     desativado: False
@@ -901,7 +909,9 @@
     descrição: "Ferramenta de organização para projetos baseados em dados, criada pela agência jornalística The Associated Press."
     categoria: Publicação
     plataforma:
-        - Python
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: True
     desativado: False
@@ -987,7 +997,8 @@
     descrição: "Extensão do Microsoft Excel. Permite a análise de redes e tem a opção de captura de dados do Twitter, Facebook, Youtube e Flickr."
     categoria: Redes
     plataforma:
-        - Excel
+        - Windows
+        - Mac OS
     open-source: False
     destaque: False
     desativado: False
@@ -1059,8 +1070,7 @@
     descrição: "Verifica a confiabilidade e precisão de arquivos de vídeo. "
     categoria: Análise
     plataforma:
-        - Chrome
-        - Firefox
+        - Web
     open-source: True
     destaque: False
     desativado: False
@@ -1270,7 +1280,9 @@
     categoria: Cartografia
     plataforma:
         - Web
-        - JavaScript
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: False
     desativado: False
@@ -1296,7 +1308,10 @@
     descrição: "Navegador de bancos de dados com linguagem SQL."
     categoria: Análise
     plataforma:
-        - Localhost
+        - Web
+        - Mac OS
+        - Windows
+        - Linux
     open-source: True
     destaque: False
     desativado: False
@@ -1642,8 +1657,7 @@
     descrição: "Extensão do Chrome. Funciona dentro do webinspector. Raspa dados sem necessidade de programação."
     categoria: Obtenção
     plataforma:
-        - Chrome OS
-        - Firefox
+        - Web
     open-source: True
     destaque: True
     desativado: False
@@ -1655,7 +1669,8 @@
     descrição: "Converte documentos feitos no Adobe Illustrator em arquivos HTML e CSS. Assim, é possível aumentar a escala do gráfico, mantendo o texto legível."
     categoria: Visualização
     plataforma:
-        - JavaScript
+        - Mac OS
+        - Windows
     open-source: True
     destaque: False
     desativado: False
@@ -1732,9 +1747,9 @@
     descrição: "Ferramenta de catálogo para gerenciar recursos georreferenciados. Disponibiliza funções de edição, pesquisa de metadados e visualização de mapa interativo."
     categoria: Cartografia
     plataforma:
+        - Web
         - Windows
         - Linux
-        - Localhost
     open-source: True
     destaque: False
     desativado: False
