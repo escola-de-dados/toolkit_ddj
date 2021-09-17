@@ -133,7 +133,7 @@ $light-purple: rgba($purple, .6);
   background-color: $off-white;
 }
 
-.drawerCloseButton{
+.closeDrawerButton{
   width: 10%;
   margin: 0 5% 0 auto;
   padding: 0;
@@ -142,14 +142,14 @@ $light-purple: rgba($purple, .6);
   border: none;
 }
 
-.drawerCloseButton svg{
+.closeDrawerButton svg{
   margin: 0;
   font-size: 1.2em;
 }
 
-.drawerApplyFiltersButton{
+.applyFiltersButton{
   width: 50%;
-  margin: 3em auto 0;
+  margin: 0 auto;
 }
 
 @media #{$big-tablets-and-down}{
@@ -168,6 +168,15 @@ $light-purple: rgba($purple, .6);
 }
 
 @media #{$big-phones-and-down}{
+  .highlightsTitleContainer{
+    margin-bottom: .7em;
+  }
+
+  .cardsContainer{
+    width: 92%;
+    margin: 0 auto;
+  }
+
   .drawerInner{
     width: 90vw;
   }

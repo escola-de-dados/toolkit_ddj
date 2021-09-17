@@ -5,7 +5,7 @@
   lightPurple: rgba($purple, .6);
 }
 
-.filters{
+.allFilters{
   width: 90%;
   margin: 4em auto 0;
   display: flex;
@@ -43,7 +43,7 @@
   flex-wrap: wrap;
 
   width: 100%;
-  padding: 1.5em;
+  padding: 2em 1em;
   background-color: rgba($purple, .02);
 }
 
@@ -59,19 +59,21 @@
 }
 
 .platformFilters{
+  margin: 0 auto;
+
   display: inherit;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 
-  flex-basis: 70%;
+  flex-basis: 60%;
 }
 
-.filtersTitle{
-  margin: 0 auto 1em;
-}
+// .filtersTitle{
+//   margin: 0 auto 1em;
+// }
 
 .filtersContainer{
-  width: 80%;
   margin: 1em 0;
 
   display: flex;
@@ -92,14 +94,23 @@
   cursor: pointer;  
 }
 
+// Filtros de categoria
+.categoryFiltersTitle{
+  margin: 0 auto 1em;
+}
+
+.categoryFiltersContainer{
+  width: 80%;
+}
+
 .categoryFilterLabel{
   margin: 0 .3em 1em;
   padding: .5em .8em;
   opacity: .5;
-
+  
   text-align: center;
   color: initial !important;
-
+  
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
 }
 
@@ -114,6 +125,19 @@
 .categoryFilterCheckbox:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
   -webkit-box-shadow: 0 0 0 0.25rem rgba($purple, .2);
   box-shadow: 0 0 0 0.25rem rgba($purple, .2);
+}
+
+.categoryFilters .cleanFiltersButtonContainer{
+  margin-bottom: 1.5em;
+}
+
+//Filtros de plataforma
+.platformFiltersContainer{
+  margin-left: 1.2em;
+}
+
+.platformFilter:first-child{
+  padding-left: 0;
 }
 
 .platformFilterLabel{
@@ -150,9 +174,10 @@
   box-shadow: 0 0 0 0.25rem rgba($purple, .2);
 }
 
+
+//Botão de limpar filtros
 .cleanFiltersButtonContainer{
   padding-left: 1.5em;
-  margin-bottom: 1.5em;
   display: inherit;
 }
 
@@ -161,23 +186,34 @@
 }
 
 .openSourceFilter{
+  width: 30%;
   margin: 0 auto;
-  font-size: .9em;
+  font-size: .95em;
 }
 
-//Filtros da barra lateral
+/*-- Filtros da barra lateral --*/
+.drawerFilters .searchContainer{
+  width: 90%;
+}
+
 .drawerFilters .checkboxFiltersContainer{
+  padding-top: .5em;
   background: none;
 }
 
-.drawerFilters .platformFilters, .categoryFilters{
+.drawerFilters .filters{
+  flex-direction: column;
   flex-basis: 90%;
+  justify-content: space-between;
+}
+
+.drawerFilters .filtersTitle{
   margin: 0 auto 1.5em;
 }
 
 .drawerFilters .filtersContainer{
   width: 90%;
-  justify-content: space-between;
+  margin: 0 auto 1.5em;
 }
 
 .drawerFilters .filter{
@@ -185,46 +221,99 @@
   padding-left: 0;
 }
 
-.drawerFilters .filter:last-child{
-  margin: auto;
+//Filtros de categoria
+.drawerFilters .categoryFiltersContainer{
+  width: 80%;
+  margin-bottom: 1em;
+  justify-content: space-between;
 }
 
 .drawerFilters .categoryFilter{
   width: 46%;
-}
-
-.drawerFilters .platformFilter{
-  width: 28%;
+  margin-bottom: 1em;
 }
 
 .drawerFilters .categoryFilterLabel{
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   padding: .4em .6em;
   font-size: .95em;
 }
 
-.drawerFilters .platformFilterLabel{
-  margin-left: auto;
-  margin-right: auto;
+//Filtros de plataforma
+.drawerFilters .platformFilter{
+  width: 28%;
 }
 
+.drawerFilters .platformFiltersContainer{
+  width: 85%;
+  margin: 0 auto 2em;
+}
+
+.drawerFilters .platformFilter{
+  margin: 0 auto 1.5em;
+}
+
+.drawerFilters .platformFilterLabel{
+  margin: auto;
+}
+
+.drawerFilters .platformFilter:nth-last-child(-n+3){
+  margin-bottom: 0;
+}
+
+//Limpar filtros
 .drawerFilters .cleanFiltersButtonContainer{
   padding-left: 0;
-  margin: .5em auto 1.5em;
+  margin: 0 auto 2em;
 }
+
+//Filtro open-source
+.drawerFilters .openSourceFilter{
+  margin: 2em 0 1.5em;
+  flex-basis: 100%;
+}
+
+.drawerFilters .openSourceFilter .filter{
+  margin: 0 auto;
+}
+/*-- FIM - Filtros da barra lateral --*/
 
 
 @media #{$big-tablets-and-down}{
-  .filter:not(.drawerFilters .filter){
+  //Filtros de plataforma
+  .platformFilters{
+    flex-direction: column;
+    flex-basis: 35%;
+  }
+  
+  .platformFiltersContainer{
+    margin-left: 0;
+  }
+
+  .platformFilter{
+    margin: auto 5%;
     padding: 0;
-    margin: 0 .5em;
+  }
+
+  .platformFilterLabel{
+    padding: .55em;
+  }
+
+  //Limpar filtros
+  .cleanFiltersButtonContainer{
+    padding: 0;
+  }
+
+  //Filtro open-source
+  .openSourceFilter{
+    flex-basis: 35%;
+    font-size: .9em;
   }
 }
 
 @media #{$big-phones-and-down}{
-  .filters{
+  .allFilters{
     width: 100%;
   }
 
@@ -244,43 +333,64 @@
     padding-left: 0;
   }
   
-  .filter:last-child{
-    margin: auto;
-  }
-  
+  //Filtros de categoria
   .categoryFilter{
     width: 42%;
+    margin-bottom: 1em;
   }
-  
-  .categoryFilter:last-child{
-    width: 50%;
-  }
-  
-  .platformFilter{
-    width: 28%;
+
+  .categoryFilter:nth-last-child(-n+2){
+    margin-bottom: 0;
   }
   
   .categoryFilterLabel{
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
     padding: .4em .6em;
     font-size: .95em;
   }
   
+  //Filtros de plataforma
+  .platformFilters{
+    flex-basis: 100%;
+  }
+
+  .platformFiltersContainer{
+    width: 80%;
+    margin-left: 0;
+  }
+
+  .platformFiltersTitle{
+    margin: 0 auto 1em;
+  }
+
+  .platformFilter{
+    width: 28%;
+    margin: 0 auto 1.2em;
+  } 
+
+  .platformFilter:nth-last-child(-n+3){
+    margin-bottom: 0;
+  }
+  
   .platformFilterLabel{
-    margin-left: auto;
-    margin-right: auto;
+    padding: .6em;
+    margin: 0 auto;
+  }
+
+  .platformFilterLabel svg{
+    font-size: 1.7em;
   }
 
   .cleanFiltersButtonContainer{
     padding-left: 0;
-    margin: 1em auto;
+    margin: 2em auto !important;
   }
   
+  //Filtro open-source
   .openSourceFilter{
+    flex-basis: 85%;
     margin: 2em auto;
-    font-size: 1em;
   }
 
   //Filtros da barra lateral

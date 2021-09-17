@@ -654,7 +654,7 @@ export default function Home({
             id="close-drawer-button"
             variant="light"
             aria-label="Fechar janela de filtros"
-            className={styles.drawerCloseButton}
+            className={styles.closeDrawerButton}
             onClick={toggleDrawer(false)}
           >
             <Icon icon="mdi:close" color="#000" />
@@ -675,7 +675,7 @@ export default function Home({
             }}
           />
           <Button
-            className={styles.drawerApplyFiltersButton}
+            className={styles.applyFiltersButton}
             onClick={toggleDrawer(false)}
           >
             Aplicar filtros

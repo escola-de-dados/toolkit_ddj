@@ -10,7 +10,7 @@ import styles from "./styles.module.scss";
 const FiltersGroup = ({ filtersData, isSideDrawer }) => {
   return (
     <div
-      className={`${styles.filters} ${isSideDrawer && styles.drawerFilters}`}
+      className={`${styles.allFilters} ${isSideDrawer && styles.drawerFilters}`}
     >
       {/* Pesquisa */}
       <InputGroup className={styles.searchContainer}>
@@ -31,8 +31,12 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
 
       <div className={styles.checkboxFiltersContainer}>
         {/* Categorias */}
-        <div className={styles.categoryFilters}>
-          <span className={styles.filtersTitle}>Categorias</span>
+        <div className={`${styles.filters} ${styles.categoryFilters}`}>
+          <span
+            className={`${styles.filtersTitle} ${styles.categoryFiltersTitle}`}
+          >
+            Categorias
+          </span>
           <div
             className={`${styles.filtersContainer} ${styles.categoryFiltersContainer}`}
           >
@@ -72,8 +76,12 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
         </div>
 
         {/* Plataformas */}
-        <div className={styles.platformFilters}>
-          <span className={styles.filtersTitle}>Plataformas</span>
+        <div className={`${styles.filters} ${styles.platformFilters}`}>
+          <span
+            className={`${styles.filtersTitle} ${styles.platformFiltersTitle}`}
+          >
+            Plataformas
+          </span>
           <div
             className={`${styles.filtersContainer} ${styles.platformFiltersContainer}`}
           >
