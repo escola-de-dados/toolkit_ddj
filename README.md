@@ -1,5 +1,6 @@
 # Caixa de Ferramentas do Jornalismo de Dados
 
+![Logo da caixa de ferramentas](https://escola-de-dados.github.io/toolkit_ddj/_next/static/images/logo-caixadeferramentas-362311af4581c907b4d6c126f1182d2b.png)
 
 ## Índice
 - [Caixa de Ferramentas do Jornalismo de Dados](#caixa-de-ferramentas-do-jornalismo-de-dados)
@@ -122,23 +123,12 @@ O título vai ser:
 <br>
 
 **Comentário:**
-
-<div style="background-color: #eee;padding:20px;border-radius:5px;margin-bottom:20px">
-
-**Nome da ferramenta:** NOME_DA_FERRAMENTA
-
-**Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA
-
-(**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO
-
-**Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA
-
-**Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO
-
-————————————
+| Seguir a estrutura abaixo |
+|---|
+| **Nome da ferramenta:** NOME_DA_FERRAMENTA <br><br> **Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA <br><br> (**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO <br><br> **Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA <br><br> **Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO <br><br> ————————————
 </div>
 
-**Repita a estrutura acima para cada ferramenta adicionada/atualizada.**
+**Repita a estrutura para cada ferramenta adicionada/atualizada.**
 
 Confira o exemplo abaixo:
 
@@ -188,23 +178,12 @@ npm run export
 <br>
 
 **Comentário:**
-
-<div style="background-color: #eee;padding:20px;border-radius:5px;margin-bottom:20px">
-
-**Nome da ferramenta:** NOME_DA_FERRAMENTA
-
-**Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA
-
-(**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO
-
-**Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA
-
-**Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO
-
-————————————
+| Seguir a estrutura abaixo |
+|---|
+| **Nome da ferramenta:** NOME_DA_FERRAMENTA <br><br> **Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA <br><br> (**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO <br><br> **Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA <br><br> **Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO <br><br> ————————————
 </div>
 
-**Repita a estrutura acima para cada ferramenta adicionada/atualizada.**
+**Repita a estrutura para cada ferramenta adicionada/atualizada.**
 
 Confira um exemplo abaixo:
 
