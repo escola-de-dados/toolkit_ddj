@@ -1,34 +1,211 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Caixa de Ferramentas do Jornalismo de Dados
 
-## Getting Started
 
-First, run the development server:
+## Índice
+- [Caixa de Ferramentas do Jornalismo de Dados](#caixa-de-ferramentas-do-jornalismo-de-dados)
+  - [Índice](#índice)
+  - [O que é a Caixa de Ferramentas](#o-que-é-a-caixa-de-ferramentas)
+  - [Instalação](#instalação)
+  - [Como colaborar](#como-colaborar)
+    - [Estrutura do arquivo](#estrutura-do-arquivo)
+    - [Parâmetros](#parâmetros)
+    - [Contribuindo direto no site do GitHub](#contribuindo-direto-no-site-do-github)
+    - [Contribuindo após clonar o projeto para a sua máquina pessoal](#contribuindo-após-clonar-o-projeto-para-a-sua-máquina-pessoal)
+
+
+## O que é a Caixa de Ferramentas
+
+A **Caixa de Ferramentas do Jornalismo de Dados** é um projeto elaborado pela **Escola de Dados**, iniciativa da **Open Knowledge Brasil**.
+
+O objetivo desta página é **divulgar** de forma prática **as ferramentas no ecossistema de tecnologia que se adequam à atividade do jornalismo de dados**. As ferramentas são separadas por categorias e plataformas, além de serem identificadas como ferramentas de código aberto ou não.
+
+A Caixa de Ferramentas é um trabalho colaborativo. Se você tem uma sugestão de ferramenta que se encaixa na premissa da página, mas não está presente na base, **você pode contribuir com a lista seguindo as orientações a seguir**.
+
+
+## Instalação
+
+1 - Clone o projeto **para uma pasta local e entre na nova pasta criada:
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/escola-de-dados/toolkit_ddj.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+cd toolkit_ddj
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+2 - Rode `npm install` para instalar todas as dependências.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3 - Rode `npm run dev` para lançar a ferramenta localmente no endereço `localhost:3000/toolkit_ddj`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<br>
 
-## Learn More
+## Como colaborar
 
-To learn more about Next.js, take a look at the following resources:
+A Caixa de Ferramentas do Jornalismo de Dados é uma base colaborativa. Você pode adicionar novas ferramentas que se encaixem nas categorias e plataformas já especificadas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Estrutura do arquivo
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+A lista das ferramentas fica no arquivo YAML `public/data/tools.yml` e cada ferramenta tem a seguinte estrutura:
 
-## Deploy on Vercel
+```yaml
+-
+    id: 0
+    nome: "Nome da ferramenta"
+    link: https://exemplo.com.br
+    github:
+    descrição: "Descrição da ferramenta"
+    categoria: Cartografia
+    plataforma:
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+```
+### Parâmetros
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Parâmetro | Formato | Uso |
+|:--:|:--:|--|
+| Id | number | É incrementado em 1 a cada ferramenta adicionada. Se a última ferramenta na base tem o `id` **153**, adicione a nova ferramenta com o `id` **154**. |
+| Nome | string | Insira o nome da ferramenta entre aspas duplas (`""`). |
+| Link | string | Site principal da ferramenta. Se não houver site, pode ser o link para o repositório. |
+| Github | string | Repositório da ferramenta se ela for de código aberto (não precisa ser Github, podem ser outros repositórios de código). Se não houver repositório é só deixar em branco. |
+| Categoria | string | Cada ferramenta possui somente uma das categorias abaixo: <ul><li>Visualização</li><li>Obtenção</li><li>Análise</li><li>Cartografia</li><li>Publicação</li><li>Limpeza</li><li>Redes</li><li>Multi (Que faz mais de uma das funções anteriores)</li></ul> |
+| Plataforma | array | Cada ferramenta pode possuir uma ou mais das plataformas abaixo: <ul><li>Windows</li><li>MacOS</li><li>Linux</li><li>iOS</li><li>Android</li><li>Web</li></ul> As ferramentas são listadas uma abaixo da outra e precedidas por um `-`.  |
+| Open-source | boolean | Identifica se a ferramenta é Open Source (Código aberto) ou não. Pode ser `True` ou `False`.  |
+| Destaque | boolean | Identifica as ferramentas que são "escolhas do editor". **Para novas contribuições deve ser sempre** `False`.  |
+| Desativado | boolean | Identifica se a ferramenta está em funcionamento e desenvolvimento ativo. **Para novas contribuições deve ser sempre** `True`. |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Cada ferramenta pode ter apenas uma categoria e uma ou mais plataformas.**
+
+<br>
+
+### Contribuindo direto no site do GitHub
+
+1 - Navegue pelos arquivos do repositório até o arquivo `public/data/tools.yml`
+
+2 - Clique no botão "Editar" no topo do arquivo:
+
+![Botão "Editar"](https://user-images.githubusercontent.com/85042317/137641970-b4231153-06fc-4940-8e9c-f5100f419af6.png)
+
+3 - Insira ou atualize a ferramenta desejada abaixo da última ferramenta no arquivo.
+
+Na imagem abaixo foi adicionada a ferramenta "Nova ferramenta" abaixo da última da lista, "Datoris Chrome Extension":
+
+![Adicionando nova ferramenta](https://user-images.githubusercontent.com/85042317/137642010-bc56a204-ca9b-4179-abe1-e83e6d97fdaa.png)
+
+4 - Insira um título no campo que aparece com o texto padrão "Update tools.yml"
+
+O título vai ser:
+
+- **Add tool** (Para adicionar uma ou mais ferramentas)
+- **Update tool** (Para atualizar uma ou mais ferramentas)
+
+![Dando um título ao commit](https://user-images.githubusercontent.com/85042317/137642057-11cc2258-d703-48a9-bbac-77822cf51afd.png)
+
+5 - Clique em "Propose changes"
+
+6 - Na tela seguinte clique no botão verde "Create pull request"
+
+7 - Faça um Pull Request com as seguintes especificações:
+
+**Base:** develop
+
+**Título:**
+| Título | Uso |
+| --- | --- |
+| Add Tool - NOME_DA_FERRAMENTA | Para adicionar uma ferramenta só |
+| Add Tools - NÚMERO_DE_FERRAMENTAS | Para adicionar mais de uma ferramenta |
+| Update Tool - NOME_DA_FERRAMENTA | Para atualizar uma ferramenta só |
+| Update Tools - NÚMERO_DE_FERRAMENTAS | Para atualizar mais de uma ferramenta |
+
+<br>
+
+**Comentário:**
+
+<div style="background-color: #eee;padding:20px;border-radius:5px;margin-bottom:20px">
+
+**Nome da ferramenta:** NOME_DA_FERRAMENTA
+
+**Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA
+
+(**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO
+
+**Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA
+
+**Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO
+
+————————————
+</div>
+
+**Repita a estrutura acima para cada ferramenta adicionada/atualizada.**
+
+Confira o exemplo abaixo:
+
+![Exemplo de Pull Request](https://user-images.githubusercontent.com/85042317/137642087-52530f33-d9b0-485a-8cb7-9ed69634df11.png)
+
+<br>
+
+### Contribuindo após clonar o projeto para a sua máquina pessoal
+
+1 - Mude para uma nova branch derivada da main:
+
+```bash
+git checkout -m NOME_DA_NOVA_BRANCH
+```
+
+Seguindo o padrão de nome:
+
+- `SEU_USUARIO/addTool` → Para adicionar uma ou mais novas ferramentas
+- `SEU_USUARIO/updateTool` → Para atualizar os dados de uma ou mais ferramentas
+
+2 - Abra o arquivo `public/data/tools.yml`
+
+3 - Adicione ou atualize as ferramentas de acordo com a [estrutura padrão](#estrutura-do-arquivo) e usando os [parâmetros](#parâmetros) disponíveis.
+
+4 - Salve o arquivo `tools.yml` 
+
+5 - Exporte uma nova versão do site com o arquivo atualizado:
+
+```bash
+npm run export
+```
+
+6 - Faça um *commit* e *push* das alterações.
+
+7 - Faça um Pull Request no GitHub com as seguintes especificações:
+
+**Base:** develop
+
+**Título:**
+| Título | Uso |
+| --- | --- |
+| Add Tool - NOME_DA_FERRAMENTA | Para adicionar uma ferramenta só |
+| Add Tools - NÚMERO_DE_FERRAMENTAS | Para adicionar mais de uma ferramenta |
+| Update Tool - NOME_DA_FERRAMENTA | Para atualizar uma ferramenta só |
+| Update Tools - NÚMERO_DE_FERRAMENTAS | Para atualizar mais de uma ferramenta |
+
+<br>
+
+**Comentário:**
+
+<div style="background-color: #eee;padding:20px;border-radius:5px;margin-bottom:20px">
+
+**Nome da ferramenta:** NOME_DA_FERRAMENTA
+
+**Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA
+
+(**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO
+
+**Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA
+
+**Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO
+
+————————————
+</div>
+
+**Repita a estrutura acima para cada ferramenta adicionada/atualizada.**
+
+Confira um exemplo abaixo:
+
+![Exemplo de Pull Request](https://user-images.githubusercontent.com/85042317/137642087-52530f33-d9b0-485a-8cb7-9ed69634df11.png)
