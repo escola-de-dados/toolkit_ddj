@@ -9,6 +9,7 @@ jobs:
         with:
           node-version: 14.x
       - run: |
+          npm config set @bit:registry https://node.bit.dev
           npm i
           npm run export
       - name: Commit and push changes
