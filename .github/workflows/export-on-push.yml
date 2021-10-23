@@ -1,7 +1,7 @@
 name: export-on-push
 on: [push]
 jobs:
-  run script:
+  run-script:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
