@@ -18,29 +18,30 @@ import InfoModal from "../components/InfoModal";
 
 import styles from "../styles/Home.module.scss";
 
+const env = process.env.NODE_ENV;
+
+import { promises as fs } from "fs";
+import path from "path";
+
 export async function getStaticProps(context) {
-  const initialToolsData = await fetch(
-    "https://escola-de-dados.github.io/toolkit_ddj/data/tools.yml"
-  )
-    .then((res) => res.text())
+  const dataDirectory = path.join(process.cwd(), "docs/data");
+
+  const initialToolsData = await fs
+    .readFile(path.join(dataDirectory, "tools.yml"))
     .then((data) => yaml.load(data))
     .catch((err) => {
       throw new Error(err);
     });
 
-  const initialPlatformsData = await fetch(
-    "https://escola-de-dados.github.io/toolkit_ddj/data/platforms.yml"
-  )
-    .then((res) => res.text())
+  const initialPlatformsData = await fs
+    .readFile(path.join(dataDirectory, "platforms.yml"))
     .then((data) => yaml.load(data))
     .catch((err) => {
       throw new Error(err);
     });
 
-  const initialCategoriesData = await fetch(
-    "https://escola-de-dados.github.io/toolkit_ddj/data/categories.yml"
-  )
-    .then((res) => res.text())
+  const initialCategoriesData = await fs
+    .readFile(path.join(dataDirectory, "categories.yml"))
     .then((data) => yaml.load(data))
     .catch((err) => {
       throw new Error(err);
@@ -141,7 +142,7 @@ export default function Home({
       const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
         .then((res) => res.text())
         .then((data) => yaml.load(data));
-
+      console.log(updatedToolsData);
       setToolsData([...updatedToolsData]);
 
       //Lista de plataformas
@@ -163,7 +164,9 @@ export default function Home({
       setCategories(updatedCategoriesData);
     };
 
-    fetchUpdatedData();
+    if (env !== "development") {
+      fetchUpdatedData();
+    }
 
     const filteredDatabase = filterDatabase();
     setFilteredToolsData(filteredDatabase);
