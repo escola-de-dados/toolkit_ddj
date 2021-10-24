@@ -25,7 +25,7 @@ A Caixa de Ferramentas é um trabalho colaborativo. Se você tem uma sugestão d
 
 ## Instalação
 
-1 - Clone o projeto **para uma pasta local e entre na nova pasta criada:
+1 - Clone o projeto para uma pasta local e entre na nova pasta criada:
 
 ```bash
 git clone https://github.com/escola-de-dados/toolkit_ddj.git
@@ -35,9 +35,11 @@ git clone https://github.com/escola-de-dados/toolkit_ddj.git
 cd toolkit_ddj
 ```
 
-2 - Rode `npm install` para instalar todas as dependências.
+2 - Rode `npm config set @bit:registry https://node.bit.dev` para adicionar o bit.dev como *registry.*
 
-3 - Rode `npm run dev` para lançar a ferramenta localmente no endereço `localhost:3000/toolkit_ddj`
+3 - Rode `npm install` para instalar todas as dependências.
+
+4 - Rode `npm run dev` para lançar a ferramenta localmente no endereço [http://localhost:3000/toolkit_ddj](http://localhost:3000/toolkit_ddj)
 
 <br>
 
@@ -47,7 +49,7 @@ A Caixa de Ferramentas do Jornalismo de Dados é uma base colaborativa. Você po
 
 ### Estrutura do arquivo
 
-A lista das ferramentas fica no arquivo YAML `public/data/tools.yml` e cada ferramenta tem a seguinte estrutura:
+A lista das ferramentas fica no arquivo YAML `docs/data/tools.yml` e cada ferramenta tem a seguinte estrutura:
 
 ```yaml
 -
@@ -83,7 +85,7 @@ A lista das ferramentas fica no arquivo YAML `public/data/tools.yml` e cada ferr
 
 ### Contribuindo direto no site do GitHub
 
-1 - Navegue pelos arquivos do repositório até o arquivo `public/data/tools.yml`
+1 - Navegue pelos arquivos do repositório até o arquivo `docs/data/tools.yml`
 
 2 - Clique no botão "Editar" no topo do arquivo:
 
@@ -104,7 +106,7 @@ O título vai ser:
 
 ![Dando um título ao commit](https://user-images.githubusercontent.com/85042317/137642057-11cc2258-d703-48a9-bbac-77822cf51afd.png)
 
-5 - Clique em "Propose changes"
+5 - Clique no botão verde "Propose changes"
 
 6 - Na tela seguinte clique no botão verde "Create pull request"
 
@@ -123,7 +125,7 @@ O título vai ser:
 <br>
 
 **Comentário:**
-| Seguir a estrutura abaixo |
+| Seguir a estrutura abaixo: |
 |---|
 | **Nome da ferramenta:** NOME_DA_FERRAMENTA <br><br> **Descrição da ferramenta:** DESCRIÇÃO_FERRAMENTA <br><br> (**Motivo para adicionar à base/Motivo para atualizar a ferramenta):** MOTIVO <br><br> **Mais informações sobre a ferramenta:** URL_PRINCIPAL_DA_FERRAMENTA <br><br> **Atualização realizada (Caso se aplique):** DESCRIÇÃO_ATUALIZAÇÃO <br><br> ————————————
 </div>
@@ -149,21 +151,15 @@ Seguindo o padrão de nome:
 - `SEU_USUARIO/addTool` → Para adicionar uma ou mais novas ferramentas
 - `SEU_USUARIO/updateTool` → Para atualizar os dados de uma ou mais ferramentas
 
-2 - Abra o arquivo `public/data/tools.yml`
+2 - Abra o arquivo `docs/data/tools.yml`
 
 3 - Adicione ou atualize as ferramentas de acordo com a [estrutura padrão](#estrutura-do-arquivo) e usando os [parâmetros](#parâmetros) disponíveis.
 
 4 - Salve o arquivo `tools.yml` 
 
-5 - Exporte uma nova versão do site com o arquivo atualizado:
+5 - Faça um *commit* e *push* das alterações.
 
-```bash
-npm run export
-```
-
-6 - Faça um *commit* e *push* das alterações.
-
-7 - Faça um Pull Request no GitHub com as seguintes especificações:
+6 - Faça um Pull Request no GitHub com as seguintes especificações:
 
 **Base:** develop
 
