@@ -1,13 +1,19 @@
-const withPlugins = require('next-compose-plugins');
-const optimizedImages = require('next-optimized-images');
+const withPlugins = require("next-compose-plugins");
+const optimizedImages = require("next-optimized-images");
 
 const nextConfig = {
-  basePath: '/toolkit_ddj',
-  assetPrefix: '/toolkit_ddj/',
+  basePath: "/toolkit_ddj",
+  assetPrefix: "/toolkit_ddj/",
   images: {
     disableStaticImages: true,
-  }
-}
+  },
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false, path: false };
+
+    return config;
+  },
+};
 
 const config = withPlugins(
   [
@@ -20,6 +26,6 @@ const config = withPlugins(
     ],
   ],
   nextConfig
-)
+);
 
 module.exports = config;
