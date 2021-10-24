@@ -1,0 +1,25 @@
+name: export-on-push
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14.x
+      - name: Config, install dependencies and run export script
+        run: |
+          npm config set @bit:registry https://node.bit.dev
+          npm i
+          npm run export
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "automated-push"
+          git config --global user.email "automated-push@automated.com"
+          git add -A
+          git commit -m "add: send new version of website"
+          git push
