@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "mkdir temp && cp /home/runner/work/toolkit_ddj/toolkit_ddj/docs/data/* temp/ -r && echo copy-done && next build && next export -o docs && mkdir docs/data/ && cp temp/* /home/runner/work/toolkit_ddj/toolkit_ddj/docs/data/ -r && rm temp/ -r && cd docs && echo > .nojekyll",
+    "export": "mkdir temp && cp /docs/data/* temp/ -r && echo copy-done && next build && next export -o docs && mkdir docs/data/ && cp temp/* /docs/data/ -r && rm temp/ -r && cd docs && echo > .nojekyll",
+    "automated-export": "mkdir temp && cp /home/runner/work/toolkit_ddj/toolkit_ddj/docs/data/* temp/ -r && echo copy-done && next build && next export -o docs && mkdir docs/data/ && cp temp/* /home/runner/work/toolkit_ddj/toolkit_ddj/docs/data/ -r && rm temp/ -r && cd docs && echo > .nojekyll",
     "start": "next start",
     "lint": "next lint"
   },

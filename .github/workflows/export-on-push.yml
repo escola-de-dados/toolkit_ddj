@@ -15,7 +15,7 @@ jobs:
         run: |
           npm config set @bit:registry https://node.bit.dev
           npm i
-          npm run export
+          npm run automated-export
       - name: Commit and push changes
         run: |
           git config --global user.name "automated-push"
