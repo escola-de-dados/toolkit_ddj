@@ -233,8 +233,7 @@
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
     plataforma:
-        - iOS
-        - Android
+        - Web
     open-source: False
     destaque: True
     desativado: False
