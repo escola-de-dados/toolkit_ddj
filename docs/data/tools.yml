@@ -55,7 +55,7 @@
     link: https://carbondate.cs.odu.edu/
     github: https://github.com/oduwsdl/CarbonDate
     descrição: "Serviço online que permite identificar a data de criação de recursos online. Para consultar várias URLs, é recomendada rodar a versão local do software."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: True
@@ -105,7 +105,7 @@
     link: https://datahub.io/
     github: https://github.com/datopian/data-cli
     descrição: "Plataforma que fornece um repositório de dados online e uma ferramenta via linha de comando que facilita a publicação de dados online."
-    categoria: Publicação
+    categoria: Visualização
     plataforma:
         - Web
     open-source: False
@@ -143,7 +143,7 @@
     link: https://github.com/brandonrobertz/autoscrape-py
     github: https://github.com/brandonrobertz/autoscrape-py
     descrição: "Raspador automatizado de dados estruturados de páginas da web, que não requer programações específicas para cada site. "
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Windows
         - Linux
@@ -233,8 +233,7 @@
     descrição: "Aplicativo de compartilhamento de fotos da Terra capturadas por satélites."
     categoria: Cartografia
     plataforma:
-        - iOS
-        - Android
+        - Web
     open-source: False
     destaque: True
     desativado: False
@@ -323,7 +322,7 @@
     link: https://github.com/scrapinghub/portia
     github: https://github.com/scrapinghub/portia
     descrição: "Ferramenta para raspagem de dados de forma visual."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
         - Mac OS
@@ -338,7 +337,7 @@
     link: https://ckan.org/
     github: https://github.com/ckan/ckan
     descrição: "Plataforma da Open Knowledge para portais de dados abertos, que permite organizar repositórios de conjuntos de dados (datasets)."
-    categoria: Publicação
+    categoria: Visualização
     plataforma:
         - Windows
         - Linux
@@ -536,7 +535,7 @@
     link: https://chrome.google.com/webstore/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah
     github:
     descrição: "Extensão para o ChromeOS de ferramenta de extração de informações de páginas da web, que permite exportação de dados em Excel ou arquivo CSV."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source:
@@ -596,7 +595,7 @@
     link: https://www.google.com/forms/about/
     github:
     descrição: "Ferramenta do Google para produzir questionários online. Permite personalizar os formulários para coleta de dados por meio de perguntas múltipla escolha, escalas, listas suspensas e outras opções."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: False
@@ -727,7 +726,7 @@
     link: https://morph.io/
     github: https://github.com/openaustralia/morph
     descrição: "Interface para facilitar a raspagem de dados."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: False
@@ -895,7 +894,7 @@
     link: https://insomnia.rest
     github: https://github.com/Kong/insomnia
     descrição: "Plataforma para interação com APIs baseadas em HTTP."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Windows
         - Linux
@@ -909,7 +908,7 @@
     link: http://datakit.ap.org/
     github: https://github.com/associatedpress/datakit-core
     descrição: "Ferramenta de organização para projetos baseados em dados, criada pela agência jornalística The Associated Press."
-    categoria: Publicação
+    categoria: Visualização
     plataforma:
         - Windows
         - Linux
@@ -961,7 +960,7 @@
     link: https://www.import.io/
     github: https://github.com/import-io
     descrição: "Ferramenta que permite realizar raspagem de dados sem programação. Tem interface amigável. É uma ferramenta paga."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: False
@@ -1022,7 +1021,7 @@
     link: https://tools.digitalmethods.net/netvizz/youtube/
     github: https://github.com/bernorieder/YouTube-Data-Tools
     descrição: "Ferramenta de raspagem de dados do YouTube."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: True
@@ -1034,7 +1033,7 @@
     link: https://web.archive.org/
     github: https://github.com/internetarchive
     descrição: "Biblioteca digital de sites da Internet."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: True
@@ -1164,7 +1163,7 @@
     link: https://datasette.io/
     github: https://github.com/simonw/datasette
     descrição: "Ferramenta para explorar e publicar dados de maneira interativa."
-    categoria: Publicação
+    categoria: Visualização
     plataforma:
         - Web
         - Mac OS
@@ -1179,7 +1178,7 @@
     link: https://graph.tips/beta/
     github: https://github.com/sowdust/sowdust.github.io
     descrição: "Interface que facilita a busca avançada no Facebook."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: True
@@ -1216,7 +1215,7 @@
     link: https://databin.pudo.org/
     github: https://github.com/pudo/databin
     descrição: "Ferramenta para facilitar o compartilhamento de tabelas na web."
-    categoria: Publicação
+    categoria: Visualização
     plataforma:
         - Web
     open-source: True
@@ -1413,7 +1412,7 @@
     link: https://www.wolframalpha.com/
     github:
     descrição: "Calculadora que dá respostas sobre diversas áreas do conhecimento usando inteligência artificial."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: False
@@ -1438,7 +1437,7 @@
     link: https://sherlock-project.github.io/
     github: https://github.com/sherlock-project/sherlock
     descrição: "Ferramenta usada para localizar nomes de usuários em redes sociais."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Windows
         - Linux
@@ -1452,7 +1451,7 @@
     link: https://ifttt.com/
     github: https://github.com/IFTTT
     descrição: "Aplicativo que conecta serviços, aplicativos e aparelhos e automatiza tarefas. Pode servir para coletar dados sobre um tema em redes sociais."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: False
@@ -1515,7 +1514,7 @@
     link: https://www.paterva.com/web7/buy/maltego-clients/maltego-ce.php
     github: https://github.com/paterva/maltego-trx
     descrição: "Interface visual para coleta, vinculação e combinação de informações."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Windows
         - Linux
@@ -1656,7 +1655,7 @@
     link: https://chrome.google.com/webstore/detail/web-scraper/jnhgnonknehpejjnehehllkliplmbmhn
     github: https://github.com/webscraperio
     descrição: "Extensão do Chrome. Funciona dentro do webinspector. Raspa dados sem necessidade de programação."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: True
@@ -1772,7 +1771,7 @@
     link: https://convextra.com/
     github:
     descrição: "Plugin para o browser que permite realizar mineração de dados sem código."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: False
@@ -1830,7 +1829,7 @@
     link: https://twinery.org/
     github: https://github.com/klembot/twinejs/
     descrição: "Twine é uma ferramenta para publicar histórias interativas e não lineares."
-    categoria: Publicação
+    categoria: Visualização
     plataforma:
         - Web
         - Mac OS
@@ -1871,7 +1870,7 @@
     link: https://nytimes.github.io/svg-crowbar/
     github: https://github.com/NYTimes/svg-crowbar
     descrição: "Ferramenta para extrair nós SVG e estilos de acompanhamento de um documento HTML e os baixar como um arquivo SVG."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Web
     open-source: True
@@ -1883,7 +1882,7 @@
     link: https://github.com/jsvine/pdfplumber
     github: https://github.com/jsvine/pdfplumber
     descrição: "Ferramenta para extrair informações detalhadas sobre cada caractere de PDFs."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Mac OS
         - Windows
@@ -1909,7 +1908,7 @@
     link: https://github.com/DocNow/hydrator
     github: https://github.com/DocNow/hydrator
     descrição: "Aplicativo de desktop para hidratar conjuntos de dados de ID do Twitter."
-    categoria: Obtenção
+    categoria: Extração
     plataforma:
         - Mac OS
         - Windows

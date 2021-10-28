@@ -8,11 +8,5 @@
   nome: Linux
   icone: simple-icons:linux
 -
-  nome: iOS
-  icone: simple-icons:ios
--
-  nome: Android
-  icone: simple-icons:android
--
   nome: Web
   icone: mdi:web

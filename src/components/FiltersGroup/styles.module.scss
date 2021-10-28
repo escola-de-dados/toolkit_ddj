@@ -130,8 +130,8 @@
 }
 
 .categoryFilterCheckbox:checked:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
-  -webkit-box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.2rem rgba($purple, .2);
-  box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.2rem rgba($purple, .2);
+  -webkit-box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.15rem rgba($purple, .2);
+  box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.15rem rgba($purple, .2);
 }
 
 .categoryFilters .cleanFiltersButtonContainer{
