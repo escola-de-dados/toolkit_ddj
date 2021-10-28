@@ -2,17 +2,14 @@
   nome: Visualização
   slug: visualizacao
 - 
-  nome: Obtenção
-  slug: obtencao
+  nome: Extração
+  slug: extracao
 - 
   nome: Análise
   slug: analise
 - 
   nome: Cartografia
   slug: cartografia
-- 
-  nome: Publicação
-  slug: publicacao
 - 
   nome: Limpeza
   slug: limpeza
