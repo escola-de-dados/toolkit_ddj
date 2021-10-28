@@ -3,7 +3,7 @@
   icone: mdi:microsoft-windows
 -
   nome: Mac OS
-  icone: simple-icons:macos
+  icone: simple-icons:apple
 -
   nome: Linux
   icone: simple-icons:linux

@@ -37,6 +37,11 @@ h1.title{
   text-align: center;
 }
 
+.subtitle p:last-child{
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
 .subtitleNumber{
   font-weight: 500;
 }
@@ -78,6 +83,6 @@ h1.title{
   }
 
   .subtitle{
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 }
