@@ -12,23 +12,6 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
     <div
       className={`${styles.allFilters} ${isSideDrawer && styles.drawerFilters}`}
     >
-      {/* Pesquisa */}
-      <InputGroup className={styles.searchContainer}>
-        <Form.Control
-          id={isSideDrawer && "drawer-search-input"}
-          type="search"
-          placeholder="Pesquise por qualquer ferramenta..."
-          onChange={(e) => filtersData.onSearch(e)}
-        />
-        <Button
-          aria-label="Pesquisar"
-          variant="inside-input"
-          id="button-addon1"
-        >
-          <Icon icon={"mdi:search"} color={styles.lightPurple} />
-        </Button>
-      </InputGroup>
-
       <div className={styles.checkboxFiltersContainer}>
         {/* Categorias */}
         <div className={`${styles.filters} ${styles.categoryFilters}`}>
@@ -176,6 +159,25 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
           </div>
         </div>
       </div>
+
+      {/* Pesquisa */}
+      {!isSideDrawer && (
+        <InputGroup className={styles.searchContainer}>
+          <Form.Control
+            id={isSideDrawer && "drawer-search-input"}
+            type="search"
+            placeholder="Pesquise por qualquer ferramenta..."
+            onChange={(e) => filtersData.onSearch(e)}
+          />
+          <Button
+            aria-label="Pesquisar"
+            variant="inside-input"
+            id="button-addon1"
+          >
+            <Icon icon={"mdi:search"} color={styles.lightPurple} />
+          </Button>
+        </InputGroup>
+      )}
     </div>
   );
 };
