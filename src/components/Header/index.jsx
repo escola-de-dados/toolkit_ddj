@@ -18,13 +18,19 @@ const Header = ({ toolsNumber, handleModalOpen }) => {
           alt="Caixa de Ferramentas de Jornalismo de Dados"
         />
       </h1>
-      <p className={styles.subtitle}>
-        Explore mais de{" "}
-        <span className={styles.subtitleNumber}>
-          {toolsNumber - (toolsNumber % 5)}
-        </span>{" "}
-        ferramentas para jornalistas de dados
-      </p>
+      <div className={styles.subtitle}>
+        <p>
+          Explore mais de{" "}
+          <span className={styles.subtitleNumber}>
+            {toolsNumber - (toolsNumber % 5)}
+          </span>{" "}
+          ferramentas para trabalhar com dados.
+        </p>
+        <p>
+          Selecione uma categoria, plataforma ou faça uma busca por
+          palavra-chave.
+        </p>
+      </div>
       <a
         className={styles.colabModalLink}
         href="#"

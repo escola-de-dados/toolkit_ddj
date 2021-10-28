@@ -35,7 +35,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
           <span
             className={`${styles.filtersTitle} ${styles.categoryFiltersTitle}`}
           >
-            Categorias
+            Filtre por categorias
           </span>
           <div
             className={`${styles.filtersContainer} ${styles.categoryFiltersContainer}`}
