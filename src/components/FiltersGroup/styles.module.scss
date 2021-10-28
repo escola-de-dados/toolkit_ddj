@@ -120,11 +120,18 @@
 
 .categoryFilterCheckbox:checked + .categoryFilterLabel{
   opacity: 1;
+  -webkit-box-shadow: inset 0 0 0 0.08rem $purple;
+  box-shadow: inset 0 0 0 0.08rem $purple;
 }
 
 .categoryFilterCheckbox:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
-  -webkit-box-shadow: 0 0 0 0.25rem rgba($purple, .2);
-  box-shadow: 0 0 0 0.25rem rgba($purple, .2);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($purple, .2);
+  box-shadow: 0 0 0 0.2rem rgba($purple, .2);
+}
+
+.categoryFilterCheckbox:checked:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
+  -webkit-box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.2rem rgba($purple, .2);
+  box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.2rem rgba($purple, .2);
 }
 
 .categoryFilters .cleanFiltersButtonContainer{
@@ -170,8 +177,13 @@
 }
 
 .platformFilterCheckbox:focus + .platformFilterLabel, .platformFilterLabel:focus{
-  -webkit-box-shadow: 0 0 0 0.25rem rgba($purple, .2);
-  box-shadow: 0 0 0 0.25rem rgba($purple, .2);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba($purple, .2);
+  box-shadow: 0 0 0 0.2rem rgba($purple, .2);
+}
+
+.platformFilterCheckbox:checked:focus + .platformFilterLabel, .platformFilterLabel:focus{
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 0.2rem rgba($purple, .25);
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 0.2rem rgba($purple, .25);
 }
 
 
