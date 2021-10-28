@@ -33,8 +33,7 @@ const Header = ({ toolsNumber, handleModalOpen }) => {
       </div>
       <a
         className={styles.colabModalLink}
-        href="#"
-        onClick={() => handleModalOpen("howTo")}
+        href="https://github.com/escola-de-dados/toolkit_ddj"
       >
         Colabore com a base
       </a>

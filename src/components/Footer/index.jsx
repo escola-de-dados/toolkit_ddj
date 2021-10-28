@@ -33,8 +33,7 @@ const Footer = ({ handleModalOpen }) => {
             </a>
             <a
               className={styles.footerLink}
-              href="#"
-              onClick={() => handleModalOpen("howTo")}
+              href="https://github.com/escola-de-dados/toolkit_ddj"
             >
               Quero colaborar
             </a>
