@@ -130,8 +130,8 @@
 }
 
 .categoryFilterCheckbox:checked:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
-  -webkit-box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.15rem rgba($purple, .2);
-  box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.15rem rgba($purple, .2);
+  -webkit-box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.12rem rgba($purple, .2);
+  box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.12rem rgba($purple, .2);
 }
 
 .categoryFilters .cleanFiltersButtonContainer{
@@ -243,7 +243,12 @@
 
 .drawerFilters .categoryFilter{
   width: 46%;
-  margin-bottom: 1em;
+  margin-bottom: 1.2em;
+}
+
+.drawerFilters .categoryFilter:last-child{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .drawerFilters .categoryFilterLabel{
@@ -255,7 +260,7 @@
 
 //Filtros de plataforma
 .drawerFilters .platformFilter{
-  width: 28%;
+  width: 25%;
 }
 
 .drawerFilters .platformFiltersContainer{
@@ -264,15 +269,11 @@
 }
 
 .drawerFilters .platformFilter{
-  margin: 0 auto 1.5em;
+  margin: 0 auto;
 }
 
 .drawerFilters .platformFilterLabel{
   margin: auto;
-}
-
-.drawerFilters .platformFilter:nth-last-child(-n+3){
-  margin-bottom: 0;
 }
 
 //Limpar filtros
