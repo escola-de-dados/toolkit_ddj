@@ -259,17 +259,14 @@
 }
 
 //Filtros de plataforma
-.drawerFilters .platformFilter{
-  width: 25%;
-}
-
 .drawerFilters .platformFiltersContainer{
   width: 85%;
   margin: 0 auto 2em;
 }
 
 .drawerFilters .platformFilter{
-  margin: 0 auto;
+  width: 28%;
+  margin: 0 auto 1.5em;
 }
 
 .drawerFilters .platformFilterLabel{
@@ -350,11 +347,12 @@
   //Filtros de categoria
   .categoryFilter{
     width: 42%;
-    margin-bottom: 1em;
+    margin-bottom: 1.2em;
   }
 
-  .categoryFilter:nth-last-child(-n+2){
-    margin-bottom: 0;
+  .categoryFilter:last-child{
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .categoryFilterLabel{
@@ -380,10 +378,10 @@
 
   .platformFilter{
     width: 28%;
-    margin: 0 auto 1.2em;
+    margin: 0 auto 1.5em;
   } 
 
-  .platformFilter:nth-last-child(-n+3){
+  .platformFilter:last-child{
     margin-bottom: 0;
   }
   

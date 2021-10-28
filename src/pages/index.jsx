@@ -227,7 +227,6 @@ export default function Home({
     if (isInitialCountMount.current) {
       isInitialCountMount.current = false;
     } else {
-      //TODO: Resolver isso aqui. Tá focando pelo tab, mas não no Voiceover
       if (
         (count.next > 12 && window.innerWidth > 576) ||
         (count.next > 6 && window.innerWidth <= 576)
@@ -436,23 +435,23 @@ export default function Home({
         />
 
         {/* Icons */}
-        <link rel="icon" href="toolkit_ddj/favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="toolkit_ddj/apple-touch-icon.png"
+          href="apple-touch-icon.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="toolkit_ddj/favicon-32x32.png"
+          href="favicon-32x32.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="toolkit_ddj/favicon-16x16.png"
+          href="favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
