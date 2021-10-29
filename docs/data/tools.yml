@@ -556,7 +556,7 @@
 -
     id: 45
     nome: "Voyant Tools"
-    link: voyant-tools.org/
+    link: https://voyant-tools.org/
     github: https://github.com/sgsinclair/Voyant
     descrição: "Ferramenta de leitura e análise de textos digitais."
     categoria: Análise
@@ -1397,7 +1397,7 @@
 -
     id: 110
     nome: "Merge CSV"
-    link: merge-csv.com/
+    link: https://merge-csv.com/
     github:
     descrição: "Ferramenta que combina vários arquivos CSV."
     categoria: Limpeza
