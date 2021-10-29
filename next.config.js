@@ -2,8 +2,6 @@ const withPlugins = require("next-compose-plugins");
 const optimizedImages = require("next-optimized-images");
 
 const nextConfig = {
-  basePath: "/toolkit_ddj",
-  assetPrefix: "/toolkit_ddj/",
   images: {
     disableStaticImages: true,
   },
