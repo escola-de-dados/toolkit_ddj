@@ -143,7 +143,6 @@ export default function Home({
       const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
         .then((res) => res.text())
         .then((data) => yaml.load(data));
-      console.log(updatedToolsData);
       setToolsData([...updatedToolsData]);
 
       //Lista de plataformas
@@ -233,8 +232,9 @@ export default function Home({
         (count.next > 12 && window.innerWidth > 576) ||
         (count.next > 6 && window.innerWidth <= 576)
       ) {
-        console.log(cardNumberPerLoading.current);
-        document.getElementById("new-first-card").focus();
+        if (document.getElementById("new-first-card")) {
+          document.getElementById("new-first-card").focus();
+        }
       }
     }
   }, [count]);
@@ -565,6 +565,7 @@ export default function Home({
                     const currentHighlightsNumber = current.filter(
                       (item) => item.destaque
                     ).length;
+
                     if (
                       tool.destaque &&
                       index === currentHighlightsNumber - 1
@@ -596,8 +597,8 @@ export default function Home({
                         </>
                       );
                     } else if (
-                      index ===
-                      current.length - cardNumberPerLoading.current
+                      index === current.length - cardNumberPerLoading.current ||
+                      (current.length < 24 && index === 12)
                     ) {
                       return (
                         <Card
