@@ -1,21 +1,28 @@
 - 
   nome: Visualização
   slug: visualizacao
+  descrição: Criação de gráficos, mapas interativos e outras visualizações de dados
 - 
   nome: Extração
   slug: extracao
+  descrição: Raspagem e coleta de dados a partir de várias fontes
 - 
   nome: Análise
   slug: analise
+  descrição: Ferramentas de gerenciamento, organização e processamento de dados para análise
 - 
   nome: Cartografia
   slug: cartografia
+  descrição: Exploração e visualização de dados geográficos e mapas
 - 
   nome: Limpeza
   slug: limpeza
+  descrição: Conversores de tipos de arquivo e limpeza de dados em geral
 - 
   nome: Redes
   slug: redes
+  descrição: Visualização, construção e manipulação de grafos
 - 
   nome: Multi
   slug: multi
+  descrição: Ferramentas que se encaixam em mais de uma categoria

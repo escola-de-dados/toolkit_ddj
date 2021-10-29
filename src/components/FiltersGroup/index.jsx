@@ -28,6 +28,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
                 className={`${styles.filter} ${styles.categoryFilter}`}
                 key={`${f.label}_key`}
                 id={f.slug}
+                title={f.description}
                 type="checkbox"
               >
                 <Form.Check.Input
@@ -39,6 +40,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
                   isValid
                 />
                 <Form.Check.Label
+                  title={f.description}
                   className={`${styles.filterLabel} ${styles.categoryFilterLabel} ${f.slug}`}
                 >
                   {f.label}

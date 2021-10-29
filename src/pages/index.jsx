@@ -64,6 +64,7 @@ export async function getStaticProps(context) {
     return {
       slug: category.slug,
       label: category.nome,
+      description: category["descrição"],
       isChecked: category.nome === "Visualização" ? true : false,
     };
   });
@@ -179,6 +180,7 @@ export default function Home({
         return {
           slug: category.slug,
           label: category.nome,
+          description: category["descrição"],
           isChecked: category.nome === "Visualização" ? true : false,
         };
       });
