@@ -2,7 +2,7 @@ name: export-on-push
 on:
   push:
     branches:
-      - develop
+      - main
 jobs:
   run-script:
     runs-on: ubuntu-latest

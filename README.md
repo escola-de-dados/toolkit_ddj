@@ -39,7 +39,7 @@ cd toolkit_ddj
 
 3 - Rode `npm install` para instalar todas as dependências.
 
-4 - Rode `npm run dev` para lançar a ferramenta localmente no endereço [http://localhost:3000/toolkit_ddj](http://localhost:3000/toolkit_ddj)
+4 - Rode `npm run dev` para lançar a ferramenta localmente no endereço [http://localhost:3000/](http://localhost:3000/)
 
 <br>
 
