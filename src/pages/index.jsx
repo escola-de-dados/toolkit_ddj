@@ -361,22 +361,10 @@ export default function Home({
 
   const onPlatformFilter = (event) => {
     const {
-      target: { value, checked },
+      target: { value },
     } = event;
 
     setSelectedPlatform(value);
-
-    // setPlatformFilters((currentFilters) =>
-    //   currentFilters.map((f) => {
-    //     if (f.label === value) {
-    //       return {
-    //         ...f,
-    //         isChecked: checked,
-    //       };
-    //     }
-    //     return f;
-    //   })
-    // );
   };
 
   const clearPlatformFilters = () => {
