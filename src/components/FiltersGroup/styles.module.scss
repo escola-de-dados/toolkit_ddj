@@ -69,10 +69,6 @@
   flex-basis: 60%;
 }
 
-// .filtersTitle{
-//   margin: 0 auto 1em;
-// }
-
 .filtersContainer{
   margin: 1em 0;
 
@@ -81,7 +77,7 @@
   justify-content: center;
 }
 
-.filterCheckbox{
+.filterRadio{
   position: absolute;
   left: -9999px;
 }
@@ -118,18 +114,18 @@
   opacity: .7;
 }
 
-.categoryFilterCheckbox:checked + .categoryFilterLabel{
+.categoryFilterRadio:checked + .categoryFilterLabel{
   opacity: 1;
   -webkit-box-shadow: inset 0 0 0 0.08rem $purple;
   box-shadow: inset 0 0 0 0.08rem $purple;
 }
 
-.categoryFilterCheckbox:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
+.categoryFilterRadio:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
   -webkit-box-shadow: 0 0 0 0.2rem rgba($purple, .2);
   box-shadow: 0 0 0 0.2rem rgba($purple, .2);
 }
 
-.categoryFilterCheckbox:checked:focus + .categoryFilterLabel, .categoryFilterLabel:focus{
+.categoryFilterRadio:checked:focus + .categoryFilterLabel{
   -webkit-box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.12rem rgba($purple, .2);
   box-shadow: inset 0 0 0 0.08rem $purple, 0 0 0 0.12rem rgba($purple, .2);
 }
@@ -163,27 +159,27 @@
   color: lighten($purple, 15%);
 }
 
-.platformFilterCheckbox:checked + .platformFilterLabel{
+.platformFilterRadio:checked + .platformFilterLabel{
   box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15);
   background-color: rgba(darken($purple, 5%), .08);
 }
 
-.platformFilterCheckbox:checked + .platformFilterLabel:hover{
+.platformFilterRadio:checked + .platformFilterLabel:hover{
   background-color: rgba(darken($purple, 5%), .06);
 }
 
-.platformFilterCheckbox:checked + .platformFilterLabel svg{
+.platformFilterRadio:checked + .platformFilterLabel svg{
   color: $red;
 }
 
-.platformFilterCheckbox:focus + .platformFilterLabel, .platformFilterLabel:focus{
+.platformFilterRadio:focus + .platformFilterLabel, .platformFilterLabel:focus{
   -webkit-box-shadow: 0 0 0 0.2rem rgba($purple, .2);
   box-shadow: 0 0 0 0.2rem rgba($purple, .2);
 }
 
-.platformFilterCheckbox:checked:focus + .platformFilterLabel, .platformFilterLabel:focus{
-  -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 0.2rem rgba($purple, .25);
-  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 0.2rem rgba($purple, .25);
+.platformFilterRadio:checked:focus + .platformFilterLabel{
+  -webkit-box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 0.15rem rgba($purple, .25);
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.15), 0 0 0 0.15rem rgba($purple, .25);
 }
 
 
@@ -206,7 +202,6 @@
 /*-- Filtros da barra lateral --*/
 .drawerFilters .searchContainer{
   width: 90%;
-  order: -1;
 }
 
 .drawerFilters .checkboxFiltersContainer{
