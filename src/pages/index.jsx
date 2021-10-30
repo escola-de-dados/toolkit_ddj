@@ -112,6 +112,10 @@ export default function Home({
     ...initialPlatformFilters,
   ]);
 
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const [selectedPlatform, setSelectedPlatform] = useState("");
+
   const [onlyOpenSourceFilter, setOnlyOpenSourceFilter] = useState(false);
 
   const [showHowToModal, setShowHowToModal] = useState(false);
@@ -180,7 +184,7 @@ export default function Home({
           slug: category.slug,
           label: category.nome,
           description: category["descrição"],
-          isChecked: category.nome === "Visualização" ? true : false,
+          isChecked: false,
         };
       });
     });
@@ -192,7 +196,7 @@ export default function Home({
       return platforms.map((platform) => {
         return {
           label: platform.nome,
-          isChecked: true,
+          isChecked: false,
         };
       });
     });
@@ -206,6 +210,8 @@ export default function Home({
     toolsData,
     categoryFilters,
     platformFilters,
+    selectedCategory,
+    selectedPlatform,
     onlyOpenSourceFilter,
     searchInput,
   ]);
@@ -290,7 +296,7 @@ export default function Home({
   //Aplica todos os filtros à base original de dados e retorna a base filtrada e ordenada
   const filterDatabase = () => {
     return toolsData
-      .filter((item) => !item.desativado) //remove itens desativados
+      .filter(removeInactiveRule)
       .filter(categoryFilterRule)
       .filter(platformFilterRule)
       .filter(onlyOpenSourceFilterRule)
@@ -307,15 +313,9 @@ export default function Home({
 
   // Retorna o item se a categoria dele for encontrada dentre os filtros de categoria marcados
   const categoryFilterRule = (item) => {
-    const categoryCheckedFilters = categoryFilters
-      .filter((filterItem) => filterItem.isChecked)
-      .map((filterItem) => filterItem.label);
-
-    if (categoryCheckedFilters.length === 0) {
-      return false;
-    } else {
-      return categoryCheckedFilters.indexOf(item.categoria) !== -1;
-    }
+    return selectedCategory === ""
+      ? true
+      : item.categoria.includes(selectedCategory);
   };
 
   // Retorna o item se a quantidade de suas plataformas que for igual às plataformas marcadas for maior que zero
@@ -323,21 +323,9 @@ export default function Home({
     // Copia a array de plataformas do item para uma nova variável
     const itemPlatforms = [...item.plataforma];
 
-    const platformCheckedFilters = platformFilters
-      .filter((filterItem) => filterItem.isChecked)
-      .map((filterItem) => filterItem.label);
-
-    if (platformCheckedFilters.length === 0) {
-      return false;
-    } else {
-      // 'match' guarda todas as plataformas do item que estão inclusas na array de plataformas marcadas
-      const match = itemPlatforms.filter((platform) => {
-        return platformCheckedFilters.includes(platform);
-      });
-
-      // se o nº de plataformas do item inclusas nas plataformas marcadas for maior que 0, retorna o item
-      return match.length > 0;
-    }
+    return selectedPlatform === ""
+      ? true
+      : item.plataforma.includes(selectedPlatform);
   };
 
   const onlyOpenSourceFilterRule = (item) =>
@@ -361,31 +349,14 @@ export default function Home({
 
   const onCategoryFilter = (event) => {
     const {
-      target: { value, checked },
+      target: { value },
     } = event;
 
-    setCategoryFilters((currentFilters) =>
-      currentFilters.map((f) => {
-        if (f.label === value) {
-          return {
-            ...f,
-            isChecked: checked,
-          };
-        }
-        return f;
-      })
-    );
+    setSelectedCategory(value);
   };
 
   const clearCategoryFilters = () => {
-    setCategoryFilters((currentFilters) =>
-      currentFilters.map((f) => {
-        return {
-          ...f,
-          isChecked: true,
-        };
-      })
-    );
+    setSelectedCategory("");
   };
 
   const onPlatformFilter = (event) => {
@@ -393,25 +364,28 @@ export default function Home({
       target: { value, checked },
     } = event;
 
-    setPlatformFilters((currentFilters) =>
-      currentFilters.map((f) => {
-        if (f.label === value) {
-          return {
-            ...f,
-            isChecked: checked,
-          };
-        }
-        return f;
-      })
-    );
+    setSelectedPlatform(value);
+
+    // setPlatformFilters((currentFilters) =>
+    //   currentFilters.map((f) => {
+    //     if (f.label === value) {
+    //       return {
+    //         ...f,
+    //         isChecked: checked,
+    //       };
+    //     }
+    //     return f;
+    //   })
+    // );
   };
 
   const clearPlatformFilters = () => {
+    setSelectedPlatform("");
     setPlatformFilters((currentFilters) =>
       currentFilters.map((f) => {
         return {
           ...f,
-          isChecked: true,
+          isChecked: false,
         };
       })
     );
@@ -522,9 +496,11 @@ export default function Home({
             filtersData={{
               onSearch,
               categoryFilters,
+              selectedCategory,
               onCategoryFilter,
               clearCategoryFilters,
               platformFilters,
+              selectedPlatform,
               platforms,
               onPlatformFilter,
               clearPlatformFilters,
@@ -669,9 +645,11 @@ export default function Home({
             filtersData={{
               onSearch,
               categoryFilters,
+              selectedCategory,
               onCategoryFilter,
               clearCategoryFilters,
               platformFilters,
+              selectedPlatform,
               platforms,
               onPlatformFilter,
               clearPlatformFilters,
