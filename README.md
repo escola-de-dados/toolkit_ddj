@@ -94,7 +94,7 @@ A lista das ferramentas fica no arquivo YAML `docs/data/tools.yml` e cada ferram
 
 Na imagem abaixo foi adicionada a ferramenta "Nova ferramenta" abaixo da última da lista, "Datoris Chrome Extension":
 
-![Adicionando nova ferramenta](https://user-images.githubusercontent.com/85042317/137642010-bc56a204-ca9b-4179-abe1-e83e6d97fdaa.png)
+![Adicionando nova ferramenta](https://user-images.githubusercontent.com/85042317/139560732-ce0388ff-69a6-4014-9add-ff344b3aa968.png)
 
 4 - Insira um título no campo que aparece com o texto padrão "Update tools.yml"
 
@@ -103,7 +103,7 @@ O título vai ser:
 - **Add tool** (Para adicionar uma ou mais ferramentas)
 - **Update tool** (Para atualizar uma ou mais ferramentas)
 
-![Dando um título ao commit](https://user-images.githubusercontent.com/85042317/137642057-11cc2258-d703-48a9-bbac-77822cf51afd.png)
+![Dando um título ao commit](https://user-images.githubusercontent.com/85042317/139560750-6d7d7171-948e-4baf-b4eb-0d088b709bc9.png)
 
 5 - Clique no botão verde "Propose changes"
 
