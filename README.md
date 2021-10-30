@@ -58,7 +58,8 @@ A lista das ferramentas fica no arquivo YAML `docs/data/tools.yml` e cada ferram
     link: https://exemplo.com.br
     github:
     descrição: "Descrição da ferramenta"
-    categoria: Cartografia
+    categoria:
+        - Cartografia
     plataforma:
         - Web
     open-source: False
@@ -73,13 +74,11 @@ A lista das ferramentas fica no arquivo YAML `docs/data/tools.yml` e cada ferram
 | Nome | string | Insira o nome da ferramenta entre aspas duplas (`""`). |
 | Link | string | Site principal da ferramenta. Se não houver site, pode ser o link para o repositório. |
 | Github | string | Repositório da ferramenta se ela for de código aberto (não precisa ser Github, podem ser outros repositórios de código). Se não houver repositório é só deixar em branco. |
-| Categoria | string | Cada ferramenta possui somente uma das categorias abaixo: <ul><li>Visualização</li><li>Obtenção</li><li>Análise</li><li>Cartografia</li><li>Publicação</li><li>Limpeza</li><li>Redes</li><li>Multi (Que faz mais de uma das funções anteriores)</li></ul> |
+| Categoria | string | Cada ferramenta pode pertencer a uma ou mais das categorias abaixo: <ul><li>Visualização</li><li>Obtenção</li><li>Análise</li><li>Cartografia</li><li>Publicação</li><li>Limpeza</li><li>Redes</li><li>Multi (Que faz mais de uma das funções anteriores)</li></ul> |
 | Plataforma | array | Cada ferramenta pode possuir uma ou mais das plataformas abaixo: <ul><li>Windows</li><li>MacOS</li><li>Linux</li><li>iOS</li><li>Android</li><li>Web</li></ul> As ferramentas são listadas uma abaixo da outra e precedidas por um `-`.  |
 | Open-source | boolean | Identifica se a ferramenta é Open Source (Código aberto) ou não. Pode ser `True` ou `False`.  |
 | Destaque | boolean | Identifica as ferramentas que são "escolhas do editor". **Para novas contribuições deve ser sempre** `False`.  |
 | Desativado | boolean | Identifica se a ferramenta está em funcionamento e desenvolvimento ativo. **Para novas contribuições deve ser sempre** `True`. |
-
-**Cada ferramenta pode ter apenas uma categoria e uma ou mais plataformas.**
 
 <br>
 

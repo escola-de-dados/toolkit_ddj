@@ -62,6 +62,16 @@
   font-weight: 600;
 }
 
+.categoriesList{
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.categoriesList li{
+  list-style: none;
+}
+
 .toolCategory{
   padding: .2em .8em;
   font-size: .9em;

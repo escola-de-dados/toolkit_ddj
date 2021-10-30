@@ -22,16 +22,24 @@ const Card = ({ id, toolData, platforms, categories }) => {
       </header>
       <section className={styles.toolDetailsContainer}>
         <h3 className={styles.toolDetailsTitle}>Categorias</h3>
-        <div>
-          <span
-            className={`${styles.toolCategory} ${getCategorySlug(
-              toolData.categoria,
-              categories
-            )}`}
-          >
-            {toolData.categoria}
-          </span>
-        </div>
+        <ul className={styles.categoriesList}>
+          {toolData.categoria &&
+            toolData.categoria.map((categoria, index) => {
+              console.log(categoria);
+              return (
+                <li key={index}>
+                  <span
+                    className={`${styles.toolCategory} ${getCategorySlug(
+                      categoria,
+                      categories
+                    )}`}
+                  >
+                    {categoria}
+                  </span>
+                </li>
+              );
+            })}
+        </ul>
       </section>
 
       <section className={styles.toolDetailsContainer}>
