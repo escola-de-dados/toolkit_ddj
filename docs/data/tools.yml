@@ -537,7 +537,8 @@
     github: https://github.com/Airtable
     descrição: "Banco de dados com interface de planilha. Útil para edições colaborativas e visualizações dos registros das tabelas em outros formatos (galeria, formulário, kanban, gantt, etc)."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Web
     open-source: False
@@ -591,7 +592,9 @@
     github: https://github.com/CJWorkbench
     descrição: "Combina raspagem, análise e visualização de forma simples. Funciona a partir de módulos que podem ser facilmente montados em um “fluxo de trabalho”. É compartilhável e produz gráficos publicáveis ou uma API."
     categoria:
-        - Multi
+        - Visualização
+        - Extração
+        - Análise
     plataforma:
         - Web
     open-source: True
@@ -1493,9 +1496,10 @@
     nome: "XSV"
     link: https://github.com/BurntSushi/xsv
     github: https://github.com/BurntSushi/xsv
-    descrição: "Kit de ferramentas de linha de comando para analisar e combinar arquivios CSV."
+    descrição: "Kit de ferramentas de linha de comando para analisar e combinar arquivos CSV."
     categoria:
-        - Multi
+        - Análise
+        - Limpeza
     plataforma:
         - Windows
         - Linux
@@ -1536,7 +1540,7 @@
     github: https://github.com/apache/superset
     descrição: "Plataforma web de business intelligence (BI) para exploração de dados, com suporte a grandes volumes de dados. Para experimentar o software no Windows, é preciso utilizar uma máquina virtual, pois não há suporte nativo."
     categoria:
-        - Multi
+        - Análise
     plataforma:
         - Mac OS
         - Linux
@@ -1703,7 +1707,8 @@
     github: https://github.com/datasketch
     descrição: "Kit de ferramentas para análise e visualização de dados."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Web
     open-source: True
@@ -2073,7 +2078,8 @@
     github: https://github.com/PAIR-code/lit/
     descrição: "Ferramenta para visualização e compreensão de modelos de PNL."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Mac OS
         - Windows
@@ -2101,7 +2107,8 @@
     github: 
     descrição: "Ferramenta para extração e visualização de dados tabulares de sites."
     categoria:
-        - Multi
+        - Visualização
+        - Extração
     plataforma:
         - Web
     open-source: False

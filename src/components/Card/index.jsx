@@ -20,12 +20,11 @@ const Card = ({ id, toolData, platforms, categories }) => {
         <h2 className={styles.toolName}>{toolData.nome}</h2>
         <p className={styles.toolDescription}>{toolData["descrição"]}</p>
       </header>
-      <section className={styles.toolDetailsContainer}>
+      <div className={styles.toolDetailsContainer}>
         <h3 className={styles.toolDetailsTitle}>Categorias</h3>
         <ul className={styles.categoriesList}>
           {toolData.categoria &&
             toolData.categoria.map((categoria, index) => {
-              console.log(categoria);
               return (
                 <li key={index}>
                   <span
@@ -40,9 +39,9 @@ const Card = ({ id, toolData, platforms, categories }) => {
               );
             })}
         </ul>
-      </section>
+      </div>
 
-      <section className={styles.toolDetailsContainer}>
+      <div className={styles.toolDetailsContainer}>
         <h3 className={styles.toolDetailsTitle}>Plataformas</h3>
         <ul className={styles.platformList}>
           {toolData.plataforma &&
@@ -109,7 +108,7 @@ const Card = ({ id, toolData, platforms, categories }) => {
               );
             })}
         </ul>
-      </section>
+      </div>
 
       <footer className={styles.cardFooter}>
         {toolData.link && (
