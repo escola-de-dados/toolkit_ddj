@@ -22,6 +22,7 @@ const env = process.env.NODE_ENV;
 
 import { promises as fs } from "fs";
 import path from "path";
+import { scrollIt } from "../utils/utils";
 
 export async function getStaticProps(context) {
   const dataDirectory = path.join(process.cwd(), "docs/data");
@@ -523,8 +524,14 @@ export default function Home({
             aria-label="Voltar ao início da página"
             className={`${styles.backToTopButton} ${styles.fabButton}`}
             onClick={() => {
-              document.getElementById("github-corner").focus();
-              window.scrollTo(0, 0);
+              scrollIt(
+                document.getElementById("github-corner"),
+                300,
+                "easeOutQuart",
+                () => {
+                  document.getElementById("github-corner").focus();
+                }
+              );
             }}
           >
             <Icon icon="mdi:chevron-up" color="#fff" />
