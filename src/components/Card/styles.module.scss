@@ -8,13 +8,13 @@
 .toolCard{
   width: 31%;
   min-height: 550px;
-  margin-bottom: 3em;
+  margin: 0 1.16% 3em;
+  padding: 2.2em 1.8em 2.5em;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 2.2em 1.8em 2.5em;
 
   background: #FFFFFF;
   border: 1px solid #F2F2F2;
@@ -116,6 +116,9 @@
 @media #{$big-tablets-and-down}{
   .toolCard{
     width: 48%;
+  }
+  .toolCard:not(:nth-child(3)):not(:last-child){
+    margin: 0 auto 3em;
   }
 }
 

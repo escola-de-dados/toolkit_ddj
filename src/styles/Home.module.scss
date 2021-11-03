@@ -60,7 +60,7 @@ $light-purple: rgba($purple, .6);
 .cardsContainer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .allResultsLoadedMessage{
