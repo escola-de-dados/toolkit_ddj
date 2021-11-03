@@ -295,13 +295,21 @@ export default function Home({
 
   //Aplica todos os filtros à base original de dados e retorna a base filtrada e ordenada
   const filterDatabase = () => {
-    return toolsData
+    const filteredDatabase = toolsData
       .filter(removeInactiveRule)
       .filter(categoryFilterRule)
       .filter(platformFilterRule)
+      .filter(onlyOpenSourceFilterRule);
+
+    const orderedDatabase = orderByThreeHighlights(filteredDatabase);
+
+    // return orderedDatabase.filter(searchFilterRule);
+
+    return orderedDatabase
+      .filter(categoryFilterRule)
+      .filter(platformFilterRule)
       .filter(onlyOpenSourceFilterRule)
-      .filter(searchFilterRule)
-      .sort(sortRule);
+      .filter(searchFilterRule);
   };
 
   /*--- Filter Rules ---*/
@@ -338,8 +346,47 @@ export default function Home({
       .includes(searchInput.toLowerCase());
   };
 
-  const sortRule = (a, b) => {
-    return b.destaque - a.destaque || a.categoria < b.categoria;
+  const extractThreeRandomHighlights = (dataSet) => {
+    const allHighlights = dataSet.filter((tool) => tool.destaque);
+    let threeRandom = [];
+
+    if (allHighlights.length >= 3) {
+      for (let i = 0; i <= 2; i++) {
+        let randomItem =
+          allHighlights[Math.floor(Math.random() * allHighlights.length)];
+
+        if (i > 0 && threeRandom.some((item) => item.id === randomItem.id)) {
+          while (threeRandom.some((item) => item.id === randomItem.id)) {
+            randomItem =
+              allHighlights[Math.floor(Math.random() * allHighlights.length)];
+          }
+        }
+
+        threeRandom.push(randomItem);
+      }
+    } else {
+      threeRandom = allHighlights.slice(0);
+    }
+
+    const threeRandomIds = threeRandom.map((item) => item.id);
+
+    const newArrayWithoutThreeHighlights = dataSet.filter((item) => {
+      return !threeRandomIds.includes(item.id);
+    });
+
+    return [threeRandom, newArrayWithoutThreeHighlights];
+  };
+
+  const orderByThreeHighlights = (dataSet) => {
+    const [threeRandom, databaseWithoutRandom] =
+      extractThreeRandomHighlights(dataSet);
+
+    //Orders database without three random highlights by categories
+    const orderedDatabaseWithoutRandom = databaseWithoutRandom.sort((a, b) => {
+      return a.categoria < b.categoria;
+    });
+
+    return threeRandom.concat(orderedDatabaseWithoutRandom);
   };
 
   /*--- Filter Handlers ---*/
@@ -508,7 +555,9 @@ export default function Home({
               {filteredToolsData.filter((item) => item.destaque).length > 0 && (
                 <div className={styles.highlightsTitleContainer}>
                   <Icon icon="mdi:star" color={styles.yellow} />
-                  <span className={styles.highlightsTitle}>Destaques</span>
+                  <span className={styles.highlightsTitle}>
+                    Nossos destaques
+                  </span>
                 </div>
               )}
               <InfiniteScroll
@@ -532,7 +581,7 @@ export default function Home({
 
                     if (
                       tool.destaque &&
-                      index === currentHighlightsNumber - 1
+                      (index === 2 || index === currentHighlightsNumber - 1)
                     ) {
                       return (
                         <>
@@ -543,6 +592,7 @@ export default function Home({
                             platforms={platforms}
                           />
                           <div
+                            key="highlight-separator"
                             tabIndex="0"
                             className={styles.highlightsSeparator}
                           >
