@@ -596,7 +596,9 @@ export default function Home({
 
                     if (
                       tool.destaque &&
-                      (index === 2 || index === currentHighlightsNumber - 1)
+                      (index === 2 ||
+                        (currentHighlightsNumber < 3 &&
+                          index === currentHighlightsNumber - 1))
                     ) {
                       return (
                         <>
