@@ -36,7 +36,7 @@
   text-align: center;
 }
 
-.checkboxFiltersContainer{
+.radioFiltersContainer{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -202,9 +202,10 @@
 /*-- Filtros da barra lateral --*/
 .drawerFilters .searchContainer{
   width: 90%;
+  margin: 0 0 3em;
 }
 
-.drawerFilters .checkboxFiltersContainer{
+.drawerFilters .radioFiltersContainer{
   padding-top: .5em;
   background: none;
 }
@@ -241,11 +242,6 @@
   margin-bottom: 1.2em;
 }
 
-.drawerFilters .categoryFilter:last-child{
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .drawerFilters .categoryFilterLabel{
   width: 100%;
   margin: 0;
@@ -262,6 +258,10 @@
 .drawerFilters .platformFilter{
   width: 28%;
   margin: 0 auto 1.5em;
+}
+
+.drawerFilters .platformFilter:last-child{
+  margin-bottom: 0;
 }
 
 .drawerFilters .platformFilterLabel{
@@ -281,6 +281,7 @@
 }
 
 .drawerFilters .openSourceFilter .filter{
+  width: fit-content;
   margin: 0 auto;
 }
 /*-- FIM - Filtros da barra lateral --*/
@@ -344,11 +345,6 @@
     width: 42%;
     margin-bottom: 1.2em;
   }
-
-  .categoryFilter:last-child{
-    margin-left: auto;
-    margin-right: auto;
-  }
   
   .categoryFilterLabel{
     width: 100%;
@@ -391,7 +387,7 @@
 
   .cleanFiltersButtonContainer{
     padding-left: 0;
-    margin: 2em auto !important;
+    margin: 2em auto;
   }
   
   //Filtro open-source
@@ -399,9 +395,14 @@
     flex-basis: 85%;
     margin: 2em auto;
   }
-
+  
   //Filtros da barra lateral
   .drawerFilters .searchContainer{
     padding: 1.5em;
+  }
+
+  .drawerFilters .cleanFiltersButtonContainer{
+    padding-left: 0;
+    margin-top: 0;
   }
 }

@@ -12,7 +12,7 @@ const FiltersGroup = ({ filtersData, isSideDrawer }) => {
     <div
       className={`${styles.allFilters} ${isSideDrawer && styles.drawerFilters}`}
     >
-      <div className={styles.checkboxFiltersContainer}>
+      <div className={styles.radioFiltersContainer}>
         {/* Pesquisa - Side Drawer */}
         {isSideDrawer && (
           <InputGroup className={styles.searchContainer}>
