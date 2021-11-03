@@ -48,6 +48,15 @@
   margin-bottom: 1em;
 }
 
+.toolName a{
+  text-decoration: none;
+}
+
+.toolName a:hover{
+  color: initial;
+  text-decoration: underline;
+}
+
 .toolDetailsContainer{
   margin: 1em 0;
 }
