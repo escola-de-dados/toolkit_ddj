@@ -620,7 +620,8 @@
     github:
     descrição: "Bloco de notas e editor de códigos disponível para uso na web."
     categoria:
-        - Multi
+        - Análise
+        - Visualização
     plataforma:
         - Web
     open-source: False
@@ -753,19 +754,6 @@
     destaque: False
     desativado: False
 -
-    id: 56
-    nome: "Typing"
-    link: https://typing.io/
-    github:
-    descrição: "Serviço web para treinar escrita de código. Serve para diferentes linguagens (JavaScript, Ruby, C, C ++, Java, PHP, Perl, Haskell, Scala e outras)."
-    categoria:
-        - Multi
-    plataforma:
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
--
     id: 57
     nome: "Hadoop"
     link: https://hadoop.apache.org/
@@ -828,7 +816,9 @@
     github:
     descrição: "O editor de planilhas do Google. Funciona online e permite criar documentos compartilháveis e facilita a edição colaborativa."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
+        - Limpeza
     plataforma:
         - Web
     open-source: False
@@ -854,9 +844,10 @@
     nome: "Deepnote"
     link: https://deepnote.com/
     github: https://github.com/deepnote
-    descrição: "Bloco de notas editor de códigos."
+    descrição: "Bloco de notas (notebook) voltado para ciência de dados. Compatível com o Jupyter e permite edições colaborativas."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Web
     open-source: True
@@ -867,9 +858,10 @@
     nome: "Weka"
     link: https://waikato.github.io/weka-wiki/
     github: https://github.com/Waikato/weka-wiki
-    descrição: "Coleção de algoritmos de aprendizado de máquina e pré-processamento de dados."
+    descrição: "Coleção de algoritmos de aprendizado de máquina e pré-processamento de dados. Baseado em Java, conta com uma interface gráfica."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Windows
         - Linux
@@ -910,7 +902,8 @@
     github: https://github.com/jupyter
     descrição: "Aplicativo que produz documentos com códigos de programação (por exemplo, em Python) e elementos de texto (parágrafo, equações, figuras, links, etc). São documentos legíveis por humanos e executáveis por computador (para realizar a análise de dados, por exemplo)."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Web
         - Mac OS
@@ -1470,7 +1463,8 @@
     github: https://github.com/rstudio
     descrição: "Programa que traz uma interface gráfica mais amigável para utilizar o R. R = linguagem de programação para gráficos e cálculos estatísticos."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Windows
         - Linux
@@ -1817,7 +1811,8 @@
     github: https://github.com/dataiku
     descrição: "Ferramenta para facilitar o trabalho com aplicações de inteligência artificial."
     categoria:
-        - Multi
+        - Visualização
+        - Análise
     plataforma:
         - Windows
         - Linux
@@ -1902,7 +1897,8 @@
     github: https://github.com/airbytehq/airbyte
     descrição: "Plataforma para integração e processamento ETL de armazenamento de dados."
     categoria:
-        - Multi
+        - Extração
+        - Limpeza
     plataforma:
         - Web
     open-source: True
@@ -1966,7 +1962,7 @@
     github:
     descrição: "Ferramenta que permite programar em R e Python sem precisar instalar programas. Possui suporte de uma comunidade de desenvolvedores. Tem biblioteca de códigos bem indexada."
     categoria:
-        - Multi
+        - Análise
     plataforma:
     open-source: False
     destaque: False
