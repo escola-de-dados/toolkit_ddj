@@ -17,7 +17,11 @@ const Card = ({ id, toolData, platforms, categories }) => {
       }`}
     >
       <header className={styles.cardHeader}>
-        <h2 className={styles.toolName}><a target="_blank" href={toolData.link}>{toolData.nome}</a></h2>
+        <h2 className={styles.toolName}>
+          <a target="_blank" rel="noreferrer" href={toolData.link}>
+            {toolData.nome}
+          </a>
+        </h2>
         <p className={styles.toolDescription}>{toolData["descrição"]}</p>
       </header>
       <div className={styles.toolDetailsContainer}>
@@ -117,6 +121,7 @@ const Card = ({ id, toolData, platforms, categories }) => {
             className={styles.cardButton}
             href={toolData.link}
             target="_blank"
+            rel="noreferrer"
           >
             <Icon icon="mdi:link-variant" color="#fff" />
             Site
@@ -128,6 +133,7 @@ const Card = ({ id, toolData, platforms, categories }) => {
             className={styles.cardButton}
             href={toolData.github}
             target="_blank"
+            rel="noreferrer"
           >
             <Icon icon="octicon:repo-forked-16" color="#fff" />
             Repositório
