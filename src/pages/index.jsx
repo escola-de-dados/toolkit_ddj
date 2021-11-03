@@ -149,24 +149,20 @@ export default function Home({
 
     const fetchUpdatedData = async () => {
       //Lista de ferramentas
-      const updatedToolsData = await fetch("/toolkit_ddj/data/tools.yml")
+      const updatedToolsData = await fetch("/data/tools.yml")
         .then((res) => res.text())
         .then((data) => yaml.load(data));
       setToolsData([...updatedToolsData]);
 
       //Lista de plataformas
-      const updatedPlatformsData = await fetch(
-        "/toolkit_ddj/data/platforms.yml"
-      )
+      const updatedPlatformsData = await fetch("/data/platforms.yml")
         .then((res) => res.text())
         .then((data) => yaml.load(data));
 
       setPlatforms(updatedPlatformsData);
 
       //Lista de categorias
-      const updatedCategoriesData = await fetch(
-        "/toolkit_ddj/data/categories.yml"
-      )
+      const updatedCategoriesData = await fetch("/data/categories.yml")
         .then((res) => res.text())
         .then((data) => yaml.load(data));
 
