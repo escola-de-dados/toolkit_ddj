@@ -92,6 +92,7 @@ export default function Home({
 
   const isInitialCountMount = useRef(true);
 
+  /*--- States ---*/
   const [toolsData, setToolsData] = useState([...initialToolsData]);
 
   const [filteredToolsData, setFilteredToolsData] = useState([
@@ -134,6 +135,9 @@ export default function Home({
   const [current, setCurrent] = useState(
     initialToolsData.slice(count.prev, count.next)
   );
+  /*--- END - States ---*/
+
+  /*--- useEffects ---*/
 
   // Ao inicializar o componente
   useEffect(() => {
@@ -168,15 +172,16 @@ export default function Home({
       setCategories(updatedCategoriesData);
     };
 
+    // Só busca dados atualizados nesse local se estiver no ambiente de desenvolvimento
     if (env !== "development") {
       fetchUpdatedData();
     }
 
-    const filteredDatabase = filterDatabase();
-    setFilteredToolsData(filteredDatabase);
+    const filteredtoolsDatabase = filterAndSorttoolsDatabase();
+    setFilteredToolsData(filteredtoolsDatabase);
   }, []);
 
-  //Atualiza os filtros de categorias
+  //Atualiza os filtros de categorias toda vez que a lista de categorias muda
   useEffect(() => {
     setCategoryFilters(() => {
       return categories.map((category) => {
@@ -190,7 +195,7 @@ export default function Home({
     });
   }, [categories]);
 
-  //Atualiza os filtros de plataformas
+  //Atualiza os filtros de plataformas toda vez que a lista de plataformas muda
   useEffect(() => {
     setPlatformFilters(() => {
       return platforms.map((platform) => {
@@ -204,8 +209,8 @@ export default function Home({
 
   // Filtra novamente base de dados original toda vez que um dos filtros muda
   useEffect(() => {
-    const filteredDatabase = filterDatabase();
-    setFilteredToolsData(filteredDatabase);
+    const filteredtoolsDatabase = filterAndSorttoolsDatabase();
+    setFilteredToolsData(filteredtoolsDatabase);
   }, [
     toolsData,
     categoryFilters,
@@ -216,6 +221,7 @@ export default function Home({
     searchInput,
   ]);
 
+  // Reseta o contador, o current das ferramentas e o hasMore toda vez que a base é filtrada
   useEffect(() => {
     setCount({ prev: 0, next: cardNumberPerLoading.current });
     setCurrent(filteredToolsData.slice(0, cardNumberPerLoading.current));
@@ -244,7 +250,110 @@ export default function Home({
       }
     }
   }, [count]);
+  /*--- END - useEffects ---*/
 
+  //Aplica os filtros à base original de dados e retorna a base filtrada e ordenada
+  const filterAndSorttoolsDatabase = () => {
+    const filteredtoolsDatabase = toolsData
+      .filter(removeInactiveRule)
+      .filter(categoryFilterRule)
+      .filter(platformFilterRule)
+      .filter(onlyOpenSourceFilterRule);
+
+    const orderedtoolsDatabase = orderByThreeHighlights(filteredtoolsDatabase);
+
+    return orderedtoolsDatabase
+      .filter(categoryFilterRule)
+      .filter(platformFilterRule)
+      .filter(onlyOpenSourceFilterRule)
+      .filter(searchFilterRule);
+  };
+
+  /*--- Filter Rules ---*/
+
+  //Remove itens inativos
+  const removeInactiveRule = (item) => {
+    return !item.desativado;
+  };
+
+  // Retorna o item se a categoria dele for encontrada dentre os filtros de categoria marcados
+  const categoryFilterRule = (item) => {
+    return selectedCategory === ""
+      ? true
+      : item.categoria.includes(selectedCategory);
+  };
+
+  // Retorna o item se a quantidade de suas plataformas que for igual às plataformas marcadas for maior que zero
+  const platformFilterRule = (item) => {
+    return selectedPlatform === ""
+      ? true
+      : item.plataforma.includes(selectedPlatform);
+  };
+
+  // Retorna apenas itens de código aberto
+  const onlyOpenSourceFilterRule = (item) =>
+    onlyOpenSourceFilter ? item["open-source"] : true;
+
+  // Retorna itens que incluam o termo pesquisado em qualquer uma de suas propriedades
+  const searchFilterRule = (item) => {
+    return Object.values(item)
+      .join("")
+      .toLowerCase()
+      .includes(searchInput.toLowerCase());
+  };
+  /*--- END - Filter Rules ---*/
+
+  /*--- Funções para ordenar a lista com três destaques aleatórios no início ---*/
+  const extractThreeRandomHighlights = (toolsDatabase) => {
+    const allHighlights = toolsDatabase.filter((tool) => tool.destaque);
+    let threeRandom = [];
+
+    if (allHighlights.length >= 3) {
+      for (let i = 0; i <= 2; i++) {
+        // Puxa um item destaque aleatório
+        let randomItem =
+          allHighlights[Math.floor(Math.random() * allHighlights.length)];
+
+        // Se o item puxado já estiver na lista dos três aleatórios, puxa outro até vir um único
+        if (i > 0 && threeRandom.some((item) => item.id === randomItem.id)) {
+          while (threeRandom.some((item) => item.id === randomItem.id)) {
+            randomItem =
+              allHighlights[Math.floor(Math.random() * allHighlights.length)];
+          }
+        }
+
+        threeRandom.push(randomItem);
+      }
+    } else {
+      threeRandom = allHighlights.slice(0); // Se o número de destaques na categoria for menor que 3, adiciona todos à lista
+    }
+
+    const threeRandomIds = threeRandom.map((item) => item.id);
+
+    // Cria uma nova base completa sem os três destaques aleatórios
+    const newArrayWithoutThreeHighlights = toolsDatabase.filter((item) => {
+      return !threeRandomIds.includes(item.id);
+    });
+
+    return [threeRandom, newArrayWithoutThreeHighlights];
+  };
+
+  const orderByThreeHighlights = (toolsDatabase) => {
+    const [threeRandom, toolsDatabaseWithoutRandom] =
+      extractThreeRandomHighlights(toolsDatabase);
+
+    // Ordena a base sem os três destaques por categoria
+    const orderedtoolsDatabaseWithoutRandom = toolsDatabaseWithoutRandom.sort(
+      (a, b) => {
+        return a.categoria < b.categoria;
+      }
+    );
+
+    return threeRandom.concat(orderedtoolsDatabaseWithoutRandom);
+  };
+  /*--- END - Funções para ordenar a lista com três destaques aleatórios no início ---*/
+
+  /*--- Event Handlers ---*/
   const handleModalClose = () => {
     if (showHowToModal) {
       setShowHowToModal(false);
@@ -259,17 +368,6 @@ export default function Home({
     } else {
       setShowAboutPageModal(true);
     }
-  };
-
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-
-    setIsDrawerOpen(open);
   };
 
   const handleMoreDataButtonClick = () => {
@@ -293,103 +391,18 @@ export default function Home({
     }));
   };
 
-  //Aplica todos os filtros à base original de dados e retorna a base filtrada e ordenada
-  const filterDatabase = () => {
-    const filteredDatabase = toolsData
-      .filter(removeInactiveRule)
-      .filter(categoryFilterRule)
-      .filter(platformFilterRule)
-      .filter(onlyOpenSourceFilterRule);
-
-    const orderedDatabase = orderByThreeHighlights(filteredDatabase);
-
-    // return orderedDatabase.filter(searchFilterRule);
-
-    return orderedDatabase
-      .filter(categoryFilterRule)
-      .filter(platformFilterRule)
-      .filter(onlyOpenSourceFilterRule)
-      .filter(searchFilterRule);
-  };
-
-  /*--- Filter Rules ---*/
-
-  //Remove itens inativos
-  const removeInactiveRule = (item) => {
-    return !item.desativado;
-  };
-
-  // Retorna o item se a categoria dele for encontrada dentre os filtros de categoria marcados
-  const categoryFilterRule = (item) => {
-    return selectedCategory === ""
-      ? true
-      : item.categoria.includes(selectedCategory);
-  };
-
-  // Retorna o item se a quantidade de suas plataformas que for igual às plataformas marcadas for maior que zero
-  const platformFilterRule = (item) => {
-    // Copia a array de plataformas do item para uma nova variável
-    const itemPlatforms = [...item.plataforma];
-
-    return selectedPlatform === ""
-      ? true
-      : item.plataforma.includes(selectedPlatform);
-  };
-
-  const onlyOpenSourceFilterRule = (item) =>
-    onlyOpenSourceFilter ? item["open-source"] : true;
-
-  const searchFilterRule = (item) => {
-    return Object.values(item)
-      .join("")
-      .toLowerCase()
-      .includes(searchInput.toLowerCase());
-  };
-
-  const extractThreeRandomHighlights = (dataSet) => {
-    const allHighlights = dataSet.filter((tool) => tool.destaque);
-    let threeRandom = [];
-
-    if (allHighlights.length >= 3) {
-      for (let i = 0; i <= 2; i++) {
-        let randomItem =
-          allHighlights[Math.floor(Math.random() * allHighlights.length)];
-
-        if (i > 0 && threeRandom.some((item) => item.id === randomItem.id)) {
-          while (threeRandom.some((item) => item.id === randomItem.id)) {
-            randomItem =
-              allHighlights[Math.floor(Math.random() * allHighlights.length)];
-          }
-        }
-
-        threeRandom.push(randomItem);
-      }
-    } else {
-      threeRandom = allHighlights.slice(0);
+  const toggleDrawer = (open) => (event) => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
     }
 
-    const threeRandomIds = threeRandom.map((item) => item.id);
-
-    const newArrayWithoutThreeHighlights = dataSet.filter((item) => {
-      return !threeRandomIds.includes(item.id);
-    });
-
-    return [threeRandom, newArrayWithoutThreeHighlights];
+    setIsDrawerOpen(open);
   };
 
-  const orderByThreeHighlights = (dataSet) => {
-    const [threeRandom, databaseWithoutRandom] =
-      extractThreeRandomHighlights(dataSet);
-
-    //Orders database without three random highlights by categories
-    const orderedDatabaseWithoutRandom = databaseWithoutRandom.sort((a, b) => {
-      return a.categoria < b.categoria;
-    });
-
-    return threeRandom.concat(orderedDatabaseWithoutRandom);
-  };
-
-  /*--- Filter Handlers ---*/
+  /* Filter Handlers */
   const onSearch = (event) => {
     setSearchInput(event.target.value);
   };
@@ -433,6 +446,8 @@ export default function Home({
 
     setOnlyOpenSourceFilter(checked);
   };
+  /* END - Filter Handlers */
+  /*--- END - Event Handlers ---*/
 
   return (
     <div>
@@ -531,13 +546,13 @@ export default function Home({
             filtersData={{
               onSearch,
               categoryFilters,
-              selectedCategory,
               onCategoryFilter,
+              selectedCategory,
               clearCategoryFilters,
               platformFilters,
+              onPlatformFilter,
               selectedPlatform,
               platforms,
-              onPlatformFilter,
               clearPlatformFilters,
               onOnlyOpenSourceFilter,
               onlyOpenSourceFilter,
@@ -683,13 +698,13 @@ export default function Home({
             filtersData={{
               onSearch,
               categoryFilters,
-              selectedCategory,
               onCategoryFilter,
+              selectedCategory,
               clearCategoryFilters,
               platformFilters,
+              onPlatformFilter,
               selectedPlatform,
               platforms,
-              onPlatformFilter,
               clearPlatformFilters,
               onOnlyOpenSourceFilter,
               onlyOpenSourceFilter,
