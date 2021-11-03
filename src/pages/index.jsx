@@ -173,7 +173,7 @@ export default function Home({
       setCategories(updatedCategoriesData);
     };
 
-    // Só busca dados atualizados nesse local se estiver no ambiente de desenvolvimento
+    // Só busca dados atualizados nesse local se não estiver no ambiente de desenvolvimento
     if (env !== "development") {
       fetchUpdatedData();
     }
