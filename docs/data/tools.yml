@@ -598,7 +598,7 @@
     plataforma:
         - Web
     open-source: True
-    destaque: True
+    destaque: False
     desativado: False
 -
     id: 45
