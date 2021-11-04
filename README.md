@@ -49,7 +49,7 @@ A Caixa de Ferramentas do Jornalismo de Dados é uma base colaborativa. Você po
 
 ### Estrutura do arquivo
 
-A lista das ferramentas fica no arquivo YAML `docs/data/tools.yml` e cada ferramenta tem a seguinte estrutura:
+A lista das ferramentas fica no arquivo YAML [`docs/data/tools.yml`](https://github.com/escola-de-dados/toolkit_ddj/blob/main/docs/data/tools.yml) e cada ferramenta tem a seguinte estrutura:
 
 ```yaml
 -
