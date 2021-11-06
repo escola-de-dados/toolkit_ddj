@@ -18,6 +18,8 @@ import InfoModal from "../components/InfoModal";
 
 import styles from "../styles/Home.module.scss";
 
+import metaImg from "../../public/img/meta-img.jpg";
+
 const env = process.env.NODE_ENV;
 
 import { promises as fs } from "fs";
@@ -475,7 +477,7 @@ export default function Home({
             toolsData.filter(removeInactiveRule).length
           } ferramentas para trabalhar com dados e colabore para aumentar a base.`}
         />
-        <meta property="og:image" content="meta-img.jpg" />
+        <meta property="og:image" content={metaImg} />
 
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
@@ -493,7 +495,7 @@ export default function Home({
             toolsData.filter(removeInactiveRule).length
           } ferramentas para trabalhar com dados e colabore para aumentar a base.`}
         />
-        <meta property="twitter:image" content="meta-img.jpg" />
+        <meta property="twitter:image" content={metaImg} />
 
         {/* Icons */}
         <link rel="icon" href="favicon.ico" />
