@@ -12,11 +12,10 @@ const Header = ({ toolsNumber, handleModalOpen }) => {
     <header className={styles.pageHeader}>
       <GithubCorner />
       <h1 className={styles.title}>
-        <img
-          className={styles.logoImage}
-          src={logoImg}
-          alt="Caixa de Ferramentas do Jornalismo de Dados"
-        />
+        <span className="sr-only">
+          Caixa de Ferramentas do Jornalismo de Dados
+        </span>
+        <img className={styles.logoImage} src={logoImg} alt="" />
       </h1>
       <div className={styles.subtitle}>
         <p>

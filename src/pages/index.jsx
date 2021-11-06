@@ -450,7 +450,7 @@ export default function Home({
     <div>
       <Head>
         {/*Meta info */}
-        <title>Caixa de Ferramentas | Jornalismo de Dados</title>
+        <title>Caixa de Ferramentas do Jornalismo de Dados</title>
         <meta
           name="title"
           content="Caixa de Ferramentas do Jornalismo de Dados"
@@ -459,7 +459,7 @@ export default function Home({
           name="description"
           content={`Explore mais de ${
             toolsData.filter(removeInactiveRule).length
-          } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
+          } ferramentas para trabalhar com dados e colabore para aumentar a base.`}
         />
 
         {/* <!-- Open Graph / Facebook --> */}
@@ -473,7 +473,7 @@ export default function Home({
           property="og:description"
           content={`Explore mais de ${
             toolsData.filter(removeInactiveRule).length
-          } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
+          } ferramentas para trabalhar com dados e colabore para aumentar a base.`}
         />
         <meta property="og:image" content="meta-img.jpg" />
 
@@ -491,7 +491,7 @@ export default function Home({
           property="twitter:description"
           content={`Explore mais de ${
             toolsData.filter(removeInactiveRule).length
-          } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
+          } ferramentas para trabalhar com dados e colabore para aumentar a base.`}
         />
         <meta property="twitter:image" content="meta-img.jpg" />
 
