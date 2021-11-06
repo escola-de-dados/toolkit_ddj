@@ -15,7 +15,7 @@ const Header = ({ toolsNumber, handleModalOpen }) => {
         <img
           className={styles.logoImage}
           src={logoImg}
-          alt="Caixa de Ferramentas de Jornalismo de Dados"
+          alt="Caixa de Ferramentas do Jornalismo de Dados"
         />
       </h1>
       <div className={styles.subtitle}>

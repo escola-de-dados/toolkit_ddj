@@ -449,13 +449,51 @@ export default function Home({
   return (
     <div>
       <Head>
+        {/*Meta info */}
         <title>Caixa de Ferramentas | Jornalismo de Dados</title>
+        <meta
+          name="title"
+          content="Caixa de Ferramentas do Jornalismo de Dados"
+        />
         <meta
           name="description"
           content={`Explore mais de ${
             toolsData.filter(removeInactiveRule).length
           } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
         />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://kit.jornalismodedados.org/" />
+        <meta
+          property="og:title"
+          content="Caixa de Ferramentas do Jornalismo de Dados"
+        />
+        <meta
+          property="og:description"
+          content={`Explore mais de ${
+            toolsData.filter(removeInactiveRule).length
+          } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
+        />
+        <meta property="og:image" content="meta-img.jpg" />
+
+        {/* <!-- Twitter --> */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="http://kit.jornalismodedados.org/"
+        />
+        <meta
+          property="twitter:title"
+          content="Caixa de Ferramentas do Jornalismo de Dados"
+        />
+        <meta
+          property="twitter:description"
+          content={`Explore mais de ${
+            toolsData.filter(removeInactiveRule).length
+          } ferramentas para jornalistas de dados e colabore para aumentar a base.`}
+        />
+        <meta property="twitter:image" content="meta-img.jpg" />
 
         {/* Icons */}
         <link rel="icon" href="favicon.ico" />
