@@ -456,16 +456,15 @@ export default function Home({
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-0LV7HJ9EPR"
         ></script>
-        <script>
-          dangerouslySetInnerHTML=
-          {{
-            _html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
               window.dataLayer = window.dataLayer || []; function gtag()
               {dataLayer.push(arguments)}
               gtag('js', new Date()); gtag('config', 'G-0LV7HJ9EPR');
             `,
           }}
-        </script>
+        />
 
         {/*Meta info */}
         <title>Caixa de Ferramentas do Jornalismo de Dados</title>
