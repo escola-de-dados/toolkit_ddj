@@ -2110,3 +2110,20 @@
     open-source: False
     destaque: False
     desativado: False
+ -
+    id: 154
+    nome: "n8n"
+    link: https://n8n.io/
+    github: https://github.com/n8n-io/n8n
+    descrição: "Ferramenta low-code para construção de fluxos de automação."
+    categoria:
+        - Análise
+        - Extração
+        - Limpeza
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+    open-source: True
+    destaque: False
+    desativado: False
