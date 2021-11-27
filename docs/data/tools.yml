@@ -1461,7 +1461,7 @@
     nome: "RStudio"
     link: https://www.rstudio.com/
     github: https://github.com/rstudio
-    descrição: "Programa que traz uma interface gráfica mais amigável para utilizar o R. R = linguagem de programação para gráficos e cálculos estatísticos."
+    descrição: "Programa que traz uma interface gráfica mais amigável para utilizar a linguagem de programação R."
     categoria:
         - Visualização
         - Análise
