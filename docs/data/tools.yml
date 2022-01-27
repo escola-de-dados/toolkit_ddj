@@ -2127,3 +2127,18 @@
     open-source: True
     destaque: False
     desativado: False
+ -
+    id: 155
+    nome: "Timemap"
+    link: https://forensic-architecture.org/investigation/timemap-for-cartographic-platforms
+    github: https://github.com/forensic-architecture/datasheet-server
+    descrição: "Ferramenta do Forensic Architecture para construção de linhas do tempo com mapas interativos."
+    categoria:
+        - Visualização
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+    open-source: True
+    destaque: True
+    desativado: False
