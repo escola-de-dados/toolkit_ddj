@@ -2142,3 +2142,18 @@
     open-source: True
     destaque: True
     desativado: False
+-
+    id: 156
+    nome: "Beekeeper Studio"
+    link: https://www.beekeeperstudio.io/
+    github: https://github.com/beekeeper-studio/beekeeper-studio
+    descrição: "Cliente SQL e SQLite de código-aberto, com interface gráfica e recursos extras."
+    categoria:
+        - Análise
+    plataforma:
+        - Web
+        - Mac OS
+        - Windows
+    open-source: True
+    destaque: True
+    desativado: False
