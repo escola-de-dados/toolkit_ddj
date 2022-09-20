@@ -2157,3 +2157,17 @@
     open-source: True
     destaque: True
     desativado: False
+-
+    id: 157
+    nome: "Google Collaboratory"
+    link: https://colab.research.google.com/
+    github: https://github.com/googlecolab
+    descrição: "Bloco de notas e editor de códigos disponível para uso na web."
+    categoria:
+        - Análise
+        - Visualização
+    plataforma:
+        - Web
+    open-source: False
+    destaque: False
+    desativado: True
