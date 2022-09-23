@@ -142,7 +142,7 @@ Confira o exemplo abaixo:
 1 - Mude para uma nova branch derivada da main:
 
 ```bash
-git checkout -m NOME_DA_NOVA_BRANCH
+git checkout -b NOME_DA_NOVA_BRANCH
 ```
 
 Seguindo o padrão de nome:
