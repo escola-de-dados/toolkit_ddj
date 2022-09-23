@@ -78,7 +78,7 @@ A lista das ferramentas fica no arquivo YAML [`docs/data/tools.yml`](https://git
 | Plataforma | array | Cada ferramenta pode possuir uma ou mais das plataformas abaixo: <ul><li>Windows</li><li>MacOS</li><li>Linux</li><li>iOS</li><li>Android</li><li>Web</li></ul> As ferramentas são listadas uma abaixo da outra e precedidas por um `-`.  |
 | Open-source | boolean | Identifica se a ferramenta é Open Source (Código aberto) ou não. Pode ser `True` ou `False`.  |
 | Destaque | boolean | Identifica as ferramentas que são "escolhas do editor". **Para novas contribuições deve ser sempre** `False`.  |
-| Desativado | boolean | Identifica se a ferramenta está em funcionamento e desenvolvimento ativo. **Para novas contribuições deve ser sempre** `True`. |
+| Desativado | boolean | Identifica se a ferramenta deve estar visível ou não na plataforma. **Para novas contribuições deve ser sempre** `False`. |
 
 <br>
 
