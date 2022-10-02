@@ -1,0 +1,15 @@
+@import "../../styles/_variables.scss";
+
+.scrollTopButton {
+    margin-right: 2rem;
+
+    svg {
+        font-size: 2.5rem;
+        margin: auto;
+    }
+
+    @media #{$big-tablets-and-down} {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
