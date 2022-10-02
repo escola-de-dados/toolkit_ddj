@@ -11,6 +11,14 @@ $light-purple: rgba($purple, .6);
 .contentContainer{
   max-width: 1000px;
   margin: 0 auto;
+
+  @media #{$big-tablets-and-down}{
+    max-width: 90vw;
+  }
+
+  @media #{$desktop-1300-and-up}{
+    max-width: 1200px;
+  }
 }
 
 .highlightsTitleContainer{
@@ -24,14 +32,18 @@ $light-purple: rgba($purple, .6);
   color: $yellow;
   font-size: 1.8em;
   font-weight: 300;
+
+  svg{
+    font-size: 1.2em;
+  }
+
+  @media #{$big-phones-and-down}{
+    margin-bottom: .7em;
+  }
 }
 
 .highlightsTitle{
   margin-left: .2em;
-}
-
-.highlightsTitleContainer svg{
-  font-size: 1.2em;
 }
 
 .highlightsSeparator{
@@ -61,6 +73,11 @@ $light-purple: rgba($purple, .6);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+
+  @media #{$big-phones-and-down}{
+    width: 92%;
+    margin: 0 auto;
+  }
 }
 
 .allResultsLoadedMessage{
@@ -79,13 +96,12 @@ $light-purple: rgba($purple, .6);
   padding: .9rem 1.1rem;
   
   font-size: 1rem;
-}
 
-.loadMoreButton svg{
-  font-size: 1.5rem;
-  margin: 0;
+  svg{
+    font-size: 1.5rem;
+    margin: 0;
+  }
 }
-
 
 .fabButtonsContainer{
   position: fixed;
@@ -96,41 +112,20 @@ $light-purple: rgba($purple, .6);
   flex-wrap: wrap;
 
   z-index: 1100;
-}
 
-.fabButton:first-child{
-  margin-right: 2rem;
-}
-
-.fabButton{
-  width: 3.5rem;
-  height: 3.5rem;
-  padding: 0;
-  border-radius: 100px;
-  
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
-}
-
-.fabButton:focus{
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2), 0 0 0 0.25rem rgba(243, 65, 66, 0.5);
-}
-
-.fabButton svg{
-  margin: auto;
-}
-
-.backToTopButton svg{
-  font-size: 2.5rem;
-}
-
-.openDrawerFiltersButton svg{
-  font-size: 1.5rem;
+  @media #{$big-tablets-and-down}{
+    flex-direction: column;
+  }
 }
 
 .drawerInner{
   width: 25em;
   padding: 2em 0;
   background-color: $off-white;
+
+  @media #{$big-phones-and-down}{
+    width: 90vw;
+  }
 }
 
 .closeDrawerButton{
@@ -140,50 +135,14 @@ $light-purple: rgba($purple, .6);
 
   background: none;
   border: none;
-}
 
-.closeDrawerButton svg{
-  margin: 0;
-  font-size: 1.2em;
+  svg{
+    margin: 0;
+    font-size: 1.2em;
+  }
 }
 
 .applyFiltersButton{
   width: 50%;
   margin: 0 auto;
-}
-
-@media #{$big-tablets-and-down}{
-  .contentContainer{
-    max-width: 90vw;
-  }
-
-  .fabButtonsContainer{
-    flex-direction: column;
-  }
-
-  .fabButton:first-child{
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-}
-
-@media #{$big-phones-and-down}{
-  .highlightsTitleContainer{
-    margin-bottom: .7em;
-  }
-
-  .cardsContainer{
-    width: 92%;
-    margin: 0 auto;
-  }
-
-  .drawerInner{
-    width: 90vw;
-  }
-}
-
-@media #{$desktop-1300-and-up}{
-  .contentContainer{
-    max-width: 1200px;
-  }
 }
