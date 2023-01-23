@@ -22,3 +22,8 @@
   nome: Redes
   slug: redes
   descrição: Visualização, construção e manipulação de grafos
+-
+ nome: OSINT
+ slug: osint
+ descrição:  Open Source Intelligence é tradução para Inteligência de Fonte Aberta ou Código Aberto. OSINT é um conjunto de atividades para coletar, armazenar e analisar as informações de fontes públicas
+

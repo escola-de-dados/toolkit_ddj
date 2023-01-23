@@ -2171,3 +2171,16 @@
     open-source: False
     destaque: False
     desativado: False
+-
+    id: 158
+    nome: "Kit de ferramentas OSINT"
+    link: https://kit.jornalismodedados.org/
+    github: https://github.com/escola-de-dados/toolkit_ddj
+    descrição: ""
+    categoria:
+        - OSINT
+    plataforma:
+        - Web
+    open-source: True
+    destaque: True
+    desativado: False
