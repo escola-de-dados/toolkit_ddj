@@ -1549,6 +1549,7 @@
     descrição: "Ferramenta usada para localizar nomes de usuários em redes sociais."
     categoria:
         - Extração
+        - OSINT
     plataforma:
         - Windows
         - Linux
@@ -2173,14 +2174,14 @@
     desativado: False
 -
     id: 158
-    nome: "Kit de ferramentas OSINT"
-    link: https://kit.jornalismodedados.org/
-    github: https://github.com/escola-de-dados/toolkit_ddj
+    nome: 
+    link: 
+    github: 
     descrição: ""
     categoria:
-        - OSINT
+        
     plataforma:
-        - Web
-    open-source: True
-    destaque: True
-    desativado: False
+       
+    open-source: 
+    destaque: 
+    desativado: 
