@@ -2174,14 +2174,14 @@
     desativado: False
 -
     id: 158
-    nome: 
-    link: 
+    nome: "How to verify"
+    link: https://www.howtoverify.info/
     github: 
-    descrição: ""
+    descrição: "Grafos de conhecimento sobre checagem de infos."
     categoria:
-        
-    plataforma:
-       
-    open-source: 
-    destaque: 
-    desativado: 
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
