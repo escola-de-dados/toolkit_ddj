@@ -1093,10 +1093,10 @@
     desativado: False
 -
     id: 81
-    nome: "YouTube Data Tool"
+    nome: "YouTube Data Tools"
     link: https://tools.digitalmethods.net/netvizz/youtube/
     github: https://github.com/bernorieder/YouTube-Data-Tools
-    descrição: "Ferramenta de raspagem de dados do YouTube."
+    descrição: "Conjunto de ferramentas para raspagem de dados do YouTube."
     categoria:
         - Extração
     plataforma:
