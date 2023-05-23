@@ -76,7 +76,7 @@ const Footer = ({ handleModalOpen }) => {
         <div className={styles.creditsRow}>
           <span className={`${styles.creditsSpan} mb-3 mb-lg-2`}>
             Desenvolvimento:{" "}
-            <a href="https://liaporto.github.io/pt-br/">Lia Porto</a>
+            <a href="https://taiporto.github.io/pt-br/">Tai Porto</a>
           </span>
           <span className={styles.creditsSpan}>
             Nosso conteúdo está disponível sob a licença{" "}
