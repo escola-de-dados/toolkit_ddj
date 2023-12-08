@@ -2185,3 +2185,294 @@
     open-source: False
     destaque: True
     desativado: False
+ -
+    id: 159
+    nome: "Pinpoint"
+    link: https://journaliststudio.google.com/pinpoint/about
+    github: 
+    descrição: "Cataloga documentos e arquivos carregados, fornecendo OCR, indexação e outros serviços"
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
+ -
+    id: 160
+    nome: "Google Lens"
+    link: https://lens.google.com/search?p=
+    github: 
+    descrição: "Serviço que faz busca reversa de imagens no Google"
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
+-
+    id: 161
+    nome: "Metadatago2"
+    link: https://www.metadata2go.com/
+    github: 
+    descrição: "Checa metadados de imagens e vídeo online"
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 162
+    nome: "Reveal Image Verification Assistant"
+    link: http://reveal-mklab.iti.gr/reveal/index.html
+    github: 
+    descrição: "Ferramenta forense que fornece oito filtros para detetar alterações em imagens fixas."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 163
+    nome: "YouTube Geofind"
+    link: https://mattw.io/youtube-geofind/location
+    github: 
+    descrição: "Permite procurar vídeos do YouTube por coordenadas em vez de palavras-chave."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 164
+    nome: "Facebook Video Downloader"
+    link: http://fdown.net/
+    github: 
+    descrição: "Site útil para descarregar vídeos públicos do Facebook."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 165
+    nome: "Bellingcat Insta Location Search"
+    link: https://github.com/bellingcat/instagram-location-search
+    github: https://github.com/bellingcat/instagram-location-search
+    descrição: "Encontra IDs de localização do Instagram perto de uma latitude e longitude especificadas."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 166
+    nome: "TGstat"
+    link: http://tgstat.com/
+    github: 
+    descrição: "Pesquisa canais de Telegram arquivados e fornece análises de canais."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 167
+    nome: "Bellingcat Phonenumber Check"
+    link: https://github.com/bellingcat/telegram-phone-number-checker
+    github: https://github.com/bellingcat/telegram-phone-number-checker
+    descrição: "Verificar se um número de telefone específico está ligado a uma conta do Telegram."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 168
+    nome: "Telepathy"
+    link: https://github.com/jordanwildon/Telepathy
+    github: https://github.com/jordanwildon/Telepathy
+    descrição: "'Canivete suíço' para investigar as conversas do Telegram"
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 169
+    nome: "Bellingcat TikTok # Analysis"
+    link: https://github.com/bellingcat/tiktok-hashtag-analysis
+    github: https://github.com/bellingcat/tiktok-hashtag-analysis
+    descrição: "Ajuda a descarregar publicações e vídeos do TikTok para um determinado conjunto de hashtags durante um período de tempo."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 170
+    nome: "Bellingcat TikTok Date Extract"
+    link: https://bellingcat.github.io/tiktok-timestamp/
+    github: https://bellingcat.github.io/tiktok-timestamp/
+    descrição: "Obter a data e hora exactas de carregamento dos urls de vídeo do tiktok."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 171
+    nome: "Twitter Video Downloader"
+    link: http://twittervideodownloader.com/
+    github: 
+    descrição: "Baixar vídeos do Twitter."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 172
+    nome: "Wikimapia"
+    link: http://wikimapia.org/
+    github: 
+    descrição: "Informações de crowdsourcing relacionadas com localizações geográficas."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 173
+    nome: "Riskiq"
+    link: https://community.riskiq.com/
+    github: 
+    descrição: "Recolhe, armazena e analisa dados de milhares de sensores com DNS disponíveis."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 174
+    nome: "Shodan"
+    link: http://shodan.io/
+    github: 
+    descrição: "Motor de pesquisa da Internet das coisas."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 175
+    nome: "Osint Tools Map"
+    link: https://cybdetective.com/osintmap/
+    github: 
+    descrição: "Mapa mundial de registos de empresas, registos judiciais e outras informações."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 176
+    nome: "RAISG"
+    link: https://www.raisg.org/en/maps/
+    github: 
+    descrição: "Mapas e shapefiles de áreas naturais protegidas, concessões, territórios indígenas, petróleo, minas, estradas, incêndios, desflorestação na floresta amazonica."
+    categoria:
+        - OSINT 
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 177
+    nome: "Globel Forest Watch Fires"
+    link: https://www.globalforestwatch.org/map/?map=eyJjZW50ZXIiOnsibGF0IjoxMS4wNjI3MjYxMDE3OTE2ODIsImxuZyI6Ny42MTA4NTMzNzQwNDg3MjV9LCJ6b29tIjo0Ljc3ODgxMTg1NDU1NTYwMTUsImJib3giOm51bGwsImRhdGFzZXRzIjpbeyJkYXRhc2V0IjoiZmlyZS1hbGVydHMtdmlpcnMiLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlLCJsYXllcnMiOlsiZmlyZS1hbGVydHMtdmlpcnMiXX0seyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfSx7ImRhdGFzZXQiOiJmZWU1ZmMzOC03YTYyLTQ5YjgtODg3NC1kZmEzMWNiYjFlZjYiLCJsYXllcnMiOlsiZjEzZjg2Y2ItMDhiNS00ZTZjLWJiOGQtYjQ3ODIwNTJmOWU1Il0sIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWV9XSwibGFiZWwiOiJkZWZhdWx0In0%3D&menu=eyJtZW51U2VjdGlvbiI6Im15LWdmdyIsImRhdGFzZXRDYXRlZ29yeSI6IiJ9
+    github: 
+    descrição: "Maria global de incêndio."
+    categoria:
+        - OSINT 
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 178
+    nome: "Globel Forest Watch Fires"
+    link: https://www.globalforestwatch.org/map/?map=eyJjZW50ZXIiOnsibGF0IjoxMS4wNjI3MjYxMDE3OTE2ODIsImxuZyI6Ny42MTA4NTMzNzQwNDg3MjV9LCJ6b29tIjo0Ljc3ODgxMTg1NDU1NTYwMTUsImJib3giOm51bGwsImRhdGFzZXRzIjpbeyJkYXRhc2V0IjoiZmlyZS1hbGVydHMtdmlpcnMiLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlLCJsYXllcnMiOlsiZmlyZS1hbGVydHMtdmlpcnMiXX0seyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfSx7ImRhdGFzZXQiOiJmZWU1ZmMzOC03YTYyLTQ5YjgtODg3NC1kZmEzMWNiYjFlZjYiLCJsYXllcnMiOlsiZjEzZjg2Y2ItMDhiNS00ZTZjLWJiOGQtYjQ3ODIwNTJmOWU1Il0sIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWV9XSwibGFiZWwiOiJkZWZhdWx0In0%3D&menu=eyJtZW51U2VjdGlvbiI6Im15LWdmdyIsImRhdGFzZXRDYXRlZ29yeSI6IiJ9
+    github: 
+    descrição: "Mapa global de incêndio."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 179
+    nome: "Hunch.ly"
+    link: http://hunch.ly/
+    github: 
+    descrição: "Ajudante de investigação que recolhe, documenta e anota automaticamente todas as páginas web que visita."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+        - Windows
+        - Linux
+        - Mac OS
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 180
+    nome: "Conifer"
+    link: https://conifer.rhizome.org/
+    github: https://github.com/rhizome-conifer/conifer
+    descrição: "Serviço de arquivamento da Web que cria uma cópia interativa de qualquer página Web em que navegue."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
