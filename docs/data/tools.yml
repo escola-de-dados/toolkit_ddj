@@ -2185,7 +2185,7 @@
     open-source: False
     destaque: True
     desativado: False
- -
+-
     id: 159
     nome: "Pinpoint"
     link: https://journaliststudio.google.com/pinpoint/about
@@ -2198,7 +2198,7 @@
     open-source: False
     destaque: True
     desativado: False
- -
+-
     id: 160
     nome: "Google Lens"
     link: https://lens.google.com/search?p=
