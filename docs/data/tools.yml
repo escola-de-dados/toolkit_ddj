@@ -2201,7 +2201,7 @@
 -
     id: 160
     nome: "Google Lens"
-    link: https://lens.google.com/search?p=
+    link: https://lens.google/
     github: 
     descrição: "Serviço que faz busca reversa de imagens no Google"
     categoria:
