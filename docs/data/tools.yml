@@ -1543,7 +1543,7 @@
     desativado: False
 -
     id: 113
-    nome: "Scherlock"
+    nome: "Sherlock"
     link: https://sherlock-project.github.io/
     github: https://github.com/sherlock-project/sherlock
     descrição: "Ferramenta usada para localizar nomes de usuários em redes sociais."
@@ -2239,7 +2239,7 @@
     desativado: False
 -
     id: 163
-    nome: "YouTube Geofind"
+    nome: "MW Geofind"
     link: https://mattw.io/youtube-geofind/location
     github: 
     descrição: "Permite procurar vídeos do YouTube por coordenadas em vez de palavras-chave."
@@ -2422,10 +2422,10 @@
     desativado: False
 -
     id: 177
-    nome: "Globel Forest Watch Fires"
+    nome: "Global Forest Watch Fires"
     link: https://www.globalforestwatch.org/map/?map=eyJjZW50ZXIiOnsibGF0IjoxMS4wNjI3MjYxMDE3OTE2ODIsImxuZyI6Ny42MTA4NTMzNzQwNDg3MjV9LCJ6b29tIjo0Ljc3ODgxMTg1NDU1NTYwMTUsImJib3giOm51bGwsImRhdGFzZXRzIjpbeyJkYXRhc2V0IjoiZmlyZS1hbGVydHMtdmlpcnMiLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlLCJsYXllcnMiOlsiZmlyZS1hbGVydHMtdmlpcnMiXX0seyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfSx7ImRhdGFzZXQiOiJmZWU1ZmMzOC03YTYyLTQ5YjgtODg3NC1kZmEzMWNiYjFlZjYiLCJsYXllcnMiOlsiZjEzZjg2Y2ItMDhiNS00ZTZjLWJiOGQtYjQ3ODIwNTJmOWU1Il0sIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWV9XSwibGFiZWwiOiJkZWZhdWx0In0%3D&menu=eyJtZW51U2VjdGlvbiI6Im15LWdmdyIsImRhdGFzZXRDYXRlZ29yeSI6IiJ9
     github: 
-    descrição: "Maria global de incêndio."
+    descrição: "Mapa global de incêndio."
     categoria:
         - OSINT 
         - Cartografia
@@ -2436,19 +2436,6 @@
     desativado: False
 -
     id: 178
-    nome: "Globel Forest Watch Fires"
-    link: https://www.globalforestwatch.org/map/?map=eyJjZW50ZXIiOnsibGF0IjoxMS4wNjI3MjYxMDE3OTE2ODIsImxuZyI6Ny42MTA4NTMzNzQwNDg3MjV9LCJ6b29tIjo0Ljc3ODgxMTg1NDU1NTYwMTUsImJib3giOm51bGwsImRhdGFzZXRzIjpbeyJkYXRhc2V0IjoiZmlyZS1hbGVydHMtdmlpcnMiLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlLCJsYXllcnMiOlsiZmlyZS1hbGVydHMtdmlpcnMiXX0seyJkYXRhc2V0IjoicG9saXRpY2FsLWJvdW5kYXJpZXMiLCJsYXllcnMiOlsiZGlzcHV0ZWQtcG9saXRpY2FsLWJvdW5kYXJpZXMiLCJwb2xpdGljYWwtYm91bmRhcmllcyJdLCJvcGFjaXR5IjoxLCJ2aXNpYmlsaXR5Ijp0cnVlfSx7ImRhdGFzZXQiOiJmZWU1ZmMzOC03YTYyLTQ5YjgtODg3NC1kZmEzMWNiYjFlZjYiLCJsYXllcnMiOlsiZjEzZjg2Y2ItMDhiNS00ZTZjLWJiOGQtYjQ3ODIwNTJmOWU1Il0sIm9wYWNpdHkiOjEsInZpc2liaWxpdHkiOnRydWV9XSwibGFiZWwiOiJkZWZhdWx0In0%3D&menu=eyJtZW51U2VjdGlvbiI6Im15LWdmdyIsImRhdGFzZXRDYXRlZ29yeSI6IiJ9
-    github: 
-    descrição: "Mapa global de incêndio."
-    categoria:
-        - OSINT   
-    plataforma: 
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
--
-    id: 179
     nome: "Hunch.ly"
     link: http://hunch.ly/
     github: 
@@ -2464,7 +2451,7 @@
     destaque: False
     desativado: False
 -
-    id: 180
+    id: 179
     nome: "Conifer"
     link: https://conifer.rhizome.org/
     github: https://github.com/rhizome-conifer/conifer
@@ -2473,6 +2460,21 @@
         - OSINT   
     plataforma: 
         - Web
+    open-source: True
+    destaque: True
+    desativado: False
+-
+    id: 180
+    nome: "Chronocalc"
+    link: https://github.com/Sector035/chronocalc
+    github: https://github.com/Sector035/chronocalc
+    descrição: "calcula as datas e horas em que o sol ou a lua se encontram numa determinada posição no céu."
+    categoria:
+        - OSINT   
+    plataforma: 
+        - Windows
+        - Linux
+        - Mac OS
     open-source: True
     destaque: False
     desativado: False
