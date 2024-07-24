@@ -2468,13 +2468,26 @@
     nome: "Chronocalc"
     link: https://github.com/Sector035/chronocalc
     github: https://github.com/Sector035/chronocalc
-    descrição: "calcula as datas e horas em que o sol ou a lua se encontram numa determinada posição no céu."
+    descrição: "Calcula as datas e horas em que o sol ou a lua se encontram numa determinada posição no céu."
     categoria:
         - OSINT   
     plataforma: 
         - Windows
         - Linux
         - Mac OS
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 181
+    nome: "FlowmapBlue"
+    link: https://www.flowmap.blue/
+    github: https://github.com/FlowmapBlue/FlowmapBlue
+    descrição: "Criar mapas de fluxo interativos a partir de planilhas do Google."
+    categoria:
+        - Visualização   
+    plataforma: 
+        - Web
     open-source: True
     destaque: False
     desativado: False
