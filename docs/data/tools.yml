@@ -1908,12 +1908,13 @@
     desativado: False
 -
     id: 139
-    nome: "Convextra"
-    link: https://convextra.com/
+    nome: "Suncalc"
+    link: https://www.suncalc.org/
     github:
-    descrição: "Plugin para o browser que permite realizar mineração de dados sem código."
+    descrição: "Determine a posição do sol com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
     categoria:
-        - Extração
+        - Análise
+        - OSINT
     plataforma:
         - Web
     open-source: False
@@ -1921,12 +1922,13 @@
     desativado: True
 -
     id: 140
-    nome: "Flocker"
-    link: https://flocker.outliers.es/
+    nome: "Mooncalc"
+    link: https://www.mooncalc.org/#/49.495,11.073,3/2024.08.13/13:06/1/3
     github:
-    descrição: "Aplicativo que estrutura redes de retweets e menções em tempo real. Permite exportar nos formatos Gexf, SGV e PNG. "
+    descrição: "Determine a posição da lua com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
     categoria:
-        - Redes
+        - Análise
+        - OSINT
     plataforma:
         - Web
     open-source: False
