@@ -1125,6 +1125,7 @@
     descrição: "Biblioteca para aprendizado de máquina, lançada pelo Google. Permite treinamento de redes neurais para detectar e decifrar padrões e correlações."
     categoria:
         - Análise
+        - Inteligência Artificial
     plataforma:
         - Web
     open-source: True
@@ -2491,3 +2492,5 @@
     open-source: True
     destaque: False
     desativado: False
+-
+  
