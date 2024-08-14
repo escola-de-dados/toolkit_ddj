@@ -587,17 +587,16 @@
     desativado: False
 -
     id: 44
-    nome: "Workbench"
-    link: https://workbenchdata.com/
-    github: https://github.com/CJWorkbench
-    descrição: "Combina raspagem, análise e visualização de forma simples. Funciona a partir de módulos que podem ser facilmente montados em um “fluxo de trabalho”. É compartilhável e produz gráficos publicáveis ou uma API."
+    nome: "WeVerify"
+    link: https://weverify.eu/verification-plugin/
+    github: 
+    descrição: "Plugin que extrai frames de vídeos, permitindo que você clique no frame para fazer uma busca."
     categoria:
-        - Visualização
-        - Extração
+        - OSINT
         - Análise
     plataforma:
         - Web
-    open-source: True
+    open-source: False
     destaque: False
     desativado: False
 -
@@ -2435,6 +2434,76 @@
     link: https://www.suncalc.org/
     github: 
     descrição: "Determine a posição do sol com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
+    categoria:
+        - Análise
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 177
+    nome: "Mooncalc"
+    link: https://www.mooncalc.org/
+    github: 
+    descrição: "Determine a posição da lua com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
+    categoria:
+        - Análise
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 178
+    nome: "Weatherunderground"
+    link: https://www.wunderground.com/history
+    github: 
+    descrição: "Mantém padrões climáticos históricos, identificados por local, data e hora. Pode ser usado para verificar as condições climáticas e a direção do vento no conteúdo."
+    categoria:
+        - Análise
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 179
+    nome: "Map Checking"
+    link: https://www.mapchecking.com/
+    github: 
+    descrição: "Estima o tamanho da multidão para qualquer local geográfico dado. Capacidade de verificar o tamanho potencial da multidão, desde uma seção de rua até uma área de grande escala. Fornece uma estimativa de tamanho da multidão em intervalos numéricos."
+    categoria:
+        - Análise
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 180
+    nome: "TinEye"
+    link: https://tineye.com/
+    github: 
+    descrição: "Encontra os lugares onde a imagem foi tirada."
+    categoria:
+        - Análise
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 181
+    nome: "Bing Visual Search"
+    link: https://www4.bing.com/visualsearch
+    github: 
+    descrição: "Faz busca na web a partir de imagens."
     categoria:
         - Análise
         - OSINT   
