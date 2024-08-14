@@ -2542,3 +2542,126 @@
     open-source: False
     destaque: True
     desativado: False
+- 
+    id: 184
+    nome: "Caffe"
+    link: https://caffe.berkeleyvision.org/ 
+    github: https://github.com/BVLC/caffe 
+    descrição: "Uma biblioteca open source que pode ser usada para identificar imagens ou vídeos."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+-
+    id: 185
+    nome: "Apache Mahout"
+    link: https://mahout.apache.org/  
+    github: https://github.com/apache/mahout 
+    descrição: "Permite a implementação de algoritimos próprios para clusterização."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+- 
+    id: 186
+    nome: "OpenNN"
+    link: https://www.opennn.net/  
+    github: https://github.com/Artelnics/OpenNN 
+    descrição: "Biblioteca de análise dados utilizando redes neurais."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+- 
+    id: 187
+    nome: "Torch"
+    link: http://torch.ch/  
+    github: https://github.com/torch 
+    descrição: "Biblioteca open source para aprendizado de máquina, em Python, para processamento de linguagem natural."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+- 
+    id: 188
+    nome: "Neuroph"
+    link: https://neuroph.sourceforge.net/  
+    github: https://github.com/neuroph/neuroph 
+    descrição: "Framework que pode criar e treinar redes neurais utilizando a linguagem Java."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+- 
+    id: 189
+    nome: "Deeplearning4j"
+    link: https://deeplearning4j.konduit.ai/  
+    github: https://github.com/deeplearning4j/deeplearning4j 
+    descrição: "Um conjunto de ferramentas para aprendizado profundo (deep learning)."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False 
+- 
+    id: 190
+    nome: "Mycroft"
+    link:   
+    github: https://github.com/MycroftAI 
+    descrição: "Assistente de voz de código aberto e personalizável."
+    categoria:
+        - Inteligência Artificial
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
+- 
+    id: 191
+    nome: "Gemini"
+    link: https://gemini.google.com/  
+    github: https://github.com/google-gemini 
+    descrição: "Modelo de inteligência artificial do Google que funciona como um assistente virtual podendo tirar dúvidas e apoiar em tarefas"
+    categoria:
+        - Inteligência Artificial
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 192
+    nome: "Maritaca"
+    link: https://chat.maritaca.ai/  
+    github: https://github.com/maritaca-ai 
+    descrição: "Chatbot brasileiro que pode funcionar como um assistente virtual."
+    categoria:
+        - Inteligência Artificial
+    plataforma: 
+        - Web
+    open-source: True
+    destaque: False
+    desativado: False
