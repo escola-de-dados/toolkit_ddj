@@ -1906,73 +1906,8 @@
     open-source: True
     destaque: False
     desativado: False
--
-    id: 139
-    nome: "Suncalc"
-    link: https://www.suncalc.org/
-    github:
-    descrição: "Determine a posição do sol com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
-    categoria:
-        - Análise
-        - OSINT
-    plataforma:
-        - Web
-    open-source: False
-    destaque: False
-    desativado: True
--
-    id: 140
-    nome: "Mooncalc"
-    link: https://www.mooncalc.org/#/49.495,11.073,3/2024.08.13/13:06/1/3
-    github:
-    descrição: "Determine a posição da lua com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
-    categoria:
-        - Análise
-        - OSINT
-    plataforma:
-        - Web
-    open-source: False
-    destaque: False
-    desativado: True
--
-    id: 141
-    nome: "Netvizz"
-    link: https://apps.facebook.com/netvizz/
-    github:
-    descrição: "Aplicativo do Facebook que captura e planifica dados de posts, usuários e interações em páginas ou grupos. Funciona apenas com páginas e grupos abertos. Anonimiza os usuários."
-    categoria:
-        - Redes
-    plataforma:
-        - Web
-    open-source: False
-    destaque: False
-    desativado: True
--
-    id: 142
-    nome: "Charted"
-    link: https://charted.co/
-    github: https://github.com/charted-co/charted
-    descrição: "Ferramenta de criação de visualizações de dados interativas."
-    categoria:
-        - Visualização
-    plataforma:
-    open-source: True
-    destaque: False
-    desativado: True
--
-    id: 143
-    nome: "QuickCode"
-    link: https://quickcode.io/
-    github:
-    descrição: "Ferramenta que permite programar em R e Python sem precisar instalar programas. Possui suporte de uma comunidade de desenvolvedores. Tem biblioteca de códigos bem indexada."
-    categoria:
-        - Análise
-    plataforma:
-    open-source: False
-    destaque: False
-    desativado: True
--
-    id: 144
+
+-    id: 144
     nome: "Twine"
     link: https://twinery.org/
     github: https://github.com/klembot/twinejs/
