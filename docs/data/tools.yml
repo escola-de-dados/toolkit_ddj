@@ -1123,8 +1123,8 @@
     github: https://github.com/tensorflow/
     descrição: "Biblioteca para aprendizado de máquina, lançada pelo Google. Permite treinamento de redes neurais para detectar e decifrar padrões e correlações."
     categoria:
-        - Análise
         - Inteligência Artificial
+        - Análise
     plataforma:
         - Web
     open-source: True
