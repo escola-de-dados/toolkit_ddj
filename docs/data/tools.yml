@@ -2429,4 +2429,17 @@
     open-source: True
     destaque: False
     desativado: False
-  
+- 
+    id: 176
+    nome: "Suncalc"
+    link: https://www.suncalc.org/
+    github: 
+    descrição: "Determine a posição do sol com base na localização, data e hora. Útil ao utilizar sombras em vídeos e fotos."
+    categoria:
+        - Análise
+        - OSINT   
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: True
