@@ -2650,7 +2650,7 @@
     plataforma: 
         - Web
     open-source: False
-    destaque: False
+    destaque: True
     desativado: False
 - 
     id: 192
@@ -2663,5 +2663,5 @@
     plataforma: 
         - Web
     open-source: True
-    destaque: False
+    destaque: True
     desativado: False
