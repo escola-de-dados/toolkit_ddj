@@ -2512,3 +2512,33 @@
     open-source: False
     destaque: False
     desativado: False
+- 
+    id: 182
+    nome: "Apache SistemDS"
+    link: 
+    github: https://github.com/apache/systemds
+    descrição: "Sistema de código aberto para aprendizado de máquina que compreende o ciclo de vida completo da ciência de dados, desde a integração de dados, limpeza até o treinamento eficiente de modelos."
+    categoria:
+        - Inteligência Artificial
+        - Análise 
+    plataforma: 
+        - Windows
+        - Linux
+        - Mac OS
+    open-source: True
+    destaque: False
+    desativado: False
+- 
+    id: 183
+    nome: "ChatGPT"
+    link: https://chatgpt.com/ 
+    github: https://github.com/apache/systemds
+    descrição: "Modelo de inteligência artificial que funciona como um assistente virtual podendo tirar dúvidas e apoiar em tarefas."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
