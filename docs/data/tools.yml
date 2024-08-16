@@ -2693,7 +2693,7 @@
     destaque: False
     desativado: False
 - 
-    id: 194
+    id: 195
     nome: "Google Maps"
     link: https://www.google.com/maps 
     github:  
@@ -2706,7 +2706,7 @@
     destaque: False
     desativado: False
 - 
-    id: 195
+    id: 196
     nome: "Bing Maps"
     link: https://www.bing.com/maps/
     github:  
@@ -2719,7 +2719,7 @@
     destaque: False
     desativado: False
 - 
-    id: 196
+    id: 197
     nome: "World Imagery Wayback"
     link: https://livingatlas.arcgis.com/wayback/
     github:  
@@ -2732,7 +2732,7 @@
     destaque: False
     desativado: False
 - 
-    id: 197
+    id: 198
     nome: "FotoForensics"
     link: https://fotoforensics.com/
     github:  
@@ -2745,7 +2745,7 @@
     destaque: False
     desativado: False
 - 
-    id: 198
+    id: 199
     nome: "FotoForensics"
     link: https://fotoforensics.com/
     github:  
