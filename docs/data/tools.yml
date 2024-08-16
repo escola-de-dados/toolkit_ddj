@@ -2665,3 +2665,95 @@
     open-source: True
     destaque: True
     desativado: False
+- 
+    id: 193
+    nome: "Deepware"
+    link: https://deepware.ai/  
+    github: 
+    descrição: "Digitaliza e detecta vídeos de deep fake produzidos por IA."
+    categoria:
+        - Inteligência Artificial
+        - Análise
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 194
+    nome: "Google Earth"
+    link: https://earth.google.com/web/ 
+    github:  
+    descrição: "Compara imagens varredura do Google Earth. Procura por pontos de referência. Compara o terreno e a paisagem."
+    categoria:
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 194
+    nome: "Google Maps"
+    link: https://www.google.com/maps 
+    github:  
+    descrição: "Informações sobre regiões geográficas. Navegação por GPS"
+    categoria:
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 195
+    nome: "Bing Maps"
+    link: https://www.bing.com/maps/
+    github:  
+    descrição: "Informações sobre regiões geográficas. Navegação por GPS"
+    categoria:
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 196
+    nome: "World Imagery Wayback"
+    link: https://livingatlas.arcgis.com/wayback/
+    github:  
+    descrição: "Compara terreno e paisagem. Compara mudanças na terra e no desenvolvimento ao longo do tempo."
+    categoria:
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 197
+    nome: "FotoForensics"
+    link: https://fotoforensics.com/
+    github:  
+    descrição: "Permite fazer diversos tipos de análise em uma imagem."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 198
+    nome: "FotoForensics"
+    link: https://fotoforensics.com/
+    github:  
+    descrição: "Permite fazer diversos tipos de análise em uma imagem."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
