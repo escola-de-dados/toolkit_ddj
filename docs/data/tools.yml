@@ -2771,7 +2771,7 @@
     destaque: False
     desativado: False
 - 
-    id: 200
+    id: 201
     nome: "ImgOps"
     link: https://imgops.com/upload
     github:  
@@ -2784,7 +2784,7 @@
     destaque: False
     desativado: False
 - 
-    id: 201
+    id: 202
     nome: "Whois Domain Lookup"
     link: https://whois.domaintools.com/
     github:  
@@ -2797,26 +2797,13 @@
     destaque: False
     desativado: False
 - 
-    id: 202
+    id: 203
     nome: "ICANN Lookup"
     link: https://lookup.icann.org/en
     github:  
     descrição: "Mostra lgumas informações relacionadas ao domínio de um endereço web."
     categoria:
         - OSINT
-    plataforma: 
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
-- 
-    id: 203
-    nome: "Single File"
-    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
-    github:  
-    descrição: "Plugin que salva uma página web em formato HTML."
-    categoria:
-        - Extração
     plataforma: 
         - Web
     open-source: False
@@ -2837,6 +2824,19 @@
     desativado: False
 - 
     id: 205
+    nome: "Single File"
+    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
+    github:  
+    descrição: "Plugin que salva uma página web em formato HTML."
+    categoria:
+        - Extração
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 206
     nome: "DownThemAll"
     link: https://www.downthemall.net/
     github:  
@@ -2849,7 +2849,7 @@
     destaque: False
     desativado: False
 - 
-    id: 206
+    id: 207
     nome: "Wayback Machine"
     link: https://web.archive.org/
     github:  
@@ -2862,7 +2862,7 @@
     destaque: False
     desativado: False
 - 
-    id: 207
+    id: 208
     nome: "Exif Viewer"
     link: https://chromewebstore.google.com/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg
     github:  
@@ -2876,7 +2876,7 @@
     destaque: False
     desativado: False
 - 
-    id: 208
+    id: 209
     nome: "OneTab"
     link: https://chromewebstore.google.com/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg
     github:  
@@ -2889,7 +2889,7 @@
     destaque: False
     desativado: False
 - 
-    id: 209
+    id: 210
     nome: "FireShot"
     link: https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
     github:  
@@ -2903,7 +2903,7 @@
     destaque: False
     desativado: False
 - 
-    id: 210
+    id: 211
     nome: "FireShot"
     link: https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
     github:  
