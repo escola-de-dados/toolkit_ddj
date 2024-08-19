@@ -2757,3 +2757,162 @@
     open-source: False
     destaque: False
     desativado: False
+- 
+    id: 200
+    nome: "Image Edited"
+    link: http://imageedited.com/
+    github:  
+    descrição: "Indica se a foto foi editada ou manipulada por Photoshop."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 200
+    nome: "ImgOps"
+    link: https://imgops.com/upload
+    github:  
+    descrição: "Faz uma análise e apresenta todos os metadados de um imagem."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 201
+    nome: "Whois Domain Lookup"
+    link: https://whois.domaintools.com/
+    github:  
+    descrição: "Mostra metadados relacionados ao domínio de um endereço web."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 202
+    nome: "ICANN Lookup"
+    link: https://lookup.icann.org/en
+    github:  
+    descrição: "Mostra lgumas informações relacionadas ao domínio de um endereço web."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 203
+    nome: "Single File"
+    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
+    github:  
+    descrição: "Plugin que salva uma página web em formato HTML."
+    categoria:
+        - Extração
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 204
+    nome: "Single File"
+    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
+    github:  
+    descrição: "Plugin que salva uma página web em formato HTML."
+    categoria:
+        - Extração
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 205
+    nome: "DownThemAll"
+    link: https://www.downthemall.net/
+    github:  
+    descrição: "Baixa conteúdo multimídia em massa de sites."
+    categoria:
+        - Extração
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 206
+    nome: "Wayback Machine"
+    link: https://web.archive.org/
+    github:  
+    descrição: "Pesquisa versões arquivadas de sites."
+    categoria:
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 207
+    nome: "Exif Viewer"
+    link: https://chromewebstore.google.com/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg
+    github:  
+    descrição: "Identifica metadados embutidos dentro de uma imagem ou fotografia."
+    categoria:
+        - OSINT
+        - Análise
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 208
+    nome: "OneTab"
+    link: https://chromewebstore.google.com/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg
+    github:  
+    descrição: "Organiza as abas do navegador em uma lista para facilitar o gerenciamento."
+    categoria:
+        - Análise
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 209
+    nome: "FireShot"
+    link: https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
+    github:  
+    descrição: "Captura imagens completas da página da web. Capture, edite e salve-as em PDF/JPEG/GIF/PNG."
+    categoria:
+        - Extração
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 210
+    nome: "FireShot"
+    link: https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
+    github:  
+    descrição: "Captura imagens completas da página da web. Capture, edite e salve-as em PDF/JPEG/GIF/PNG."
+    categoria:
+        - Extração
+        - OSINT
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
