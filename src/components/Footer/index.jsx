@@ -39,7 +39,7 @@ const Footer = ({ handleModalOpen }) => {
             </a>
             <a
               className={styles.footerLink}
-              href="https://premio.jornalismodedados.org/"
+              href="https://premio.jornalismodedados.org.br/"
             >
               Prêmio Cláudio Weber Abramo
             </a>

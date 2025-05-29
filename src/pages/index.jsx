@@ -481,7 +481,7 @@ export default function Home({
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="http://kit.jornalismodedados.org/" />
+        <meta property="og:url" content="http://kit.jornalismodedados.org.br/" />
         <meta
           property="og:title"
           content="Caixa de Ferramentas do Jornalismo de Dados"
@@ -498,7 +498,7 @@ export default function Home({
         <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
-          content="http://kit.jornalismodedados.org/"
+          content="http://kit.jornalismodedados.org.br/"
         />
         <meta
           property="twitter:title"
