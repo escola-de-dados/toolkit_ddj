@@ -13,7 +13,7 @@ jobs:
           node-version: 14.x
       - name: Config, install dependencies and run export script
         run: |
-          npm config set @bit:registry https://node.bit.dev
+          npm config set @bit:registry https://node-registry.bit.cloud
           npm i
           npm run automated-export
       - name: Commit and push changes
