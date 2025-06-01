@@ -17,7 +17,7 @@ const Footer = ({ handleModalOpen }) => {
           Acesse o Fórum Jornalismo de Dados e conecte-se a outras pessoas
           interessadas no tema:
         </p>
-        <Button variant="white" href="https://forum.jornalismodedados.org/">
+        <Button variant="white" href="https://forum.ornalismodedados.org.br/">
           Fórum Jornalismo de Dados
         </Button>
       </div>
@@ -45,7 +45,7 @@ const Footer = ({ handleModalOpen }) => {
             </a>
             <a
               className={styles.footerLink}
-              href="https://forum.jornalismodedados.org/"
+              href="https://forum.ornalismodedados.org.br/"
             >
               Fórum Jornalismo de Dados
             </a>
