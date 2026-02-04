@@ -5,7 +5,7 @@ import yaml from "js-yaml";
 import Head from "next/head";
 
 import { Button } from "react-bootstrap";
-import Drawer from "@bit/mui-org.material-ui.drawer";
+import Drawer from "@material-ui/core/Drawer";
 import { Icon } from "@iconify/react";
 
 import InfiniteScroll from "react-infinite-scroll-component";
