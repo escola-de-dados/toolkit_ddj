@@ -30,3 +30,7 @@
  nome: Inteligência Artificial
  slug: inteligenciaartificial
  descrição:  Inteligência Artificial é a capacidade que uma máquina para reproduzir competências semelhantes às humanas como é o caso do raciocínio, a aprendizagem, o planeamento e a criatividade
+-
+ nome: Base de Dados
+ slug: basededados
+ descrição:  Conjunto organizado de informações armazenadas de forma estruturada para facilitar consulta, atualização e análise.
