@@ -2916,3 +2916,16 @@
     open-source: False
     destaque: False
     desativado: False
+- 
+    id: 212
+    nome: "Painel de Dados do Plano Nacional de Enfrentamento ao Tráfico de Pessoas"
+    link: https://app.powerbi.com/view?r=eyJrIjoiMTE3NzA4NWItZDJmOC00NDEzLWJhNmMtNWJiYjY3NjJhZDUyIiwidCI6ImViMDkwNDIwLTQ0NGMtNDNmNy05MWYyLTRiOGRhNmJmZThlMSJ9 
+    github:  
+    descrição: "Plataforma para reunir e integrar informações detalhadas sobre enfrentamento ao tráfico de pessoas."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
