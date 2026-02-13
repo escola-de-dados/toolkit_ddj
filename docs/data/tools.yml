@@ -2929,3 +2929,94 @@
     open-source: False
     destaque: True
     desativado: False
+- 
+    id: 213
+    nome: "WikiLAI"
+    link: https://wikilai.fiquemsabendo.com.br/wiki/P%C3%A1gina_principal 
+    github:  
+    descrição: "Tudo sobre sobre a Lei de Acesso à Informação (LAI)."
+    categoria:
+        - extracao
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 214
+    nome: "Agenda Transparente"
+    link: https://agendas.fiquemsabendo.com.br/ 
+    github:  
+    descrição: "Ferramenta intuitiva que permite rastrear movimentações políticas ou de temas da sua escolha através do monitoramento de encontros entre autoridades do governo e outros atores."
+    categoria:
+        - extracao
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 215
+    nome: "Observatório da Erradicação do Trabalho Escravo e do Tráfico de Pessoas (Smartlab)"
+    link: https://smartlabbr.org/trabalhoescravo 
+    github:  
+    descrição: "Uma plataforma digital lançada pelo Ministério Público do Trabalho (MPT) em parceria com a Organização Internacional do Trabalho (OIT)."
+    categoria:
+        - basededados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 216
+    nome: "ObMigra"
+    link: https://www.datamigra.unb.br/  
+    github:  
+    descrição: "Plataforma que integra dados oficiais de fontes como Polícia Federal, IBGE, Ministério do Trabalho e Emprego."
+    categoria:
+        - basededados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 217
+    nome: "Painel de Inquéritos Policiais"
+    link: https://app.powerbi.com/view?r=eyJrIjoiNDBhMDE5YWQtZWI5OC00Mjc5LWFjZWUtOThhYTg0MDc5YTQ5IiwidCI6IjU2YzFlMmZiLTg3YzEtNGRlMC1hNmFjLWQwNTY2YzA4Y2U2NiJ9
+    github:  
+    descrição: "Plataforma que reúne inquéritos policiais em andamento, por tipo de crime, origem da comunicação, unidades da Polícia Federal e UF"
+    categoria:
+        - basededados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 218
+    nome: "Epstein files"
+    link: https://www.justice.gov/epstein/doj-disclosures
+    github:  
+    descrição: "Arquivos sobre o caso Jeffrey Epstein relacionado a crimes sexuais, tráfico e conexões de Epstein."
+    categoria:
+        - basededados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 219
+    nome: "Painel do Orçamento Federal"
+    link: https://www1.siop.planejamento.gov.br/QvAJAXZfc/opendoc.htm?document=IAS%2FExecucao_Orcamentaria.qvw&host=QVS%40pqlk04&anonymous=true&sheet=SH06
+    github:  
+    descrição: "Uma ferramenta pública que exibe dashboards interativos com dados de execução orçamentária federal em tempo real."
+    categoria:
+        - basededados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
