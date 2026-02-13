@@ -2936,7 +2936,7 @@
     github:  
     descrição: "Tudo sobre sobre a Lei de Acesso à Informação (LAI)."
     categoria:
-        - extracao
+        - Extração
     plataforma: 
         - Web
     open-source: False
@@ -2949,7 +2949,7 @@
     github:  
     descrição: "Ferramenta intuitiva que permite rastrear movimentações políticas ou de temas da sua escolha através do monitoramento de encontros entre autoridades do governo e outros atores."
     categoria:
-        - extracao
+        - Extração
     plataforma: 
         - Web
     open-source: False
@@ -2962,7 +2962,7 @@
     github:  
     descrição: "Uma plataforma digital lançada pelo Ministério Público do Trabalho (MPT) em parceria com a Organização Internacional do Trabalho (OIT)."
     categoria:
-        - basededados
+        - Base de Dados
     plataforma: 
         - Web
     open-source: False
@@ -2975,7 +2975,7 @@
     github:  
     descrição: "Plataforma que integra dados oficiais de fontes como Polícia Federal, IBGE, Ministério do Trabalho e Emprego."
     categoria:
-        - basededados
+        - Base de Dados
     plataforma: 
         - Web
     open-source: False
@@ -2988,7 +2988,7 @@
     github:  
     descrição: "Plataforma que reúne inquéritos policiais em andamento, por tipo de crime, origem da comunicação, unidades da Polícia Federal e UF"
     categoria:
-        - basededados
+        - Base de Dados
     plataforma: 
         - Web
     open-source: False
@@ -3001,7 +3001,7 @@
     github:  
     descrição: "Arquivos sobre o caso Jeffrey Epstein relacionado a crimes sexuais, tráfico e conexões de Epstein."
     categoria:
-        - basededados
+        - Base de Dados
     plataforma: 
         - Web
     open-source: False
@@ -3014,7 +3014,7 @@
     github:  
     descrição: "Uma ferramenta pública que exibe dashboards interativos com dados de execução orçamentária federal em tempo real."
     categoria:
-        - basededados
+        - Base de Dados
     plataforma: 
         - Web
     open-source: False
