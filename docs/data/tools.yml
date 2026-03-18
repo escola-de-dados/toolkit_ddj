@@ -3020,3 +3020,108 @@
     open-source: False
     destaque: False
     desativado: False
+- 
+    id: 220
+    nome: "Sistema de Tráfego Internacional"
+    link: https://dados.gov.br/dados/conjuntos-dados/sti---sistema-de-trafego-internacional
+    github:  
+    descrição: "Dados referentes a movimentos migratórios nos postos de fronteiras no Brasil."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 221
+    nome: "O Brasil indígena (IBGE)"
+    link: https://www.ibge.gov.br/brasil-indigena/
+    github:  
+    descrição: "Dados referentes ao povo indígena no Brasil."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
+- 
+    id: 222
+    nome: "Polícia Federal: Entradas e saídas de venezuelanos no Brasil (2018-2025)"
+    link: https://buscalai.cgu.gov.br/busca/10277936
+    github:  
+    descrição: "dados sobre entradas e saídas de cidadãos venezuelanos no Brasil de 2018 a 2025, segmentados por sexo, faixa etária, raça, unidade de entrada, mês e ano, em formato aberto e anonimizados conforme a Lei Geral de Proteção de Dados."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
+    id: 223
+    nome: "Ministério da Defesa: orçamento para a Operação Acolhida (2018-2025)"
+    link: https://buscalai.cgu.gov.br/busca/10278044
+    github:  
+    descrição: "Orçamento da Operação Acolhida do Ministério da Defesa de 2018 a 2025, incluindo valores previstos, empenhados e pagos, por ano, em formato aberto e editável."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 224
+    nome: "Disque 100: denúncias sobre exploração sexual, violência sexual e tráfico de pessoas tendo como vítimas mulheres venezuelanas (2018-2025)"
+    link: https://buscalai.cgu.gov.br/busca/10279525
+    github:  
+    descrição: "Dados consolidados de denúncias no Disque 100 sobre exploração sexual, violência sexual e tráfico de pessoas contra mulheres venezuelanas entre 2018 e 2025, segmentados por unidade da federação, ano e tipo de violação, em formato aberto e anonimizados conforme a Lei Geral de Proteção de Dados."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 225
+    nome: "Ministério da Justiça e Segurança Pública: resgates de mulheres venezuelanas em situação de exploração sexual, tráfico de pessoas e/ou trabalho análogo à escravidão (2018-2025)"
+    link: https://buscalai.cgu.gov.br/busca/10279791
+    github:  
+    descrição: "Dados sobre resgates de mulheres venezuelanas em situação de exploração entre 2018 e 2025, segmentados por localização, ano, idade e etnia, em formato aberto e anonimizados conforme a Lei de Proteção de Dados."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 226
+    nome: "Polícia Federal: operações de combate ao tráfico de pessoas e exploração sexual envolvendo mulheres imigrantes venezuelanas resgatadas (2018-2025)"
+    link: https://buscalai.cgu.gov.br/busca/10279936
+    github:  
+    descrição: "Dados sobre operações de combate ao tráfico de pessoas envolvendo mulheres imigrantes venezuelanas resgatadas entre 2018 e 2025, por estado, ano e número de vítimas, em formato aberto e anonimizados."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 227
+    nome: "Amazon Mining Watch"
+    link: https://amazonminingwatch.org/pt?areaType=countries&yearStart=201800&yearEnd=202504
+    github:  
+    descrição: "Ferramenta que utiliza inteligência artificial para mapear o impacto das atividades de mineração de ouro em nove países amazônicos."
+    categoria:
+        - Inteligência Artificial
+        - Cartografia
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: True
+    desativado: False
