@@ -582,7 +582,7 @@
         - Extração
     plataforma:
         - Web
-    open-source:
+    open-source: False
     destaque: False
     desativado: False
 -
@@ -2629,7 +2629,7 @@
 - 
     id: 190
     nome: "Mycroft"
-    link:   
+    link: https://github.com/MycroftAI  
     github: https://github.com/MycroftAI 
     descrição: "Assistente de voz de código aberto e personalizável."
     categoria:
@@ -2746,19 +2746,6 @@
     desativado: False
 - 
     id: 199
-    nome: "FotoForensics"
-    link: https://fotoforensics.com/
-    github:  
-    descrição: "Permite fazer diversos tipos de análise em uma imagem."
-    categoria:
-        - OSINT
-    plataforma: 
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
-- 
-    id: 200
     nome: "Image Edited"
     link: http://imageedited.com/
     github:  
@@ -2771,7 +2758,7 @@
     destaque: False
     desativado: False
 - 
-    id: 201
+    id: 200
     nome: "ImgOps"
     link: https://imgops.com/upload
     github:  
@@ -2784,7 +2771,7 @@
     destaque: False
     desativado: False
 - 
-    id: 202
+    id: 201
     nome: "Whois Domain Lookup"
     link: https://whois.domaintools.com/
     github:  
@@ -2797,7 +2784,7 @@
     destaque: False
     desativado: False
 - 
-    id: 203
+    id: 202
     nome: "ICANN Lookup"
     link: https://lookup.icann.org/en
     github:  
@@ -2810,33 +2797,20 @@
     destaque: False
     desativado: False
 - 
+    id: 203
+    nome: "Single File"
+    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
+    github:  
+    descrição: "Plugin que salva uma página web em formato HTML."
+    categoria:
+        - Extração
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+- 
     id: 204
-    nome: "Single File"
-    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
-    github:  
-    descrição: "Plugin que salva uma página web em formato HTML."
-    categoria:
-        - Extração
-    plataforma: 
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
-- 
-    id: 205
-    nome: "Single File"
-    link: https://chromewebstore.google.com/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle?pli=1
-    github:  
-    descrição: "Plugin que salva uma página web em formato HTML."
-    categoria:
-        - Extração
-    plataforma: 
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
-- 
-    id: 206
     nome: "DownThemAll"
     link: https://www.downthemall.net/
     github:  
@@ -2849,7 +2823,7 @@
     destaque: False
     desativado: False
 - 
-    id: 207
+    id: 205
     nome: "Wayback Machine"
     link: https://web.archive.org/
     github:  
@@ -2862,7 +2836,7 @@
     destaque: False
     desativado: False
 - 
-    id: 208
+    id: 206
     nome: "Exif Viewer"
     link: https://chromewebstore.google.com/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg
     github:  
@@ -2876,7 +2850,7 @@
     destaque: False
     desativado: False
 - 
-    id: 209
+    id: 207
     nome: "OneTab"
     link: https://chromewebstore.google.com/detail/exif-viewer/kbnpbnmjmgabkfemdehelbgdppngihhg
     github:  
@@ -2889,7 +2863,7 @@
     destaque: False
     desativado: False
 - 
-    id: 210
+    id: 208
     nome: "FireShot"
     link: https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
     github:  
@@ -2903,21 +2877,7 @@
     destaque: False
     desativado: False
 - 
-    id: 211
-    nome: "FireShot"
-    link: https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg
-    github:  
-    descrição: "Captura imagens completas da página da web. Capture, edite e salve-as em PDF/JPEG/GIF/PNG."
-    categoria:
-        - Extração
-        - OSINT
-    plataforma: 
-        - Web
-    open-source: False
-    destaque: False
-    desativado: False
-- 
-    id: 212
+    id: 209
     nome: "Painel de Dados do Plano Nacional de Enfrentamento ao Tráfico de Pessoas"
     link: https://app.powerbi.com/view?r=eyJrIjoiMTE3NzA4NWItZDJmOC00NDEzLWJhNmMtNWJiYjY3NjJhZDUyIiwidCI6ImViMDkwNDIwLTQ0NGMtNDNmNy05MWYyLTRiOGRhNmJmZThlMSJ9 
     github:  
@@ -2930,7 +2890,7 @@
     destaque: True
     desativado: False
 - 
-    id: 213
+    id: 210
     nome: "WikiLAI"
     link: https://wikilai.fiquemsabendo.com.br/wiki/P%C3%A1gina_principal 
     github:  
@@ -2943,7 +2903,7 @@
     destaque: False
     desativado: False
 - 
-    id: 214
+    id: 211
     nome: "Agenda Transparente"
     link: https://agendas.fiquemsabendo.com.br/ 
     github:  
@@ -2956,7 +2916,7 @@
     destaque: False
     desativado: False
 - 
-    id: 215
+    id: 212
     nome: "Observatório da Erradicação do Trabalho Escravo e do Tráfico de Pessoas (Smartlab)"
     link: https://smartlabbr.org/trabalhoescravo 
     github:  
@@ -2969,7 +2929,7 @@
     destaque: False
     desativado: False
 - 
-    id: 216
+    id: 213
     nome: "ObMigra"
     link: https://www.datamigra.unb.br/  
     github:  
@@ -2982,7 +2942,7 @@
     destaque: False
     desativado: False
 - 
-    id: 217
+    id: 214
     nome: "Painel de Inquéritos Policiais"
     link: https://app.powerbi.com/view?r=eyJrIjoiNDBhMDE5YWQtZWI5OC00Mjc5LWFjZWUtOThhYTg0MDc5YTQ5IiwidCI6IjU2YzFlMmZiLTg3YzEtNGRlMC1hNmFjLWQwNTY2YzA4Y2U2NiJ9
     github:  
@@ -2995,7 +2955,7 @@
     destaque: False
     desativado: False
 - 
-    id: 218
+    id: 215
     nome: "Epstein files"
     link: https://www.justice.gov/epstein/doj-disclosures
     github:  
@@ -3008,7 +2968,7 @@
     destaque: False
     desativado: False
 - 
-    id: 219
+    id: 216
     nome: "Painel do Orçamento Federal"
     link: https://www1.siop.planejamento.gov.br/QvAJAXZfc/opendoc.htm?document=IAS%2FExecucao_Orcamentaria.qvw&host=QVS%40pqlk04&anonymous=true&sheet=SH06
     github:  
@@ -3021,7 +2981,7 @@
     destaque: False
     desativado: False
 - 
-    id: 220
+    id: 217
     nome: "Sistema de Tráfego Internacional"
     link: https://dados.gov.br/dados/conjuntos-dados/sti---sistema-de-trafego-internacional
     github:  
@@ -3034,7 +2994,7 @@
     destaque: False
     desativado: False
 - 
-    id: 221
+    id: 218
     nome: "O Brasil indígena (IBGE)"
     link: https://www.ibge.gov.br/brasil-indigena/
     github:  
@@ -3047,7 +3007,7 @@
     destaque: True
     desativado: False
 - 
-    id: 222
+    id: 219
     nome: "Polícia Federal: Entradas e saídas de venezuelanos no Brasil (2018-2025)"
     link: https://buscalai.cgu.gov.br/busca/10277936
     github:  
@@ -3060,7 +3020,7 @@
     destaque: False
     desativado: False
 - 
-    id: 223
+    id: 220
     nome: "Ministério da Defesa: orçamento para a Operação Acolhida (2018-2025)"
     link: https://buscalai.cgu.gov.br/busca/10278044
     github:  
@@ -3073,7 +3033,7 @@
     destaque: False
     desativado: False
 -
-    id: 224
+    id: 221
     nome: "Disque 100: denúncias sobre exploração sexual, violência sexual e tráfico de pessoas tendo como vítimas mulheres venezuelanas (2018-2025)"
     link: https://buscalai.cgu.gov.br/busca/10279525
     github:  
@@ -3086,7 +3046,7 @@
     destaque: False
     desativado: False
 -
-    id: 225
+    id: 222
     nome: "Ministério da Justiça e Segurança Pública: resgates de mulheres venezuelanas em situação de exploração sexual, tráfico de pessoas e/ou trabalho análogo à escravidão (2018-2025)"
     link: https://buscalai.cgu.gov.br/busca/10279791
     github:  
@@ -3099,7 +3059,7 @@
     destaque: False
     desativado: False
 -
-    id: 226
+    id: 223
     nome: "Polícia Federal: operações de combate ao tráfico de pessoas e exploração sexual envolvendo mulheres imigrantes venezuelanas resgatadas (2018-2025)"
     link: https://buscalai.cgu.gov.br/busca/10279936
     github:  
@@ -3112,7 +3072,7 @@
     destaque: False
     desativado: False
 -
-    id: 227
+    id: 224
     nome: "Amazon Mining Watch"
     link: https://amazonminingwatch.org/pt?areaType=countries&yearStart=201800&yearEnd=202504
     github:  
@@ -3124,4 +3084,30 @@
         - Web
     open-source: False
     destaque: True
+    desativado: False
+-
+    id: 225
+    nome: "MRE - Microdados anonimizados relativos aos atendimentos prestados pela rede consular brasileira a cidadãos em situaçoes classificadas como Tráfico de Pessoas, Trabalho Análogo à Escravidão ou Servidão por Dívida"
+    link: https://buscalai.cgu.gov.br/busca/10311835
+    github:  
+    descrição: "Microdados anonimizados sobre atendimentos consulares a brasileiros em vulnerabilidade no exterior, de 2020 a 2025, para análise estatística."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
+    desativado: False
+-
+    id: 226
+    nome: "PF - Enfrentamento ao tráfico de pessoas, com foco específico no tráfico de mulheres e na exploração sexual no estado do Acre (2015-2025)"
+    link: https://buscalai.cgu.gov.br/busca/10316691
+    github:  
+    descrição: "Dados sobre tráfico de pessoas no Acre (2015-2025), focando em mulheres e exploração sexual."
+    categoria:
+        - Base de Dados
+    plataforma: 
+        - Web
+    open-source: False
+    destaque: False
     desativado: False
