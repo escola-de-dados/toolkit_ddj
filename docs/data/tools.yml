@@ -3087,7 +3087,7 @@
     desativado: False
 -
     id: 225
-    nome: "MRE - Microdados anonimizados relativos aos atendimentos prestados pela rede consular brasileira a cidadãos em situaçoes classificadas como Tráfico de Pessoas, Trabalho Análogo à Escravidão ou Servidão por Dívida"
+    nome: "MRE: Microdados anonimizados relativos aos atendimentos prestados pela rede consular brasileira a cidadãos em situaçoes classificadas como Tráfico de Pessoas, Trabalho Análogo à Escravidão ou Servidão por Dívida"
     link: https://buscalai.cgu.gov.br/busca/10311835
     github:  
     descrição: "Microdados anonimizados sobre atendimentos consulares a brasileiros em vulnerabilidade no exterior, de 2020 a 2025, para análise estatística."
@@ -3100,7 +3100,7 @@
     desativado: False
 -
     id: 226
-    nome: "PF - Enfrentamento ao tráfico de pessoas, com foco específico no tráfico de mulheres e na exploração sexual no estado do Acre (2015-2025)"
+    nome: "PF: Enfrentamento ao tráfico de pessoas, com foco específico no tráfico de mulheres e na exploração sexual no estado do Acre (2015-2025)"
     link: https://buscalai.cgu.gov.br/busca/10316691
     github:  
     descrição: "Dados sobre tráfico de pessoas no Acre (2015-2025), focando em mulheres e exploração sexual."
