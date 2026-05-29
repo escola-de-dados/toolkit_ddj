@@ -45,7 +45,7 @@ const Footer = ({ handleModalOpen }) => {
             </a>
             <a
               className={styles.footerLink}
-              href="https://forum.ornalismodedados.org.br/"
+              href="https://forum.jornalismodedados.org.br/"
             >
               Fórum Jornalismo de Dados
             </a>
